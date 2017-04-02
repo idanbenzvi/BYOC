@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-04-02T00:21:20</DateModified>
+  <DateModified>2017-04-02T19:41:16</DateModified>
   <ModuleName>p4_TB</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/idan/Desktop/p4/ISE/iseconfig/p4_TB.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/idan/Desktop/p4/ISE</ImplementationReportsDirectory>
+  <SavedFilePath>/media/sf_shared_with_vm/byoc2017/projects/hw1/hw1_shared/ISE/iseconfig/p4_TB.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/media/sf_shared_with_vm/byoc2017/projects/hw1/hw1_shared/ISE/</ImplementationReportsDirectory>
   <DateInitialized>2017-04-02T00:21:19</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
