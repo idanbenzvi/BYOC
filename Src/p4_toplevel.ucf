@@ -8,9 +8,9 @@ NET "sevenseg_out<0>" LOC = "L18";
 NET "sevenseg_out<1>" LOC = "F18";
 NET "sevenseg_out<2>" LOC = "D17";
 NET "sevenseg_out<3>" LOC=  "D16";
-NET "sevenseg_out<4>" LOC = "H14";
+NET "sevenseg_out<4>" LOC = "G14";
 NET "sevenseg_out<5>" LOC = "J17";
-NET "sevenseg_out<6>" LOC = "G14";
+NET "sevenseg_out<6>" LOC = "H14";
 
 
 NET "switches<0>" LOC = "G18";

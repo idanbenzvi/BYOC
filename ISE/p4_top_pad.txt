@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Apr  2 19:51:34 2017
+Sun Apr  2 20:20:19 2017
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -141,7 +141,7 @@ Pinout by Pin Number:
 |G11       |               |         |VCCO_0                   |         |           |0             |          |         |           |         |2.50     |          |           |                |
 |G12       |               |         |GND                      |         |           |              |          |         |           |         |         |          |           |                |
 |G13       |               |DIFFS    |IO_L20N_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|G14       |sevenseg_out<6>|IOB      |IO_L20P_1                |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
+|G14       |sevenseg_out<4>|IOB      |IO_L20P_1                |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |G15       |               |DIFFM    |IO_L18P_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |G16       |               |DIFFS    |IO_L18N_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |G17       |               |         |VCCAUX                   |         |           |              |          |         |           |         |2.5      |          |           |                |
@@ -159,7 +159,7 @@ Pinout by Pin Number:
 |H11       |               |         |GND                      |         |           |              |          |         |           |         |         |          |           |                |
 |H12       |               |         |VCCO_1                   |         |           |1             |          |         |           |         |2.50     |          |           |                |
 |H13       |pushbutton     |IBUF     |IP                       |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|H14       |sevenseg_out<4>|IOB      |IO_L17P_1                |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
+|H14       |sevenseg_out<6>|IOB      |IO_L17P_1                |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |H15       |               |DIFFS    |IO_L17N_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |H16       |               |DIFFM    |IO_L16P_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |H17       |anodes_out<0>  |IOB      |IO_L16N_1/A0             |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |

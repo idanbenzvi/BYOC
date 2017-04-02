@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Apr 02 19:51:17 2017
+// Written by: Map P.20131013 on Sun Apr 02 20:20:05 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -12,10 +12,10 @@ COMP "sevenseg_out<0>" LOCATE = SITE "L18" LEVEL 1;
 COMP "sevenseg_out<1>" LOCATE = SITE "F18" LEVEL 1;
 COMP "sevenseg_out<2>" LOCATE = SITE "D17" LEVEL 1;
 COMP "sevenseg_out<3>" LOCATE = SITE "D16" LEVEL 1;
-COMP "sevenseg_out<4>" LOCATE = SITE "H14" LEVEL 1;
+COMP "sevenseg_out<4>" LOCATE = SITE "G14" LEVEL 1;
 COMP "sevenseg_out<5>" LOCATE = SITE "J17" LEVEL 1;
 COMP "anodes_out<0>" LOCATE = SITE "H17" LEVEL 1;
-COMP "sevenseg_out<6>" LOCATE = SITE "G14" LEVEL 1;
+COMP "sevenseg_out<6>" LOCATE = SITE "H14" LEVEL 1;
 COMP "anodes_out<1>" LOCATE = SITE "F17" LEVEL 1;
 COMP "anodes_out<2>" LOCATE = SITE "C18" LEVEL 1;
 COMP "anodes_out<3>" LOCATE = SITE "F15" LEVEL 1;
