@@ -1,0 +1,39 @@
+V3 27
+FL /home/idan/Desktop/p4/Src/ck_divider.vhd 2017/03/25.18:29:28 P.20131013
+EN work/ck_divider 1491126956 FL /home/idan/Desktop/p4/Src/ck_divider.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/ck_divider/divider 1491126957 \
+      FL /home/idan/Desktop/p4/Src/ck_divider.vhd EN work/ck_divider 1491126956
+FL /home/idan/Desktop/p4/Src/counter_6bits.vhd 2017/03/28.14:09:51 P.20131013
+EN work/counter_6bits 1491126960 FL /home/idan/Desktop/p4/Src/counter_6bits.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/counter_6bits/counter 1491126961 \
+      FL /home/idan/Desktop/p4/Src/counter_6bits.vhd EN work/counter_6bits 1491126960
+FL /home/idan/Desktop/p4/Src/decoder_2to4.vhd 2017/04/02.00:31:50 P.20131013
+EN work/decoder_2to4 1491126964 FL /home/idan/Desktop/p4/Src/decoder_2to4.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/decoder_2to4/Behavioral 1491126965 \
+      FL /home/idan/Desktop/p4/Src/decoder_2to4.vhd EN work/decoder_2to4 1491126964
+FL /home/idan/Desktop/p4/Src/decoder_7seg.vhd 2017/04/02.12:42:18 P.20131013
+EN work/decoder_7seg 1491126962 FL /home/idan/Desktop/p4/Src/decoder_7seg.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/decoder_7seg/Behavioral 1491126963 \
+      FL /home/idan/Desktop/p4/Src/decoder_7seg.vhd EN work/decoder_7seg 1491126962
+FL /home/idan/Desktop/p4/Src/mux_2to1.vhd 2017/03/28.14:09:58 P.20131013
+EN work/mux_2to1 1491126958 FL /home/idan/Desktop/p4/Src/mux_2to1.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/mux_2to1/Behavioral 1491126959 \
+      FL /home/idan/Desktop/p4/Src/mux_2to1.vhd EN work/mux_2to1 1491126958
+FL /home/idan/Desktop/p4/Src/p4_TB.vhd 2017/03/25.18:38:30 P.20131013
+EN work/p4_TB 0 FL /home/idan/Desktop/p4/Src/p4_TB.vhd PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB ieee/std_logic_1164 1381692176
+AR work/p4_TB/Testing 0 \
+      FL /home/idan/Desktop/p4/Src/p4_TB.vhd EN work/p4_TB 0 CP p4_top
+FL /home/idan/Desktop/p4/Src/p4_top.vhd 2017/03/28.14:41:03 P.20131013
+EN work/p4_top 1491126966 FL /home/idan/Desktop/p4/Src/p4_top.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/p4_top/Behavioral 1491126967 \
+      FL /home/idan/Desktop/p4/Src/p4_top.vhd EN work/p4_top 1491126966 \
+      CP ck_divider CP mux_2to1 CP counter_6bits CP decoder_7seg CP decoder_2to4

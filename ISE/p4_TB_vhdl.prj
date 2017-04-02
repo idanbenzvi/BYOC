@@ -1,0 +1,7 @@
+vhdl work "/home/idan/Desktop/p4/Src/mux_2to1.vhd"
+vhdl work "/home/idan/Desktop/p4/Src/decoder_7seg.vhd"
+vhdl work "/home/idan/Desktop/p4/Src/decoder_2to4.vhd"
+vhdl work "/home/idan/Desktop/p4/Src/counter_6bits.vhd"
+vhdl work "/home/idan/Desktop/p4/Src/ck_divider.vhd"
+vhdl work "/home/idan/Desktop/p4/Src/p4_top.vhd"
+vhdl work "/home/idan/Desktop/p4/Src/p4_TB.vhd"

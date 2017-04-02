@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/idan/Desktop/p4/ISE/p4_TB_isim_beh.exe" -prj "/home/idan/Desktop/p4/ISE/p4_TB_beh.prj" "work.p4_TB" 
