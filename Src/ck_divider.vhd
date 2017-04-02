@@ -29,6 +29,6 @@ signal cntr : STD_LOGIC_VECTOR(24 downto 0);
 			end if;
 		end process;
 		
-		CK_out <=cntr(23) ;
+		CK_out <=cntr(24) ;
 		
 end divider ;
