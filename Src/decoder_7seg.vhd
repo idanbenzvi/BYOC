@@ -32,22 +32,22 @@ architecture Behavioral of decoder_7seg is
 begin
 	with digit_data  select 
 		sevenseg  <=
-		"0111111" when b"0000",
-		"0000110" when b"0001",
-		"1011011" when b"0010",
-		"1001111" when b"0011",
-		"1100110" when b"0100",
-		"1101101" when b"0101",
-		"1111101" when b"0110",
-		"0000111" when b"0111",
-		"1111111" when b"1000",
-		"1101111" when b"1001",
-		"1110111" when b"1010",
-		"1111100" when b"1011",
-		"0111001" when b"1100",
-		"1011110" when b"1101",
-		"1111001" when b"1110",
-		"1110001" when others;
+		"1000000" when b"0000",
+		"1111001" when b"0001",
+		"0100100" when b"0010",
+		"0110000" when b"0011",
+		"0011001" when b"0100",
+		"0010010" when b"0101",
+		"0000010" when b"0110",
+		"1111000" when b"0111",
+		"0000000" when b"1000",
+		"0010000" when b"1001",
+		"0001000" when b"1010",
+		"0000011" when b"1011",
+		"1000110" when b"1100",
+		"0100001" when b"1101",
+		"0000110" when b"1110",
+		"0001110" when others;
 
 end Behavioral;
 
