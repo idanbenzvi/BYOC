@@ -1,5 +1,5 @@
-NET "anodes_out<0>" LOC = "H17";
-NET "anodes_out<1>" LOC = "F17";
+NET "anodes_out<0>" LOC = "F17";
+NET "anodes_out<1>" LOC = "H17";
 NET "anodes_out<2>" LOC = "C18";
 NET "anodes_out<3>" LOC = "F15";
 
@@ -18,6 +18,6 @@ NET "switches<1>" LOC = "H18";
 NET "switches<2>" LOC = "K18";
 NET "switches<3>" LOC = "K17";
 
-NET "pushbutton"  LOC = "H13";
+NET "pushbutton"  LOC = "B18";
 
 NET   "CK"  	  LOC = "B8";
