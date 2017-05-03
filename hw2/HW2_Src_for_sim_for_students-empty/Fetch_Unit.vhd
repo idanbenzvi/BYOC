@@ -218,6 +218,8 @@ end process;
 
 
 --opcode <= IR_reg(31 downto 26); already done above
+
+-- 6 bits of function (the function field codes for RType)
 funct  <= IR_reg(5 downto 0);
 
 
