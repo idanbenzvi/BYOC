@@ -183,10 +183,15 @@ imm <= IR_reg(15 downto 0);
 sext_imm <= x"0000" & imm;
 
 -- BRANCH address  (create the branch_adrs signal)
-branch_adrs <= (imm * 4) + PC_plus_4_pID;
+--branch_adrs <= (imm * 4) + PC_plus_4_pID;
+--branch_adrs <= (imm + imm + imm + imm) + PC_plus_4_pID;
+-- multiplying by 4
+branch_adrs <= (imm & "00") + PC_plus_4_pID;
+
 
 -- JUMP address    (create the jump_adrs signal)
-jump_adrs <= PC_plus_4_pID(31 downto 28) & ((b"00" & IR_reg(25 downto 0)) * 4);
+--jump_adrs <= PC_plus_4_pID(31 downto 28) & ((b"00" & IR_reg(25 downto 0)) * 4);
+jump_adrs <= PC_plus_4_pID(31 downto 28) & ((b"00" & IR_reg(25 downto 0)) & "00");
 
 -- JR address    (create the jr_adrs signal)  
 jr_adrs <= x"00400004";
