@@ -186,7 +186,7 @@ sext_imm <= x"0000" & imm;
 branch_adrs <= (imm * 4) + PC_plus_4_pID;
 
 -- JUMP address    (create the jump_adrs signal)
-branch_adr <= PC_plus_4_pID(31 downto 28) & ((b"00" & IR_reg(25 downto 0)) * 4);
+jump_adrs <= PC_plus_4_pID(31 downto 28) & ((b"00" & IR_reg(25 downto 0)) * 4);
 
 -- JR address    (create the jr_adrs signal)  
 jr_adrs <= x"00400004";
