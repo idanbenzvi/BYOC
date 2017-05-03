@@ -188,7 +188,7 @@ imm <= IR_reg(15 downto 0);
 opcode <= IR_reg(31 downto 26);
 
 -- imm sign extension	  (create the sext_imm signal)
-sext_imm <= b"0000000000000000" & imm;
+sext_imm <= x"0000" & imm;
 
 -- BRANCH address  (create the branch_adrs signal)
 branch_adrs <= (imm * 4) + PC_plus_4_pID;
@@ -197,7 +197,7 @@ branch_adrs <= (imm * 4) + PC_plus_4_pID;
 branch_adr <= PC_plus_4_pID(31 downto 28) & ((b"00" & IR_reg(25 downto 0)) * 4);
 
 -- JR address    (create the jr_adrs signal)  
-
+jr_adrs <= x"00400004";
 	
 -- PC_plus_4_pID register   (create the PC_plus_4_pID signal)
 
