@@ -176,7 +176,8 @@ begin
 end process;
 
 imm <= IR_reg(15 downto 0);
-opcode <= IR_reg(31 downto 26);
+-- TODO: is there a reason to set it here and not using the original one?s
+--opcode <= IR_reg(31 downto 26);
 
 -- imm sign extension	  (create the sext_imm signal)
 sext_imm <= x"0000" & imm;
@@ -203,8 +204,7 @@ process(CK,RESET,HOLD,PC_plus_4_pID)
 end process;
 
 
---opcode <= IR_reg(31 downto 26); already done above
-
+opcode <= IR_reg(31 downto 26);
 -- 6 bits of function (the function field codes for RType)
 funct  <= IR_reg(5 downto 0);
 
