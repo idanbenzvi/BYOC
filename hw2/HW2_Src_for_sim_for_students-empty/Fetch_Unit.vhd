@@ -165,16 +165,16 @@ process(PC_Source, PC_plus_4, branch_adrs, jr_adrs, jump_adrs, PC_mux_out)
 begin
 	with PC_Source select
 		PC_mux_out <=
-		PC_plus_4 when "00",
-		branch_adrs when "01",
-		jr_adrs when "10",
+		PC_plus_4 when b"00",
+		branch_adrs when b"01",
+		jr_adrs when b"10",
 		--jump_adrs when '11'
 		jumps_adrs when others;
 end process;
 -- PC Adder - incrementing PC by 4  (create the PC_plus_4 signal)
 process(PC_reg)
 begin
- PC_plus_4 <= PC_reg + 4
+ PC_plus_4 <= PC_reg + 4;
 end process;
 
 -- IR_reg   (rename of the IMem_rd_data signal)
@@ -184,11 +184,11 @@ end process;
 --signal  opcode 			: STD_LOGIC_VECTOR  (5 downto 0);
 --signal  funct 			: STD_LOGIC_VECTOR  (5 downto 0);
 
-imm <= IR_reg(15 downto 0)
-opcode <= IR_reg(31 downto 26)
+imm <= IR_reg(15 downto 0);
+opcode <= IR_reg(31 downto 26);
 
 -- imm sign extension	  (create the sext_imm signal)
-
+sext_imm <= b"0000000000000000" & imm;
 
 -- BRANCH address  (create the branch_adrs signal)
 
