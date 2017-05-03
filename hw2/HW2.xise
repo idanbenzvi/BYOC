@@ -15,23 +15,23 @@
   <version xil_pn:ise_version="14.7" xil_pn:schema_version="2"/>
 
   <files>
-    <file xil_pn:name="../../../Desktop/HW2__for_students/HW2_Src_for_sim_for_students-empty/BYOC_Clock_driver_4sim.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="HW2_Src_for_sim_for_students-empty/BYOC_Clock_driver_4sim.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="7"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="7"/>
     </file>
-    <file xil_pn:name="../../../Desktop/HW2__for_students/HW2_Src_for_sim_for_students-empty/BYOC_Host_Intf_4sim.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="HW2_Src_for_sim_for_students-empty/BYOC_Host_Intf_4sim.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="8"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="8"/>
     </file>
-    <file xil_pn:name="../../../Desktop/HW2__for_students/HW2_Src_for_sim_for_students-empty/HW2_top_4sim.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="HW2_Src_for_sim_for_students-empty/HW2_top_4sim.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="10"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="10"/>
     </file>
-    <file xil_pn:name="../../../Desktop/HW2__for_students/HW2_Src_for_sim_for_students-empty/SIM_HW2_filenames.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="HW2_Src_for_sim_for_students-empty/SIM_HW2_filenames.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="11"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="11"/>
     </file>
-    <file xil_pn:name="../../../Desktop/HW2__for_students/HW2_Src_for_sim_for_students-empty/SIM_HW2_TB.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="HW2_Src_for_sim_for_students-empty/SIM_HW2_TB.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="12"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="12"/>
     </file>
@@ -149,7 +149,7 @@
     <property xil_pn:name="Ignore User Timing Constraints Map" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Ignore User Timing Constraints Par" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Implementation Top" xil_pn:value="Architecture|BYOC_TB_for_students|Testing" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Implementation Top File" xil_pn:value="../../../Desktop/HW2__for_students/HW2_Src_for_sim_for_students-empty/SIM_HW2_TB.vhd" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Implementation Top File" xil_pn:value="HW2_Src_for_sim_for_students-empty/SIM_HW2_TB.vhd" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/BYOC_TB_for_students" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Include 'uselib Directive in Verilog File" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Include SIMPRIM Models in Verilog File" xil_pn:value="false" xil_pn:valueState="default"/>

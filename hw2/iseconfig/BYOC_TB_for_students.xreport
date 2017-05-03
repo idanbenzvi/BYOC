@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-05-03T10:21:14</DateModified>
+  <DateModified>2017-05-03T14:21:34</DateModified>
   <ModuleName>BYOC_TB_for_students</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/idan/projects/BYOC_Lab_Project_1/hw2/iseconfig/BYOC_TB_for_students.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/idan/projects/BYOC_Lab_Project_1/hw2</ImplementationReportsDirectory>
+  <SavedFilePath>/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/iseconfig/BYOC_TB_for_students.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/</ImplementationReportsDirectory>
   <DateInitialized>2017-05-03T10:21:14</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
