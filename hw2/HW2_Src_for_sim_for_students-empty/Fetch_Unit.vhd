@@ -142,16 +142,15 @@ rdbk15 		<= 		x"00000000";
 IMem_adrs <= PC_reg; -- connect PC_reg to IMem
 
 --PC source mux
-entity PC_Source_Mux is
-    Port ( in0 	 		: in   STD_LOGIC;
-		   in1 	 		: in   STD_LOGIC;
-			in2 	 		: in   STD_LOGIC;
-			in3 	 		: in   STD_LOGIC;
-		   sel 	 		: in   STD_LOGIC_VECTOR(1 downto 0);
-         out_y			: out  STD_LOGIC_VECTOR(31 downto 0);
-end entity;
-
-component 
+--entity PC_Source_Mux is
+ --   Port ( in0 	 		: in   STD_LOGIC;
+--		   in1 	 		: in   STD_LOGIC;
+---			in2 	 		: in   STD_LOGIC;
+--			in3 	 		: in   STD_LOGIC;
+--		   sel 	 		: in   STD_LOGIC_VECTOR(1 downto 0);
+ --        out_y			: out  STD_LOGIC_VECTOR(31 downto 0);
+--end entity;
+ 
 
 --PC_SRC_MUX	:	PC_Source_Mux   --TODO: recomment  -- selects between manual_CK and osc_CK
 --		port map(
@@ -166,21 +165,27 @@ process(PC_Source, PC_plus_4, branch_adrs, jr_adrs, jump_adrs, PC_mux_out)
 begin
 	with PC_Source select
 		PC_mux_out <=
-		PC_plus_4 when '00'
-		branch_adrs when '01'
-		jr_adrs when '10'
+		PC_plus_4 when "00",
+		branch_adrs when "01",
+		jr_adrs when "10",
 		--jump_adrs when '11'
 		jumps_adrs when others;
 end process;
 -- PC Adder - incrementing PC by 4  (create the PC_plus_4 signal)
 process(PC_reg)
-	PC_plus_4 <= PC_Reg + 4
 begin
-
+ PC_plus_4 <= PC_reg + 4
 end process;
 
 -- IR_reg   (rename of the IMem_rd_data signal)
+--signal  IR_reg			: STD_LOGIC_VECTOR  (31 downto 0) := x"00000000";
+--signal  imm 			: STD_LOGIC_VECTOR  (15 downto 0);
+--signal  sext_imm 		: STD_LOGIC_VECTOR  (31 downto 0);
+--signal  opcode 			: STD_LOGIC_VECTOR  (5 downto 0);
+--signal  funct 			: STD_LOGIC_VECTOR  (5 downto 0);
 
+imm <= IR_reg(15 downto 0)
+opcode <= IR_reg(31 downto 26)
 
 -- imm sign extension	  (create the sext_imm signal)
 
