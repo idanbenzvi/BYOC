@@ -200,7 +200,16 @@ branch_adr <= PC_plus_4_pID(31 downto 28) & ((b"00" & IR_reg(25 downto 0)) * 4);
 jr_adrs <= x"00400004";
 	
 -- PC_plus_4_pID register   (create the PC_plus_4_pID signal)
-
+process(CK,RESET,HOLD,PC_plus_4_pID)
+		begin
+			if HOLD = '1' then
+				PC_plus_4_pID <= PC_plus_4; -- TODO: check what todo with hold 
+			elsif RESET = '1' then
+				PC_plus_4_pID <= x"00000000";
+			elsif CK 'event and CK = '1' then
+				PC_plus_4_pID <= PC_plus_4;
+			end if;
+end process;
 
 -- instruction decoder
 opcode <= IR_reg(31 downto 26);
