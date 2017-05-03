@@ -176,6 +176,10 @@ end process;
 process(PC_reg)
 begin
  PC_plus_4 <= PC_reg + 4;
+ --TODO : maybe we should add the 'Hold' functionality (Page 3 - last section) - Idan 
+ if hold = '1' then
+	PC_Plus_4 <= PC_Plus_4;
+ end if;
 end process;
 
 -- IR_reg   (rename of the IMem_rd_data signal)
@@ -212,7 +216,12 @@ process(CK,RESET,HOLD,PC_plus_4_pID)
 			end if;
 end process;
 
--- instruction decoder - added by Idan after Tal had to go
+
+--opcode <= IR_reg(31 downto 26); already done above
+funct  <= IR_reg(5 downto 0);
+
+
+-- PC_source decoder  (create the PC_source signal)
 process(opcode,PC_Source)
 begin
 	with opcode  select 
@@ -224,12 +233,6 @@ begin
 		"10"  when b"001000", --jr
 		"00"  when  others; --all other commands
 end process;
-
---opcode <= IR_reg(31 downto 26); already done above
-funct  <= IR_reg(5 downto 0);
-
-
--- PC_source decoder  (create the PC_source signal)
 
 
 
