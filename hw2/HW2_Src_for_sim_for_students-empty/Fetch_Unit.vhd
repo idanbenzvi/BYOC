@@ -142,6 +142,7 @@ rdbk15 		<= 		x"00000000";
 IMem_adrs <= PC_reg; -- connect PC_reg to IMem
 
 --PC source mux
+
 --entity PC_Source_Mux is
  --   Port ( in0 	 		: in   STD_LOGIC;
 --		   in1 	 		: in   STD_LOGIC;
@@ -205,14 +206,26 @@ process(CK,RESET,HOLD,PC_plus_4_pID)
 			if HOLD = '1' then
 				PC_plus_4_pID <= PC_plus_4; -- TODO: check what todo with hold 
 			elsif RESET = '1' then
-				PC_plus_4_pID <= x"00000000";
+				PC_plus_4_pID <= x"400000";
 			elsif CK 'event and CK = '1' then
 				PC_plus_4_pID <= PC_plus_4;
 			end if;
 end process;
 
--- instruction decoder
-opcode <= IR_reg(31 downto 26);
+-- instruction decoder - added by Idan after Tal had to go
+process(opcode,PC_Source)
+begin
+	with opcode  select 
+		PC_Source  <=
+		"11"  when b"000010" , --j
+		"11"  when b"000011", --jal
+		"01"  when b"000100" , --beq
+		"01"   when b"000101", --bne
+		"10"  when b"001000", --jr
+		"00"  when  others; --all other commands
+end process;
+
+--opcode <= IR_reg(31 downto 26); already done above
 funct  <= IR_reg(5 downto 0);
 
 
