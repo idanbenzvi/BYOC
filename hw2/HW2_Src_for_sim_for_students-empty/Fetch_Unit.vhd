@@ -139,28 +139,21 @@ rdbk15 		<= 		x"00000000";
 -- ========================================= =============================================
 --PC register
 
+process(CK,RESET,HOLD,PC_mux_out)
+		begin
+			if HOLD = '1' then
+				-- TODO: check what todo with hold
+				PC_reg <= PC_reg;
+			elsif RESET = '1' then
+				PC_reg <= x"4000000";
+			elsif CK 'event and CK = '1' then
+				PC_reg <= PC_mux_out;
+			end if;
+end process;
+
 IMem_adrs <= PC_reg; -- connect PC_reg to IMem
 
 --PC source mux
-
---entity PC_Source_Mux is
- --   Port ( in0 	 		: in   STD_LOGIC;
---		   in1 	 		: in   STD_LOGIC;
----			in2 	 		: in   STD_LOGIC;
---			in3 	 		: in   STD_LOGIC;
---		   sel 	 		: in   STD_LOGIC_VECTOR(1 downto 0);
- --        out_y			: out  STD_LOGIC_VECTOR(31 downto 0);
---end entity;
- 
-
---PC_SRC_MUX	:	PC_Source_Mux   --TODO: recomment  -- selects between manual_CK and osc_CK
---		port map(
---			in0 => PC_plus_4,
---			in1 => branch_adrs,
---			in2 => jr_adrs, --TODO: is it the correct signal			
---			in3 => jump_adrs, 
---			sel => rdbk_vec1--PC_Source,
---			out_y => PC_mux_out );
 
 process(PC_Source, PC_plus_4, branch_adrs, jr_adrs, jump_adrs, PC_mux_out)
 begin
@@ -169,7 +162,7 @@ begin
 		PC_plus_4 when b"00",
 		branch_adrs when b"01",
 		jr_adrs when b"10",
-		--jump_adrs when '11'
+		--jump_adrs when "11"
 		jumps_adrs when others;
 end process;
 -- PC Adder - incrementing PC by 4  (create the PC_plus_4 signal)
@@ -181,13 +174,6 @@ begin
 	PC_Plus_4 <= PC_Plus_4;
  end if;
 end process;
-
--- IR_reg   (rename of the IMem_rd_data signal)
---signal  IR_reg			: STD_LOGIC_VECTOR  (31 downto 0) := x"00000000";
---signal  imm 			: STD_LOGIC_VECTOR  (15 downto 0);
---signal  sext_imm 		: STD_LOGIC_VECTOR  (31 downto 0);
---signal  opcode 			: STD_LOGIC_VECTOR  (5 downto 0);
---signal  funct 			: STD_LOGIC_VECTOR  (5 downto 0);
 
 imm <= IR_reg(15 downto 0);
 opcode <= IR_reg(31 downto 26);
