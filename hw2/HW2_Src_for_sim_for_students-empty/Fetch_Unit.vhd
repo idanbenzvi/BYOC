@@ -141,7 +141,9 @@ rdbk15 		<= 		x"00000000";
 --PC register
 process(CK)
 begin
-IMem_adrs <= PC_reg; -- connect PC_reg to IMem
+if CK 'event and CK='1' then -- ASK GENERIC DANNY
+IMem_adrs <= PC_reg; -- connect PC_reg to IMem 
+end if;
 end process;
 
 process(CK,RESET,HOLD)
