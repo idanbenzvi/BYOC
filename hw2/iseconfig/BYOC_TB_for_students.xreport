@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-05-07T17:04:43</DateModified>
+  <DateModified>2017-05-07T20:04:31</DateModified>
   <ModuleName>BYOC_TB_for_students</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2017-05-07T17:28:25</SummaryTimeStamp>
   <SavedFilePath>/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/iseconfig/BYOC_TB_for_students.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/</ImplementationReportsDirectory>
   <DateInitialized>2017-05-03T10:21:14</DateInitialized>

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-04-02T20:38:33</DateModified>
+  <DateModified>2017-05-07T20:01:24</DateModified>
   <ModuleName>p4_top</ModuleName>
   <SummaryTimeStamp>2017-04-02T20:29:00</SummaryTimeStamp>
-  <SavedFilePath>/media/sf_shared_with_vm/byoc2017/projects/hw1/hw1_shared/ISE/iseconfig/p4_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/media/sf_shared_with_vm/byoc2017/projects/hw1/hw1_shared/ISE/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw1/ISE/iseconfig/p4_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw1/ISE/</ImplementationReportsDirectory>
   <DateInitialized>2017-03-28T14:02:59</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

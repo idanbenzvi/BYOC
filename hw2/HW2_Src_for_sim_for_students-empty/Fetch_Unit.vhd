@@ -139,21 +139,23 @@ rdbk15 		<= 		x"00000000";
 -- ============================= IF phase processes ======================================
 -- ========================================= =============================================
 --PC register
+process(CK)
+begin
+IMem_adrs <= PC_reg; -- connect PC_reg to IMem
+end process;
 
 process(CK,RESET,HOLD)
 		begin
 			if RESET = '1' then
 				PC_reg <= x"00400000";
-				IR_reg <= x"00000000";
 				PC_plus_4_pID <= x"00000000";
 			elsif CK 'event and CK = '1' then
 				if HOLD = '0' then
 					PC_reg <= PC_mux_out;
+					PC_plus_4_pID <= PC_plus_4;
 				end if;
 			end if;
 end process;
-
-IMem_adrs <= PC_reg; -- connect PC_reg to IMem
 
 --PC source mux
 
@@ -168,26 +170,36 @@ IMem_adrs <= PC_reg; -- connect PC_reg to IMem
 -- PC Adder - incrementing PC by 4  (create the PC_plus_4 signal)
 process(PC_reg)
 begin
- PC_plus_4 <= PC_reg + 4;
- --TODO : maybe we should add the 'Hold' functionality (Page 3 - last section) - Idan 
- if hold = '1' then
-	PC_Plus_4 <= PC_Plus_4;
- end if;
+	--if CK 'event and CK = '1' then
+	PC_plus_4 <= PC_reg + 4;
+	--end if;
+--TODO : maybe we should add the 'Hold' functionality (Page 3 - last section) - Idan 
+-- if hold = '1' then
+--	PC_Plus_4 <= PC_Plus_4;
+-- end if;
 end process;
 
+-- IR_reg 
+IR_reg <= IMem_rd_data;
 imm <= IR_reg(15 downto 0);
+
 -- TODO: is there a reason to set it here and not using the original one?s
 --opcode <= IR_reg(31 downto 26);
 
 -- imm sign extension	  (create the sext_imm signal)
+process(imm)
+begin
 sext_imm <= x"0000" & imm;
+end process;
 
 -- BRANCH address  (create the branch_adrs signal)
 --branch_adrs <= (imm * 4) + PC_plus_4_pID;
 --branch_adrs <= (imm + imm + imm + imm) + PC_plus_4_pID;
 -- multiplying by 4
-branch_adrs <= (imm & "00") + PC_plus_4_pID;
-
+process(sext_imm,PC_plus_4_pID)
+begin
+branch_adrs <= (sext_imm(29 downto 0) & "00") + PC_plus_4_pID;
+end process;
 
 -- JUMP address    (create the jump_adrs signal)
 --jump_adrs <= PC_plus_4_pID(31 downto 28) & ((b"00" & IR_reg(25 downto 0)) * 4);
@@ -197,16 +209,16 @@ jump_adrs <= PC_plus_4_pID(31 downto 28) & ((IR_reg(25 downto 0)) & b"00");
 jr_adrs <= x"00400004";
 	
 -- PC_plus_4_pID register   (create the PC_plus_4_pID signal)
-process(CK,RESET,HOLD)
-		begin
-			if HOLD = '1' then
-				PC_plus_4_pID <= PC_plus_4; -- TODO: check what todo with hold 
-			elsif RESET = '1' then
-				PC_plus_4_pID <= x"00400000";
-			elsif CK 'event and CK = '1' then
-				PC_plus_4_pID <= PC_plus_4;
-			end if;
-end process;
+--process(CK,RESET,HOLD)
+--		begin
+--			if HOLD = '1' then
+--				PC_plus_4_pID <= PC_plus_4; -- TODO: check what todo with hold 
+--			elsif RESET = '1' then
+--				PC_plus_4_pID <= x"00400000"; -- fixed to 0s
+--			elsif CK 'event and CK = '1' then
+--				PC_plus_4_pID <= PC_plus_4;
+--			end if;
+--end process;
 
 
 opcode <= IR_reg(31 downto 26);

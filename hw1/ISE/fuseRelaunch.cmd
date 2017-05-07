@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/idan/Desktop/p4/ISE/p4_TB_isim_beh.exe" -prj "/home/idan/Desktop/p4/ISE/p4_TB_beh.prj" "work.p4_TB" 
+-intstyle "ise" -incremental -o "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw1/ISE/p4_top_isim_beh.exe" -prj "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw1/ISE/p4_top_beh.prj" "work.p4_top" 
