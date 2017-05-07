@@ -145,7 +145,7 @@ process(CK,RESET,HOLD,PC_mux_out)
 				-- TODO: check what todo with hold
 				PC_reg <= PC_reg;
 			elsif RESET = '1' then
-				PC_reg <= x"4000000";
+				PC_reg <= x"00400000";
 			elsif CK 'event and CK = '1' then
 				PC_reg <= PC_mux_out;
 			end if;
@@ -157,8 +157,7 @@ IMem_adrs <= PC_reg; -- connect PC_reg to IMem
 
 process(PC_Source, PC_plus_4, branch_adrs, jr_adrs, jump_adrs, PC_mux_out)
 begin
-	with PC_Source select
-		PC_mux_out <=
+	with PC_Source select PC_mux_out <=
 		PC_plus_4 when b"00",
 		branch_adrs when b"01",
 		jr_adrs when b"10",
@@ -191,7 +190,7 @@ branch_adrs <= (imm & "00") + PC_plus_4_pID;
 
 -- JUMP address    (create the jump_adrs signal)
 --jump_adrs <= PC_plus_4_pID(31 downto 28) & ((b"00" & IR_reg(25 downto 0)) * 4);
-jump_adrs <= PC_plus_4_pID(31 downto 28) & ((b"00" & IR_reg(25 downto 0)) & "00");
+jump_adrs <= PC_plus_4_pID(31 downto 28) & ((IR_reg(25 downto 0)) & b"00");
 
 -- JR address    (create the jr_adrs signal)  
 jr_adrs <= x"00400004";
@@ -202,7 +201,7 @@ process(CK,RESET,HOLD,PC_plus_4_pID)
 			if HOLD = '1' then
 				PC_plus_4_pID <= PC_plus_4; -- TODO: check what todo with hold 
 			elsif RESET = '1' then
-				PC_plus_4_pID <= x"400000";
+				PC_plus_4_pID <= x"00400000";
 			elsif CK 'event and CK = '1' then
 				PC_plus_4_pID <= PC_plus_4;
 			end if;
@@ -217,8 +216,7 @@ funct  <= IR_reg(5 downto 0);
 -- PC_source decoder  (create the PC_source signal)
 process(opcode,PC_Source)
 begin
-	with opcode  select 
-		PC_Source  <=
+	with opcode select PC_Source <=
 		"11"  when b"000010" , --j
 		"11"  when b"000011", --jal
 		"01"  when b"000100" , --beq
@@ -237,9 +235,6 @@ end process;
 
 -- rdbk signals
 rdbk_vec1  <=  x"0000000" & b"00" & PC_source;
-
-
-
 
 
 

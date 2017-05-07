@@ -22,9 +22,20 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="HW2.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="BYOC_Host_Intf.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="BYOC_Host_Intf.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="BYOC_Host_Intf.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Fetch_Unit.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Fetch_Unit.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Fetch_Unit.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="HW2_top.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="HW2_top.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="HW2_top.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="HW2_top_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
@@ -35,6 +46,10 @@
     <transform xil_pn:end_ts="1493816498" xil_pn:in_ck="3921740978945344919" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1493816498">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="HW2_Src_for_sim_for_students-empty/BYOC_Clock_driver_4sim.vhd"/>
       <outfile xil_pn:name="HW2_Src_for_sim_for_students-empty/BYOC_Host_Intf_4sim.vhd"/>
       <outfile xil_pn:name="HW2_Src_for_sim_for_students-empty/Fetch_Unit.vhd"/>
@@ -58,6 +73,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
