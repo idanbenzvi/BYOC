@@ -349,8 +349,8 @@ begin
 end process;
 
 -- connect MIPS_IMem_rd_data
-MIPS_IMem_rd_data <= IMem_rd_data;
-
+--MIPS_IMem_rd_data <= IMem_rd_data; // renamed for simulation TODO
+IR_reg <= IMem_rd_data;
 -- "actual" IMem process
 read_from_IMem: process (CK)
 begin

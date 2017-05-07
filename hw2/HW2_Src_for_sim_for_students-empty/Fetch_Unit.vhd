@@ -53,11 +53,12 @@ architecture Behavioral of Fetch_Unit is
 
 --- ========================  Host intf signals  =====================================
 --====================================================================================
-signal  RESET 			:STD_LOGIC;-- is coming directly from the Fetch_Unit_Host_intf
-signal  CK 				:STD_LOGIC;-- is coming directly from the Fetch_Unit_Host_intf
-signal  HOLD 			:STD_LOGIC;-- is coming directly from the Fetch_Unit_Host_intf
+--TODO: check that reset and hold signals are correctly defined
+signal 	RESET 			:STD_LOGIC;-- is coming directly from the Fetch_Unit_Host_intf
+signal 	CK 				:STD_LOGIC;-- is coming directly from the Fetch_Unit_Host_intf
+signal 	HOLD 			   :STD_LOGIC;-- is coming directly from the Fetch_Unit_Host_intf
 signal	IMem_adrs 		: STD_LOGIC_VECTOR  (31 downto 0);
-signal  IMem_rd_data	: STD_LOGIC_VECTOR  (31 downto 0);
+signal 	IMem_rd_data	: STD_LOGIC_VECTOR  (31 downto 0);
 
 
 -- ========================  MIPS signals  ==========================================
@@ -139,15 +140,16 @@ rdbk15 		<= 		x"00000000";
 -- ========================================= =============================================
 --PC register
 
-process(CK,RESET,HOLD,PC_mux_out)
+process(CK,RESET,HOLD)
 		begin
-			if HOLD = '1' then
-				-- TODO: check what todo with hold
-				PC_reg <= PC_reg;
-			elsif RESET = '1' then
+			if RESET = '1' then
 				PC_reg <= x"00400000";
+				IR_reg <= x"00000000";
+				PC_plus_4_pID <= x"00000000";
 			elsif CK 'event and CK = '1' then
-				PC_reg <= PC_mux_out;
+				if HOLD = '0' then
+					PC_reg <= PC_mux_out;
+				end if;
 			end if;
 end process;
 
@@ -195,7 +197,7 @@ jump_adrs <= PC_plus_4_pID(31 downto 28) & ((IR_reg(25 downto 0)) & b"00");
 jr_adrs <= x"00400004";
 	
 -- PC_plus_4_pID register   (create the PC_plus_4_pID signal)
-process(CK,RESET,HOLD,PC_plus_4_pID)
+process(CK,RESET,HOLD)
 		begin
 			if HOLD = '1' then
 				PC_plus_4_pID <= PC_plus_4; -- TODO: check what todo with hold 
