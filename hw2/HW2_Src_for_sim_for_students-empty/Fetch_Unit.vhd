@@ -155,15 +155,14 @@ IMem_adrs <= PC_reg; -- connect PC_reg to IMem
 
 --PC source mux
 
-process(PC_Source, PC_plus_4, branch_adrs, jr_adrs, jump_adrs, PC_mux_out)
-begin
+--process(PC_Source, PC_plus_4, branch_adrs, jr_adrs, jump_adrs, PC_mux_out)
+--begin
 	with PC_Source select PC_mux_out <=
 		PC_plus_4 when b"00",
 		branch_adrs when b"01",
 		jr_adrs when b"10",
-		--jump_adrs when "11"
-		jumps_adrs when others;
-end process;
+		jump_adrs when others;
+--end process;
 -- PC Adder - incrementing PC by 4  (create the PC_plus_4 signal)
 process(PC_reg)
 begin
@@ -214,16 +213,16 @@ funct  <= IR_reg(5 downto 0);
 
 
 -- PC_source decoder  (create the PC_source signal)
-process(opcode,PC_Source)
-begin
-	with opcode select PC_Source <=
-		"11"  when b"000010" , --j
-		"11"  when b"000011", --jal
-		"01"  when b"000100" , --beq
-		"01"   when b"000101", --bne
-		"10"  when b"001000", --jr
-		"00"  when  others; --all other commands
-end process;
+--process(opcode,PC_Source)
+--begin
+	with opcode select PC_Source <= 
+		"11" when "000010", --j
+		"11" when "000011", --jal
+		"01" when "000100", --beq
+		"01" when "000101", --bne
+		"10" when "001000", --jr
+		"00" when others; --all other commands
+--end process;
 
 
 
