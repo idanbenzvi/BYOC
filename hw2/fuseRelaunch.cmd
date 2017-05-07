@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/HW2_top_isim_beh.exe" -prj "/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/HW2_top_beh.prj" "work.HW2_top" 
+-intstyle "ise" -incremental -o "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/BYOC_TB_for_students_isim_beh.exe" -prj "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/BYOC_TB_for_students_beh.prj" "work.BYOC_TB_for_students" 

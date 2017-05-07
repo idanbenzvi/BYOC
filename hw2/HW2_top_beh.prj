@@ -1,5 +1,0 @@
-vhdl work "HW2_Src_for_sim_for_students-empty/SIM_HW2_filenames.vhd"
-vhdl work "HW2_Src_for_sim_for_students-empty/Fetch_Unit.vhd"
-vhdl work "HW2_Src_for_sim_for_students-empty/BYOC_Host_Intf_4sim.vhd"
-vhdl work "HW2_Src_for_sim_for_students-empty/BYOC_Clock_driver_4sim.vhd"
-vhdl work "HW2_Src_for_sim_for_students-empty/HW2_top_4sim.vhd"
