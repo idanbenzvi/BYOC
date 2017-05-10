@@ -9,13 +9,13 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Fetch_unit_imp - Fetch_Unit - Behavioral (/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/Fetch_Unit.vhd)</SelectedItem>
+         <SelectedItem>Testing_BYOC_top - HW2_top - Behavioral (/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/HW2_top_4sim.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000004cd000000020000000000000000000000000200000064ffffffff000000810000000300000002000004cd0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Fetch_unit_imp - Fetch_Unit - Behavioral (/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/Fetch_Unit.vhd)</CurrentItem>
+      <CurrentItem>Testing_BYOC_top - HW2_top - Behavioral (/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/HW2_top_4sim.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -109,12 +109,14 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
-      <SelectedItems/>
+      <SelectedItems>
+         <SelectedItem>Fetch_unit_imp - Fetch_Unit - Behavioral (/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/Fetch_Unit.vhd)</SelectedItem>
+      </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000004cd000000020000000000000000000000000200000064ffffffff000000810000000300000002000004cd0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>BYOC_TB_for_students - Testing (/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/SIM_HW2_TB.vhd)</CurrentItem>
+      <CurrentItem>Fetch_unit_imp - Fetch_Unit - Behavioral (/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/Fetch_Unit.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -135,12 +137,12 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f4000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f40000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
 </Project>

@@ -53,12 +53,11 @@ architecture Behavioral of Fetch_Unit is
 
 --- ========================  Host intf signals  =====================================
 --====================================================================================
---TODO: check that reset and hold signals are correctly defined
-signal 	RESET 			:STD_LOGIC;-- is coming directly from the Fetch_Unit_Host_intf
-signal 	CK 				:STD_LOGIC;-- is coming directly from the Fetch_Unit_Host_intf
-signal 	HOLD 			   :STD_LOGIC;-- is coming directly from the Fetch_Unit_Host_intf
+signal  RESET 			:STD_LOGIC;-- is coming directly from the Fetch_Unit_Host_intf
+signal  CK 				:STD_LOGIC;-- is coming directly from the Fetch_Unit_Host_intf
+signal  HOLD 			:STD_LOGIC;-- is coming directly from the Fetch_Unit_Host_intf
 signal	IMem_adrs 		: STD_LOGIC_VECTOR  (31 downto 0);
-signal 	IMem_rd_data	: STD_LOGIC_VECTOR  (31 downto 0);
+signal  IMem_rd_data	: STD_LOGIC_VECTOR  (31 downto 0);
 
 
 -- ========================  MIPS signals  ==========================================
@@ -96,8 +95,6 @@ signal  PC_plus_4_pID 	: STD_LOGIC_VECTOR  (31 downto 0);
 -- additional rdbk signals 
 signal  rdbk_vec1 		: STD_LOGIC_VECTOR  (31 downto 0);
 signal  rdbk_vec2 		: STD_LOGIC_VECTOR  (31 downto 0);
-
-
 
 
 -- ***************************************************************************************************
@@ -139,107 +136,79 @@ rdbk15 		<= 		x"00000000";
 -- ============================= IF phase processes ======================================
 -- ========================================= =============================================
 --PC register
-process(CK)
-begin
-if CK 'event and CK='1' then -- ASK GENERIC DANNY
-IMem_adrs <= PC_reg; -- connect PC_reg to IMem 
-end if;
-end process;
 
-process(CK,RESET,HOLD)
-		begin
-			if RESET = '1' then
-				PC_reg <= x"00400000";
-				PC_plus_4_pID <= x"00000000";
-			elsif CK 'event and CK = '1' then
-				if HOLD = '0' then
-					PC_reg <= PC_mux_out;
-					PC_plus_4_pID <= PC_plus_4;
-				end if;
-			end if;
+IMem_adrs <= PC_reg; -- connect PC_reg to IMem
+
+process(CK,RESET)
+begin
+if RESET = '1' then
+	PC_reg <= x"00400000";
+elsif CK 'event and CK='1' and HOLD ='0' then -- ASK GENERIC DANNY
+	PC_reg <= PC_mux_out ;  
+end if;
 end process;
 
 --PC source mux
 
---process(PC_Source, PC_plus_4, branch_adrs, jr_adrs, jump_adrs, PC_mux_out)
---begin
-	with PC_Source select PC_mux_out <=
-		PC_plus_4 when b"00",
-		branch_adrs when b"01",
-		jr_adrs when b"10",
-		jump_adrs when others;
---end process;
--- PC Adder - incrementing PC by 4  (create the PC_plus_4 signal)
-process(PC_reg)
+process(PC_Source)
 begin
-	--if CK 'event and CK = '1' then
-	PC_plus_4 <= PC_reg + 4;
-	--end if;
---TODO : maybe we should add the 'Hold' functionality (Page 3 - last section) - Idan 
--- if hold = '1' then
---	PC_Plus_4 <= PC_Plus_4;
--- end if;
+	case PC_Source is 
+		when b"00" => PC_Reg <= PC_Plus_4;
+		when b"01" => PC_Reg <= branch_adrs;
+		when b"10" => PC_Reg <= jr_adrs;
+		when others => PC_Reg <= jump_adrs;
+	end case;
 end process;
 
--- IR_reg 
-IR_reg <= IMem_rd_data;
-imm <= IR_reg(15 downto 0);
+-- PC Adder - incrementing PC by 4  (create the PC_plus_4 signal)
+PC_plus_4 <= PC_reg + 4;
 
--- TODO: is there a reason to set it here and not using the original one?s
---opcode <= IR_reg(31 downto 26);
+-- IR_reg   (rename of the IMem_rd_data signal)
+IR_reg <= IMem_rd_data; 
 
 -- imm sign extension	  (create the sext_imm signal)
+imm <=  IR_reg(15 downto 0);
+
 process(imm)
 begin
-sext_imm <= x"0000" & imm;
+	sext_imm <= x"0000" & imm ;
 end process;
 
 -- BRANCH address  (create the branch_adrs signal)
---branch_adrs <= (imm * 4) + PC_plus_4_pID;
---branch_adrs <= (imm + imm + imm + imm) + PC_plus_4_pID;
--- multiplying by 4
-process(sext_imm,PC_plus_4_pID)
-begin
-branch_adrs <= (sext_imm(29 downto 0) & "00") + PC_plus_4_pID;
-end process;
+branch_adrs <= (sext_imm(29 downto 0) & b"00") + PC_plus_4_pID;
 
 -- JUMP address    (create the jump_adrs signal)
---jump_adrs <= PC_plus_4_pID(31 downto 28) & ((b"00" & IR_reg(25 downto 0)) * 4);
-jump_adrs <= PC_plus_4_pID(31 downto 28) & ((IR_reg(25 downto 0)) & b"00");
+jump_adrs <= PC_plus_4_pID(31 downto 28) & ((IR_reg(25 downto 0) & b"00"));
 
 -- JR address    (create the jr_adrs signal)  
 jr_adrs <= x"00400004";
 	
 -- PC_plus_4_pID register   (create the PC_plus_4_pID signal)
---process(CK,RESET,HOLD)
---		begin
---			if HOLD = '1' then
---				PC_plus_4_pID <= PC_plus_4; -- TODO: check what todo with hold 
---			elsif RESET = '1' then
---				PC_plus_4_pID <= x"00400000"; -- fixed to 0s
---			elsif CK 'event and CK = '1' then
---				PC_plus_4_pID <= PC_plus_4;
---			end if;
---end process;
+process(CK,RESET)
+begin
+	if RESET = '1' then
+		PC_plus_4 <= x"00000000";
+	elsif CK 'event and CK = '1' and HOLD= '0' then
+			PC_plus_4_pID <= PC_plus_4;
+	end if;
+end process;
 
-
+-- instruction decoder
 opcode <= IR_reg(31 downto 26);
--- 6 bits of function (the function field codes for RType)
 funct  <= IR_reg(5 downto 0);
 
-
 -- PC_source decoder  (create the PC_source signal)
---process(opcode,PC_Source)
---begin
-	with opcode select PC_Source <= 
-		"11" when "000010", --j
-		"11" when "000011", --jal
-		"01" when "000100", --beq
-		"01" when "000101", --bne
-		"10" when "001000", --jr
-		"00" when others; --all other commands
---end process;
-
+process(opcode) --sensitive to changes in the opcode
+begin
+	case opcode is
+		when "000010" => PC_source <= b"11"; --j
+		when "000011" => PC_source <= b"11"; --jal
+		when "000100" => PC_source <= b"01"; --beq
+		when "000101" => PC_source <= b"01"; --bne
+		when "001000" => PC_source <= b"10"; --jr
+		when others => PC_source <= b"00" ; -- all other commands
+	end case;
+end process;
 
 
 -- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -253,11 +222,13 @@ rdbk_vec1  <=  x"0000000" & b"00" & PC_source;
 
 
 
+
+
+
 end Behavioral;
 
 -- ******************************************************************************************
 -- ******************************************************************************************
-
 
 
 
