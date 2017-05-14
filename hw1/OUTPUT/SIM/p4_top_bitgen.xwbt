@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/media/sf_shared_with_vm/byoc2017/projects/hw1/hw1_shared/ISE/p4_top.ncd
+OUTFILE=/media/sf_shared_with_vm/byoc2017/projects/hw1/hw1_shared/ISE/p4_top.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=/media/sf_shared_with_vm/byoc2017/projects/hw1/hw1_shared/ISE
+LICENSE=WebPack
+USER_INFO=211332431_0_0_471

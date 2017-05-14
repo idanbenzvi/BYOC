@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/idan/Desktop/p4/ISE/p4_TB_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="p4_tb" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wave_markers>
+      <marker time="2002380000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/p4_tb/tb_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_clk</obj_property>
+      <obj_property name="ObjectShortName">tb_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/p4_tb/tb_pbtn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_pbtn</obj_property>
+      <obj_property name="ObjectShortName">tb_pbtn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/p4_tb/tb_switches" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_switches[3:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_switches[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/p4_tb/tb_sevenseg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_sevenseg[6:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_sevenseg[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/p4_tb/tb_anodes" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_anodes[3:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_anodes[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider6" type="divider">
+      <obj_property name="label">signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/p4_tb/Testing_p4/cntr_ck" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cntr_ck</obj_property>
+      <obj_property name="ObjectShortName">cntr_ck</obj_property>
+   </wvobject>
+   <wvobject fp_name="/p4_tb/Testing_p4/osc_ck" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">osc_ck</obj_property>
+      <obj_property name="ObjectShortName">osc_ck</obj_property>
+   </wvobject>
+</wave_config>

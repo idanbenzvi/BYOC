@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/media/sf_shared_with_vm/byoc2017/projects/shared/hw1/ISE/p4_TB_isim_beh.exe" -prj "/media/sf_shared_with_vm/byoc2017/projects/shared/hw1/ISE/p4_TB_beh.prj" "work.p4_TB" 
