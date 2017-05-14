@@ -1,0 +1,10 @@
+PH byoc_filenames NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/SIM_HW2_filenames.vhd sub00/vhpl00 1494178004
+EN clock_driver NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/BYOC_Clock_driver_4sim.vhd sub00/vhpl01 1494178005
+AR hw2_top behavioral /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/HW2_top_4sim.vhd sub00/vhpl08 1494178012
+EN byoc_tb_for_students NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/SIM_HW2_TB.vhd sub00/vhpl09 1494167314
+EN hw2_top NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/HW2_top_4sim.vhd sub00/vhpl07 1494178011
+EN byoc_host_intf NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/BYOC_Host_Intf_4sim.vhd sub00/vhpl03 1494178007
+AR fetch_unit behavioral /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/Fetch_Unit.vhd sub00/vhpl06 1494401591
+EN fetch_unit NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/Fetch_Unit.vhd sub00/vhpl05 1494401590
+AR byoc_host_intf behavioral /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/BYOC_Host_Intf_4sim.vhd sub00/vhpl04 1494178008
+AR clock_driver clock_divider /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/BYOC_Clock_driver_4sim.vhd sub00/vhpl02 1494178006

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="HW2.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="BYOC_Host_Intf.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="BYOC_Host_Intf.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="BYOC_Host_Intf.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="BYOC_Host_Intf_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="BYOC_TB_for_students.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="BYOC_TB_for_students.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="BYOC_TB_for_students.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="BYOC_TB_for_students.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="BYOC_TB_for_students.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="BYOC_TB_for_students.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="BYOC_TB_for_students_envsettings.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="BYOC_TB_for_students_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="BYOC_TB_for_students_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="BYOC_TB_for_students_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="BYOC_TB_for_students_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="BYOC_TB_for_students_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="BYOC_TB_for_students_xst.xrpt"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Clock_Driver_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Fetch_Unit.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Fetch_Unit.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Fetch_Unit.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Fetch_Unit_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="HW2_top.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="HW2_top.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="HW2_top.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="HW2_top_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="HW2_top_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1493816078" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1493816078">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1494406429" xil_pn:in_ck="3921740978945344919" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1494406429">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="HW2_Src_for_sim_for_students-empty/BYOC_Clock_driver_4sim.vhd"/>
+      <outfile xil_pn:name="HW2_Src_for_sim_for_students-empty/BYOC_Host_Intf_4sim.vhd"/>
+      <outfile xil_pn:name="HW2_Src_for_sim_for_students-empty/Fetch_Unit.vhd"/>
+      <outfile xil_pn:name="HW2_Src_for_sim_for_students-empty/HW2_top_4sim.vhd"/>
+      <outfile xil_pn:name="HW2_Src_for_sim_for_students-empty/SIM_HW2_TB.vhd"/>
+      <outfile xil_pn:name="HW2_Src_for_sim_for_students-empty/SIM_HW2_filenames.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1494402563" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4783330819911247269" xil_pn:start_ts="1494402563">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1494402563" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-802934320669705497" xil_pn:start_ts="1494402563">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1493816078" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-6909467997851414291" xil_pn:start_ts="1493816078">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1494406429" xil_pn:in_ck="3921740978945344919" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1494406429">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="HW2_Src_for_sim_for_students-empty/BYOC_Clock_driver_4sim.vhd"/>
+      <outfile xil_pn:name="HW2_Src_for_sim_for_students-empty/BYOC_Host_Intf_4sim.vhd"/>
+      <outfile xil_pn:name="HW2_Src_for_sim_for_students-empty/Fetch_Unit.vhd"/>
+      <outfile xil_pn:name="HW2_Src_for_sim_for_students-empty/HW2_top_4sim.vhd"/>
+      <outfile xil_pn:name="HW2_Src_for_sim_for_students-empty/SIM_HW2_TB.vhd"/>
+      <outfile xil_pn:name="HW2_Src_for_sim_for_students-empty/SIM_HW2_filenames.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1494406431" xil_pn:in_ck="3921740978945344919" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4370909857455213310" xil_pn:start_ts="1494406429">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1494406094" xil_pn:in_ck="-2245705099232481431" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1070957045861215851" xil_pn:start_ts="1494406094">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForced"/>
+      <outfile xil_pn:name="BYOC_TB_for_students_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+    </transform>
+    <transform xil_pn:end_ts="1494166416" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1494166416">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1494166416" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="17142014770184871" xil_pn:start_ts="1494166416">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1494166416" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-6909467997851414291" xil_pn:start_ts="1494166416">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1494166416" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1494166416">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1494166416" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="4783330819911247269" xil_pn:start_ts="1494166416">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1494166416" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3893270297158069842" xil_pn:start_ts="1494166416">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1494166416" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="7814594626039001783" xil_pn:start_ts="1494166416">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1494167305" xil_pn:in_ck="3921740978945344919" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="5353315324339016810" xil_pn:start_ts="1494167302">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name=".lso"/>
+      <outfile xil_pn:name="BYOC_TB_for_students.lso"/>
+      <outfile xil_pn:name="BYOC_TB_for_students.prj"/>
+      <outfile xil_pn:name="BYOC_TB_for_students.syr"/>
+      <outfile xil_pn:name="BYOC_TB_for_students.xst"/>
+      <outfile xil_pn:name="BYOC_TB_for_students_vhdl.prj"/>
+      <outfile xil_pn:name="BYOC_TB_for_students_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1494166419" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="3182441760757241402" xil_pn:start_ts="1494166419">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+  </transforms>
+
+</generated_project>

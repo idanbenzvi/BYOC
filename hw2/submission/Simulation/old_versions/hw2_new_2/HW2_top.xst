@@ -1,0 +1,5 @@
+set -tmpdir "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/xst/projnav.tmp"
+set -xsthdpdir "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/xst"
+elaborate
+-ifn HW2_top.prj
+-ifmt mixed

@@ -1,0 +1,39 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/SIM_HW2_filenames.vhd" in Library work.
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw2/HW2_Src_for_sim_for_students-empty/BYOC_Host_Intf_4sim.vhd" in Library work.
+Architecture behavioral of Entity byoc_host_intf is up to date.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+
+
+Total memory usage is 471976 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
