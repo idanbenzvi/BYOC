@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun May 14 18:00:01 2017
+// Written by: Map P.20131013 on Sun May 14 18:43:06 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -807,7 +807,7 @@ TIMEGRP clock_divider/half_ck_signal = BEL "clock_divider/half_ck_signal" BEL
         "hostintf/DMem_in_host_intf/kbintf/scan_code_shift_reg_30" BEL
         "hostintf/DMem_in_host_intf/kbintf/Mshreg_scan_code_shift_reg_19" BEL
         "hostintf/DMem_in_host_intf/kbintf/scan_code_shift_reg_19" BEL
-        "CK_out_to_TB" BEL "clock_divider/CK_OUT_BUFG_INST.GCLKMUX" BEL
+        "clock_divider/CK_OUT_BUFG_INST.GCLKMUX" BEL
         "clock_divider/CK_OUT_BUFG_INST";
 TS_CK_50MHz = PERIOD TIMEGRP "CK_50MHz" 20 ns HIGH 50%;
 TS_clock_divider_half_ck_signal = PERIOD TIMEGRP
