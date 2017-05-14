@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;RS232_Tx&quot; LOC= &quot;P9&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(3)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">RS232_Tx</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;RS232_Tx&quot; LOC= &quot;P9&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(3)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">RS232_Tx</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -13,7 +13,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;RS232_Tx&quot; LOC= &quot;P9&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(3)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;RS232_Rx&quot; LOC= &quot;U6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(4)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">RS232_Rx</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;RS232_Rx&quot; LOC= &quot;U6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(4)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">RS232_Rx</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -21,7 +21,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;RS232_Rx&quot; LOC= &quot;U6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(4)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;CK_50MHz&quot;  	 LOC= &quot;B8&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(7)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">CK_50MHz</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;CK_50MHz&quot;  	 LOC= &quot;B8&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(7)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">CK_50MHz</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -29,7 +29,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;CK_50MHz&quot;  	 LOC= &quot;B8&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(7)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;buttons_in&lt;0&gt;&quot;   LOC= &quot;B18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(10)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">buttons_in&lt;0&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;buttons_in&lt;0&gt;&quot;   LOC= &quot;B18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(10)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">buttons_in&lt;0&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -37,7 +37,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;buttons_in&lt;0&gt;&quot;   LOC= &quot;B18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(10)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;buttons_in&lt;1&gt;&quot;   LOC= &quot;D18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(11)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">buttons_in&lt;1&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;buttons_in&lt;1&gt;&quot;   LOC= &quot;D18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(11)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">buttons_in&lt;1&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -45,7 +45,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;buttons_in&lt;1&gt;&quot;   LOC= &quot;D18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(11)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;buttons_in&lt;2&gt;&quot;   LOC= &quot;E18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(12)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">buttons_in&lt;2&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;buttons_in&lt;2&gt;&quot;   LOC= &quot;E18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(12)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">buttons_in&lt;2&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -53,7 +53,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;buttons_in&lt;2&gt;&quot;   LOC= &quot;E18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(12)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;buttons_in&lt;3&gt;&quot;   LOC= &quot;H13&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(13)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">buttons_in&lt;3&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;buttons_in&lt;3&gt;&quot;   LOC= &quot;H13&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(13)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">buttons_in&lt;3&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -61,7 +61,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;buttons_in&lt;3&gt;&quot;   LOC= &quot;H13&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(13)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;0&gt;&quot;  LOC= &quot;G18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(16)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;0&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;0&gt;&quot;  LOC= &quot;G18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(16)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;0&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -69,7 +69,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;switches_in&lt;0&gt;&quot;  LOC= &quot;G18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(16)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;1&gt;&quot;  LOC= &quot;H18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(17)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;1&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;1&gt;&quot;  LOC= &quot;H18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(17)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;1&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -77,7 +77,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;switches_in&lt;1&gt;&quot;  LOC= &quot;H18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(17)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;2&gt;&quot;  LOC= &quot;K18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(18)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;2&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;2&gt;&quot;  LOC= &quot;K18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(18)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;2&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -85,7 +85,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;switches_in&lt;2&gt;&quot;  LOC= &quot;K18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(18)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;3&gt;&quot;  LOC= &quot;K17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(19)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;3&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;3&gt;&quot;  LOC= &quot;K17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(19)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;3&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -93,7 +93,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;switches_in&lt;3&gt;&quot;  LOC= &quot;K17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(19)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;4&gt;&quot;  LOC= &quot;L14&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(20)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;4&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;4&gt;&quot;  LOC= &quot;L14&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(20)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;4&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -101,7 +101,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;switches_in&lt;4&gt;&quot;  LOC= &quot;L14&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(20)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;5&gt;&quot;  LOC= &quot;L13&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(21)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;5&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;5&gt;&quot;  LOC= &quot;L13&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(21)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;5&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -109,7 +109,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;switches_in&lt;5&gt;&quot;  LOC= &quot;L13&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(21)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;6&gt;&quot;  LOC= &quot;N17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(22)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;6&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;6&gt;&quot;  LOC= &quot;N17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(22)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;6&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -117,7 +117,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;switches_in&lt;6&gt;&quot;  LOC= &quot;N17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(22)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;7&gt;&quot;  LOC= &quot;R17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(23)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;7&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;switches_in&lt;7&gt;&quot;  LOC= &quot;R17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(23)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">switches_in&lt;7&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -125,7 +125,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;switches_in&lt;7&gt;&quot;  LOC= &quot;R17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(23)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_h_sync&quot; LOC= &quot;T4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(26)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_h_sync</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_h_sync&quot; LOC= &quot;T4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(26)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_h_sync</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -133,7 +133,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;VGA_h_sync&quot; LOC= &quot;T4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(26)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_v_sync&quot; LOC= &quot;U3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(27)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_v_sync</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_v_sync&quot; LOC= &quot;U3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(27)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_v_sync</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -141,7 +141,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;VGA_v_sync&quot; LOC= &quot;U3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(27)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_red0&quot; LOC= &quot;R9&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(28)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_red0</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_red0&quot; LOC= &quot;R9&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(28)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_red0</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -149,7 +149,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;VGA_red0&quot; LOC= &quot;R9&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(28)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_red1&quot; LOC= &quot;T8&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(29)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_red1</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_red1&quot; LOC= &quot;T8&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(29)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_red1</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -157,7 +157,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;VGA_red1&quot; LOC= &quot;T8&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(29)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_red2&quot; LOC= &quot;R8&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(30)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_red2</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_red2&quot; LOC= &quot;R8&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(30)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_red2</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -165,7 +165,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;VGA_red2&quot; LOC= &quot;R8&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(30)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_grn0&quot; LOC= &quot;N8&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(31)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_grn0</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_grn0&quot; LOC= &quot;N8&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(31)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_grn0</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -173,7 +173,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;VGA_grn0&quot; LOC= &quot;N8&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(31)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_grn1&quot; LOC= &quot;P8&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(32)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_grn1</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_grn1&quot; LOC= &quot;P8&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(32)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_grn1</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -181,7 +181,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;VGA_grn1&quot; LOC= &quot;P8&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(32)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_grn2&quot; LOC= &quot;P6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(33)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_grn2</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_grn2&quot; LOC= &quot;P6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(33)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_grn2</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -189,7 +189,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;VGA_grn2&quot; LOC= &quot;P6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(33)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_blu1&quot; LOC= &quot;U5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(34)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_blu1</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_blu1&quot; LOC= &quot;U5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(34)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_blu1</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -197,7 +197,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;VGA_blu1&quot; LOC= &quot;U5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(34)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_blu2&quot; LOC= &quot;U4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(35)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_blu2</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;VGA_blu2&quot; LOC= &quot;U4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(35)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">VGA_blu2</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -205,7 +205,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;VGA_blu2&quot; LOC= &quot;U4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(35)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;anodes_out&lt;0&gt;&quot; LOC= &quot;F17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(38)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">anodes_out&lt;0&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;anodes_out&lt;0&gt;&quot; LOC= &quot;F17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(38)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">anodes_out&lt;0&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -213,7 +213,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;anodes_out&lt;0&gt;&quot; LOC= &quot;F17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(38)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;anodes_out&lt;1&gt;&quot; LOC= &quot;H17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(39)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">anodes_out&lt;1&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;anodes_out&lt;1&gt;&quot; LOC= &quot;H17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(39)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">anodes_out&lt;1&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -221,7 +221,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;anodes_out&lt;1&gt;&quot; LOC= &quot;H17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(39)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;anodes_out&lt;2&gt;&quot; LOC= &quot;C18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(40)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">anodes_out&lt;2&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;anodes_out&lt;2&gt;&quot; LOC= &quot;C18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(40)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">anodes_out&lt;2&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -229,7 +229,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;anodes_out&lt;2&gt;&quot; LOC= &quot;C18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(40)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;anodes_out&lt;3&gt;&quot; LOC= &quot;F15&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(41)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">anodes_out&lt;3&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;anodes_out&lt;3&gt;&quot; LOC= &quot;F15&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(41)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">anodes_out&lt;3&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -237,7 +237,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;anodes_out&lt;3&gt;&quot; LOC= &quot;F15&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(41)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sevenseg_out&lt;0&gt;&quot; LOC= &quot;L18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(43)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sevenseg_out&lt;0&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sevenseg_out&lt;0&gt;&quot; LOC= &quot;L18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(43)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sevenseg_out&lt;0&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -245,7 +245,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;sevenseg_out&lt;0&gt;&quot; LOC= &quot;L18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(43)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sevenseg_out&lt;1&gt;&quot; LOC= &quot;F18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(44)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sevenseg_out&lt;1&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sevenseg_out&lt;1&gt;&quot; LOC= &quot;F18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(44)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sevenseg_out&lt;1&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -253,7 +253,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;sevenseg_out&lt;1&gt;&quot; LOC= &quot;F18&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(44)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sevenseg_out&lt;2&gt;&quot; LOC= &quot;D17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(45)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sevenseg_out&lt;2&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sevenseg_out&lt;2&gt;&quot; LOC= &quot;D17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(45)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sevenseg_out&lt;2&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -261,7 +261,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;sevenseg_out&lt;2&gt;&quot; LOC= &quot;D17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(45)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sevenseg_out&lt;3&gt;&quot; LOC= &quot;D16&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(46)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sevenseg_out&lt;3&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sevenseg_out&lt;3&gt;&quot; LOC= &quot;D16&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(46)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sevenseg_out&lt;3&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -269,7 +269,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;sevenseg_out&lt;3&gt;&quot; LOC= &quot;D16&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(46)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sevenseg_out&lt;4&gt;&quot; LOC= &quot;G14&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(47)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sevenseg_out&lt;4&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sevenseg_out&lt;4&gt;&quot; LOC= &quot;G14&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(47)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sevenseg_out&lt;4&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -277,7 +277,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;sevenseg_out&lt;4&gt;&quot; LOC= &quot;G14&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(47)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sevenseg_out&lt;5&gt;&quot; LOC= &quot;J17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(48)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sevenseg_out&lt;5&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sevenseg_out&lt;5&gt;&quot; LOC= &quot;J17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(48)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sevenseg_out&lt;5&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -285,7 +285,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;sevenseg_out&lt;5&gt;&quot; LOC= &quot;J17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(48)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sevenseg_out&lt;6&gt;&quot; LOC= &quot;H14&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(49)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sevenseg_out&lt;6&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sevenseg_out&lt;6&gt;&quot; LOC= &quot;H14&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(49)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sevenseg_out&lt;6&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -293,7 +293,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;sevenseg_out&lt;6&gt;&quot; LOC= &quot;H14&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(49)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;0&gt;&quot;  LOC= &quot;J14&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(52)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;0&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;0&gt;&quot;  LOC= &quot;J14&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(52)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;0&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -301,7 +301,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;leds_out&lt;0&gt;&quot;  LOC= &quot;J14&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(52)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;1&gt;&quot;  LOC= &quot;J15&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(53)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;1&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;1&gt;&quot;  LOC= &quot;J15&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(53)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;1&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -309,7 +309,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;leds_out&lt;1&gt;&quot;  LOC= &quot;J15&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(53)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;2&gt;&quot;  LOC= &quot;K15&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(54)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;2&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;2&gt;&quot;  LOC= &quot;K15&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(54)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;2&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -317,7 +317,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;leds_out&lt;2&gt;&quot;  LOC= &quot;K15&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(54)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;3&gt;&quot;  LOC= &quot;K14&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(55)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;3&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;3&gt;&quot;  LOC= &quot;K14&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(55)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;3&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -325,7 +325,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;leds_out&lt;3&gt;&quot;  LOC= &quot;K14&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(55)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;4&gt;&quot;  LOC= &quot;E17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(56)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;4&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;4&gt;&quot;  LOC= &quot;E17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(56)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;4&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -333,7 +333,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;leds_out&lt;4&gt;&quot;  LOC= &quot;E17&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(56)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;5&gt;&quot;  LOC= &quot;P15&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(57)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;5&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;5&gt;&quot;  LOC= &quot;P15&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(57)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;5&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -341,7 +341,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;leds_out&lt;5&gt;&quot;  LOC= &quot;P15&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(57)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;6&gt;&quot;  LOC= &quot;F4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(58)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;6&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;6&gt;&quot;  LOC= &quot;F4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(58)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;6&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -349,7 +349,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;leds_out&lt;6&gt;&quot;  LOC= &quot;F4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(58)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;7&gt;&quot;  LOC= &quot;R4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(59)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;7&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;leds_out&lt;7&gt;&quot;  LOC= &quot;R4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(59)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">leds_out&lt;7&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -357,7 +357,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;leds_out&lt;7&gt;&quot;  LOC= &quot;R4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(59)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;1&gt;&quot; 	LOC=  &quot;J1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(63)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;1&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;1&gt;&quot; 	LOC=  &quot;J1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(63)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;1&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -365,7 +365,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;1&gt;&quot; 	LOC=  &quot;J1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(63)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;2&gt;&quot; 	LOC=  &quot;J2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(64)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;2&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;2&gt;&quot; 	LOC=  &quot;J2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(64)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;2&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -373,7 +373,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;2&gt;&quot; 	LOC=  &quot;J2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(64)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;3&gt;&quot; 	LOC=  &quot;H4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(65)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;3&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;3&gt;&quot; 	LOC=  &quot;H4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(65)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;3&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -381,7 +381,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;3&gt;&quot; 	LOC=  &quot;H4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(65)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;4&gt;&quot; 	LOC=  &quot;H1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(66)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;4&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;4&gt;&quot; 	LOC=  &quot;H1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(66)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;4&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -389,7 +389,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;4&gt;&quot; 	LOC=  &quot;H1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(66)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;5&gt;&quot; 	LOC=  &quot;H2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(67)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;5&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;5&gt;&quot; 	LOC=  &quot;H2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(67)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;5&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -397,7 +397,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;5&gt;&quot; 	LOC=  &quot;H2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(67)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;6&gt;&quot; 	LOC=  &quot;J5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(68)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;6&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;6&gt;&quot; 	LOC=  &quot;J5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(68)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;6&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -405,7 +405,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;6&gt;&quot; 	LOC=  &quot;J5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(68)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;7&gt;&quot; 	LOC=  &quot;H3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(69)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;7&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;7&gt;&quot; 	LOC=  &quot;H3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(69)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;7&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -413,7 +413,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;7&gt;&quot; 	LOC=  &quot;H3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(69)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;8&gt;&quot; 	LOC=  &quot;H6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(70)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;8&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;8&gt;&quot; 	LOC=  &quot;H6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(70)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;8&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -421,7 +421,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;8&gt;&quot; 	LOC=  &quot;H6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(70)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;9&gt;&quot; 	LOC=  &quot;F1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(71)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;9&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;9&gt;&quot; 	LOC=  &quot;F1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(71)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;9&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -429,7 +429,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;9&gt;&quot; 	LOC=  &quot;F1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(71)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;10&gt;&quot; 	LOC=  &quot;G3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(72)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;10&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;10&gt;&quot; 	LOC=  &quot;G3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(72)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;10&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -437,7 +437,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;10&gt;&quot; 	LOC=  &quot;G3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(72)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;11&gt;&quot; 	LOC=  &quot;G6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(73)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;11&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;11&gt;&quot; 	LOC=  &quot;G6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(73)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;11&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -445,7 +445,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;11&gt;&quot; 	LOC=  &quot;G6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(73)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;12&gt;&quot; 	LOC=  &quot;G5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(74)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;12&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;12&gt;&quot; 	LOC=  &quot;G5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(74)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;12&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -453,7 +453,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;12&gt;&quot; 	LOC=  &quot;G5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(74)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;13&gt;&quot; 	LOC=  &quot;G4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(75)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;13&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;13&gt;&quot; 	LOC=  &quot;G4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(75)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;13&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -461,7 +461,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;13&gt;&quot; 	LOC=  &quot;G4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(75)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;14&gt;&quot; 	LOC=  &quot;F2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(76)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;14&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;14&gt;&quot; 	LOC=  &quot;F2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(76)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;14&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -469,7 +469,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;14&gt;&quot; 	LOC=  &quot;F2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(76)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;15&gt;&quot; 	LOC=  &quot;E1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(77)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;15&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;15&gt;&quot; 	LOC=  &quot;E1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(77)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;15&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -477,7 +477,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;15&gt;&quot; 	LOC=  &quot;E1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(77)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;16&gt;&quot; 	LOC=  &quot;M5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(78)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;16&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;16&gt;&quot; 	LOC=  &quot;M5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(78)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;16&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -485,7 +485,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;16&gt;&quot; 	LOC=  &quot;M5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(78)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;17&gt;&quot; 	LOC=  &quot;E2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(79)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;17&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;17&gt;&quot; 	LOC=  &quot;E2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(79)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;17&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -493,7 +493,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;17&gt;&quot; 	LOC=  &quot;E2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(79)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;18&gt;&quot; 	LOC=  &quot;C2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(80)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;18&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;18&gt;&quot; 	LOC=  &quot;C2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(80)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;18&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -501,7 +501,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;18&gt;&quot; 	LOC=  &quot;C2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(80)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;19&gt;&quot; 	LOC=  &quot;C1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(81)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;19&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;19&gt;&quot; 	LOC=  &quot;C1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(81)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;19&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -509,7 +509,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;19&gt;&quot; 	LOC=  &quot;C1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(81)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;20&gt;&quot; 	LOC=  &quot;D2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(82)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;20&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;20&gt;&quot; 	LOC=  &quot;D2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(82)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;20&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -517,7 +517,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;20&gt;&quot; 	LOC=  &quot;D2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(82)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;21&gt;&quot; 	LOC=  &quot;K3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(83)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;21&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;21&gt;&quot; 	LOC=  &quot;K3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(83)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;21&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -525,7 +525,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;21&gt;&quot; 	LOC=  &quot;K3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(83)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;22&gt;&quot; 	LOC=  &quot;D1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(84)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;22&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;22&gt;&quot; 	LOC=  &quot;D1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(84)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;22&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -533,7 +533,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;22&gt;&quot; 	LOC=  &quot;D1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(84)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;23&gt;&quot; 	LOC=  &quot;K6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(85)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;23&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_adrs&lt;23&gt;&quot; 	LOC=  &quot;K6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(85)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_adrs&lt;23&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -541,7 +541,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_adrs&lt;23&gt;&quot; 	LOC=  &quot;K6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(85)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;MT_ce_n&quot;      LOC= &quot;R6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(87)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">MT_ce_n</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;MT_ce_n&quot;      LOC= &quot;R6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(87)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">MT_ce_n</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -549,7 +549,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;MT_ce_n&quot;      LOC= &quot;R6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(87)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_ce_n&quot;      LOC= &quot;R5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(89)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_ce_n</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_ce_n&quot;      LOC= &quot;R5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(89)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_ce_n</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -557,7 +557,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_ce_n&quot;      LOC= &quot;R5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(89)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_we_n&quot;      LOC= &quot;N7&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(90)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_we_n</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_we_n&quot;      LOC= &quot;N7&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(90)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_we_n</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -565,7 +565,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_we_n&quot;      LOC= &quot;N7&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(90)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_oe_n&quot;      LOC= &quot;T2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(91)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_oe_n</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_oe_n&quot;      LOC= &quot;T2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(91)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_oe_n</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -573,7 +573,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_oe_n&quot;      LOC= &quot;T2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(91)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_rp_n&quot;      LOC= &quot;T5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(92)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_rp_n</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_rp_n&quot;      LOC= &quot;T5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(92)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_rp_n</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -581,7 +581,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_rp_n&quot;      LOC= &quot;T5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(92)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_sts&quot;       LOC= &quot;D3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(93)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_sts</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_sts&quot;       LOC= &quot;D3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(93)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_sts</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -589,7 +589,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_sts&quot;       LOC= &quot;D3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(93)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;0&gt;&quot;  LOC= &quot;L1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(95)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;0&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;0&gt;&quot;  LOC= &quot;L1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(95)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;0&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -597,7 +597,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;0&gt;&quot;  LOC= &quot;L1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(95)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;1&gt;&quot;  LOC= &quot;L4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(96)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;1&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;1&gt;&quot;  LOC= &quot;L4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(96)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;1&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -605,7 +605,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;1&gt;&quot;  LOC= &quot;L4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(96)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;2&gt;&quot;  LOC= &quot;L6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(97)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;2&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;2&gt;&quot;  LOC= &quot;L6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(97)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;2&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -613,7 +613,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;2&gt;&quot;  LOC= &quot;L6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(97)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;3&gt;&quot;  LOC= &quot;M4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(98)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;3&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;3&gt;&quot;  LOC= &quot;M4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(98)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;3&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -621,7 +621,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;3&gt;&quot;  LOC= &quot;M4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(98)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;4&gt;&quot;  LOC= &quot;N5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(99)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;4&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;4&gt;&quot;  LOC= &quot;N5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(99)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;4&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -629,7 +629,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;4&gt;&quot;  LOC= &quot;N5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(99)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;5&gt;&quot;  LOC= &quot;P1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(100)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;5&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;5&gt;&quot;  LOC= &quot;P1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(100)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;5&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -637,7 +637,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;5&gt;&quot;  LOC= &quot;P1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(100)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;6&gt;&quot;  LOC= &quot;P2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(101)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;6&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;6&gt;&quot;  LOC= &quot;P2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(101)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;6&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -645,7 +645,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;6&gt;&quot;  LOC= &quot;P2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(101)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;7&gt;&quot;  LOC= &quot;R2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(102)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;7&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;7&gt;&quot;  LOC= &quot;R2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(102)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;7&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -653,7 +653,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;7&gt;&quot;  LOC= &quot;R2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(102)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;8&gt;&quot;  LOC= &quot;L3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(103)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;8&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;8&gt;&quot;  LOC= &quot;L3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(103)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;8&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -661,7 +661,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;8&gt;&quot;  LOC= &quot;L3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(103)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;9&gt;&quot;  LOC= &quot;L5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(104)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;9&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;9&gt;&quot;  LOC= &quot;L5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(104)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;9&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -669,7 +669,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;9&gt;&quot;  LOC= &quot;L5&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(104)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;10&gt;&quot;  LOC= &quot;M3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(105)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;10&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;10&gt;&quot;  LOC= &quot;M3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(105)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;10&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -677,7 +677,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;10&gt;&quot;  LOC= &quot;M3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(105)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;11&gt;&quot;  LOC= &quot;M6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(106)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;11&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;11&gt;&quot;  LOC= &quot;M6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(106)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;11&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -685,7 +685,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;11&gt;&quot;  LOC= &quot;M6&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(106)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;12&gt;&quot;  LOC= &quot;L2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(107)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;12&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;12&gt;&quot;  LOC= &quot;L2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(107)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;12&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -693,7 +693,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;12&gt;&quot;  LOC= &quot;L2&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(107)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;13&gt;&quot;  LOC= &quot;N4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(108)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;13&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;13&gt;&quot;  LOC= &quot;N4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(108)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;13&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -701,7 +701,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;13&gt;&quot;  LOC= &quot;N4&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(108)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;14&gt;&quot;  LOC= &quot;R3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(109)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;14&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;14&gt;&quot;  LOC= &quot;R3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(109)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;14&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -709,7 +709,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;14&gt;&quot;  LOC= &quot;R3&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(109)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;15&gt;&quot;  LOC= &quot;T1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(110)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;15&gt;</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Flash_data&lt;15&gt;&quot;  LOC= &quot;T1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(110)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Flash_data&lt;15&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -717,7 +717,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Flash_data&lt;15&gt;&quot;  LOC= &quot;T1&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(110)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;PS2C&quot; LOC= &quot;R12&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(114)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">PS2C</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;PS2C&quot; LOC= &quot;R12&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(114)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">PS2C</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -725,7 +725,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;PS2C&quot; LOC= &quot;R12&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(114)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;PS2D&quot; LOC= &quot;P11&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(115)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">PS2D</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;PS2D&quot; LOC= &quot;P11&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(115)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">PS2D</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
@@ -733,35 +733,35 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;PS2D&quot; LOC= &quot;P11&quot;;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(115)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;CK_50MHz&quot; TNM_NET = CK_50MHz;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(119)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">CK_50MHz</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;CK_50MHz&quot; TNM_NET = CK_50MHz;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(119)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">CK_50MHz</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="56" delta="new" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_CK_50MHz = PERIOD &quot;CK_50MHz&quot; 20 ns HIGH 50%;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(120)]</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TNM&apos; or &apos;TimeGrp&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">CK_50MHz</arg>&apos;.
+<msg type="warning" file="ConstraintSystem" num="56" delta="old" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_CK_50MHz = PERIOD &quot;CK_50MHz&quot; 20 ns HIGH 50%;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(120)]</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TNM&apos; or &apos;TimeGrp&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">CK_50MHz</arg>&apos;.
 </msg>
 
-<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;clock_divider/half_ck_signal&quot; TNM_NET = clock_divider/half_ck_signal;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(121)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">clock_divider/half_ck_signal</arg>&quot; not found.  Please verify that:
+<msg type="error" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;clock_divider/half_ck_signal&quot; TNM_NET = clock_divider/half_ck_signal;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(121)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">clock_divider/half_ck_signal</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="56" delta="new" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_clock_divider_half_ck_signal = PERIOD &quot;clock_divider/half_ck_signal&quot; 30 ns HIGH 50%;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(123)]</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TNM&apos; or &apos;TimeGrp&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">clock_divider/half_ck_signal</arg>&apos;.
+<msg type="warning" file="ConstraintSystem" num="56" delta="old" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_clock_divider_half_ck_signal = PERIOD &quot;clock_divider/half_ck_signal&quot; 30 ns HIGH 50%;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(123)]</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TNM&apos; or &apos;TimeGrp&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">clock_divider/half_ck_signal</arg>&apos;.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="191" delta="new" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">CK_50MHz</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMS and cannot be actively used by the referencing <arg fmt="%s" index="3">Period</arg> constraint &apos;<arg fmt="%s" index="4">TS_CK_50MHz</arg>&apos;. If clock manager blocks are directly or indirectly driven, a new TNM constraint will not be derived even though the referencing constraint is a PERIOD constraint unless an output of the clock manager drives flip-flops, latches or RAMs. This TNM is used in the following user PERIOD specification:
+<msg type="warning" file="ConstraintSystem" num="191" delta="old" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">CK_50MHz</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMS and cannot be actively used by the referencing <arg fmt="%s" index="3">Period</arg> constraint &apos;<arg fmt="%s" index="4">TS_CK_50MHz</arg>&apos;. If clock manager blocks are directly or indirectly driven, a new TNM constraint will not be derived even though the referencing constraint is a PERIOD constraint unless an output of the clock manager drives flip-flops, latches or RAMs. This TNM is used in the following user PERIOD specification:
 <arg fmt="%s" index="5">&lt;TIMESPEC TS_CK_50MHz = PERIOD &quot;CK_50MHz&quot; 20 ns HIGH 50%;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(120)]
 </arg></msg>
 
-<msg type="warning" file="ConstraintSystem" num="197" delta="new" >The following specification is invalid because the referenced TNM constraint was removed:
+<msg type="warning" file="ConstraintSystem" num="197" delta="old" >The following specification is invalid because the referenced TNM constraint was removed:
 <arg fmt="%s" index="1">&lt;TIMESPEC TS_CK_50MHz = PERIOD &quot;CK_50MHz&quot; 20 ns HIGH 50%;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(120)]</arg>
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="191" delta="new" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clock_divider/half_ck_signal</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMS and cannot be actively used by the referencing <arg fmt="%s" index="3">Period</arg> constraint &apos;<arg fmt="%s" index="4">TS_clock_divider_half_ck_signal</arg>&apos;. If clock manager blocks are directly or indirectly driven, a new TNM constraint will not be derived even though the referencing constraint is a PERIOD constraint unless an output of the clock manager drives flip-flops, latches or RAMs. This TNM is used in the following user PERIOD specification:
+<msg type="warning" file="ConstraintSystem" num="191" delta="old" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clock_divider/half_ck_signal</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMS and cannot be actively used by the referencing <arg fmt="%s" index="3">Period</arg> constraint &apos;<arg fmt="%s" index="4">TS_clock_divider_half_ck_signal</arg>&apos;. If clock manager blocks are directly or indirectly driven, a new TNM constraint will not be derived even though the referencing constraint is a PERIOD constraint unless an output of the clock manager drives flip-flops, latches or RAMs. This TNM is used in the following user PERIOD specification:
 <arg fmt="%s" index="5">&lt;TIMESPEC TS_clock_divider_half_ck_signal = PERIOD &quot;clock_divider/half_ck_signal&quot; 30 ns HIGH 50%;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(123)]
 </arg></msg>
 
-<msg type="warning" file="ConstraintSystem" num="197" delta="new" >The following specification is invalid because the referenced TNM constraint was removed:
+<msg type="warning" file="ConstraintSystem" num="197" delta="old" >The following specification is invalid because the referenced TNM constraint was removed:
 <arg fmt="%s" index="1">&lt;TIMESPEC TS_clock_divider_half_ck_signal = PERIOD &quot;clock_divider/half_ck_signal&quot; 30 ns HIGH 50%;&gt; [/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf(123)]</arg>
 </msg>
 

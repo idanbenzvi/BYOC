@@ -74,10 +74,12 @@
     <transform xil_pn:end_ts="1494774095" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-3697484827929253263" xil_pn:start_ts="1494774095">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1494774095" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-3386868360092761673" xil_pn:start_ts="1494774095">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1494773464" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1494773464">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -86,18 +88,26 @@
     <transform xil_pn:end_ts="1494774095" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="778829794903127535" xil_pn:start_ts="1494774095">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1494773464" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3893270297158069842" xil_pn:start_ts="1494773464">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1494774095" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-6998327652241479423" xil_pn:start_ts="1494774095">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1494774106" xil_pn:in_ck="-4438053786827806152" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="4221865520417479912" xil_pn:start_ts="1494774095">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="Clock_Driver.lso"/>
       <outfile xil_pn:name="Clock_Driver.ngc"/>
@@ -114,11 +124,14 @@
     <transform xil_pn:end_ts="1494774108" xil_pn:in_ck="-1484871127860228369" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-1934955939934910652" xil_pn:start_ts="1494774108">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1494774115" xil_pn:in_ck="4103207044368724194" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="7211270997594716644" xil_pn:start_ts="1494774108">
+    <transform xil_pn:end_ts="1494774459" xil_pn:in_ck="4103207044368724194" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="7211270997594716644" xil_pn:start_ts="1494774453">
       <status xil_pn:value="FailedRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="Clock_Driver.bld"/>
       <outfile xil_pn:name="Clock_Driver_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>

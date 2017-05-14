@@ -1,2 +1,3 @@
 xst -intstyle ise -ifn "/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/ISE/Clock_Driver.xst" -ofn "/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/ISE/Clock_Driver.syr" 
 ngdbuild -intstyle ise -dd _ngo -sd ../Src_4ISE -nt timestamp -uc /media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf -p xc3s500e-fg320-4 Clock_Driver.ngc Clock_Driver.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../Src_4ISE -nt timestamp -uc /media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC.ucf -p xc3s500e-fg320-4 Clock_Driver.ngc Clock_Driver.ngd  
