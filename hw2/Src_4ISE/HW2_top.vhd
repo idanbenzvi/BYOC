@@ -47,27 +47,8 @@ CK_50MHz 		:	in		STD_LOGIC;
 buttons_in		:	in		STD_LOGIC_vector(3 downto 0);--  btn0 is single clock (manual clock), btn3 is manual reset
 switches_in 	:	in		STD_LOGIC_VECTOR (7 downto 0);-- 4-0 to select which part to be displayed on the 7Segnets LEDs
 sevenseg_out	:	out		STD_LOGIC_VECTOR (6 downto 0);-- to the 7 seg LEDs
-anodes_out		:	out		STD_LOGIC_VECTOR (3 downto 0);-- to the 7 seg LEDs
--- signals to be tested by the TB
-CK_out_to_TB			:	out STD_LOGIC; 
-RESET_out_to_TB			:	out STD_LOGIC; 
-HOLD_out_to_TB			:	out STD_LOGIC; 
-rdbk0_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk1_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk2_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk3_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk4_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk5_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk6_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk7_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk8_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk9_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk10_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk11_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk12_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk13_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk14_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk15_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0) 
+anodes_out		:	out		STD_LOGIC_VECTOR (3 downto 0)-- to the 7 seg LEDs
+
 	);
 end HW2_top; 
 
@@ -428,32 +409,6 @@ leds_out <=  Flash_sts_in_BYOC & leds_out_from_host_intf(6 downto 0);--- 7=Flash
 --==========================
 RESET <= switches_in(6) or RESET_from_Host_Intf;
 
-
-
-
--- 3) HW2 inner connections signals
---========================================
--- Connect signals to be tested by the TB
-CK_out_to_TB			<=		CK;
-RESET_out_to_TB			<=		RESET;
-HOLD_out_to_TB			<=		HOLD;
---
-rdbk0_out_to_TB 		<= 		rdbk0_line;
-rdbk1_out_to_TB 		<= 		rdbk1_line; 
-rdbk2_out_to_TB 		<= 		rdbk2_line;
-rdbk3_out_to_TB 		<=		rdbk3_line;
-rdbk4_out_to_TB 		<=		rdbk4_line;
-rdbk5_out_to_TB 		<=		rdbk5_line;
-rdbk6_out_to_TB 		<=		rdbk6_line;
-rdbk7_out_to_TB 		<= 		rdbk7_line;
-rdbk8_out_to_TB 		<=		rdbk8_line;
-rdbk9_out_to_TB 		<= 		rdbk9_line;
-rdbk10_out_to_TB 		<=		rdbk10_line;
-rdbk11_out_to_TB 		<= 		rdbk11_line;
-rdbk12_out_to_TB 		<= 		rdbk12_line;
-rdbk13_out_to_TB 		<=		rdbk13_line;
-rdbk14_out_to_TB 		<=  	rdbk14_line;
-rdbk15_out_to_TB 		<= 		rdbk15_line;
 
 
 
