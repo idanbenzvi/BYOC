@@ -1,0 +1,2 @@
+vhdl work "../Src_4ISE/BYOC_Clock_driver_4sim.vhd"
+vhdl work "../Src_4ISE/BYOC_Clock_driver.vhd"

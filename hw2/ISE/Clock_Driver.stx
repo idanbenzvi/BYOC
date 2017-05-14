@@ -1,0 +1,42 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /media/sf_shared_with_vm/byoc2017/projects/shared/hw2/ISE/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to /media/sf_shared_with_vm/byoc2017/projects/shared/hw2/ISE/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/Clock_Driver is now defined in a different file.  It was defined in "/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC_Clock_driver.vhd", and is now defined in "/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC_Clock_driver_4sim.vhd".
+WARNING:HDLParsers:3607 - Unit work/Clock_Driver/clock_divider is now defined in a different file.  It was defined in "/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC_Clock_driver.vhd", and is now defined in "/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC_Clock_driver_4sim.vhd".
+Compiling vhdl file "/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC_Clock_driver.vhd" in Library work.
+Architecture clock_divider of Entity clock_driver is up to date.
+Compiling vhdl file "/media/sf_shared_with_vm/byoc2017/projects/shared/hw2/Src_4ISE/BYOC_Clock_driver_4sim.vhd" in Library work.
+Architecture clock_divider of Entity clock_driver is up to date.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> 
+
+
+Total memory usage is 480956 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
