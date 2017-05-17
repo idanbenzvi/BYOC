@@ -1,0 +1,4 @@
+vhdl isim_temp "../GPR_File_Src/dual_port_memory.vhd"
+vhdl isim_temp "../GPR_File_Src/SIM_HW3_GPR_filenames.vhd"
+vhdl isim_temp "../GPR_File_Src/GPR.vhd"
+vhdl isim_temp "../GPR_File_Src/SIM_GPR_TB.vhd"
