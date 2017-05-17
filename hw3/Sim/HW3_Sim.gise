@@ -42,7 +42,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1495018700" xil_pn:in_ck="-223768313753670074" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1495018700">
+    <transform xil_pn:end_ts="1495019226" xil_pn:in_ck="-5844368638433718804" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1495019226">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../Src_4sim/BYOC_Clock_driver_4sim.vhd"/>
@@ -52,7 +52,6 @@
       <outfile xil_pn:name="../Src_4sim/HW2_top_4sim.vhd"/>
       <outfile xil_pn:name="../Src_4sim/SIM_GPR_TB.vhd"/>
       <outfile xil_pn:name="../Src_4sim/SIM_HW2_TB.vhd"/>
-      <outfile xil_pn:name="../Src_4sim/SIM_HW2_filenames.vhd"/>
       <outfile xil_pn:name="../Src_4sim/SIM_HW3_ALU_filenames.vhd"/>
       <outfile xil_pn:name="../Src_4sim/SIM_HW3_GPR_filenames.vhd"/>
       <outfile xil_pn:name="../Src_4sim/SIM_MIPS_ALU_TB.vhd"/>
@@ -75,20 +74,11 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="../Src_4sim/BYOC_Clock_driver_4sim.vhd"/>
-      <outfile xil_pn:name="../Src_4sim/BYOC_Host_Intf_4sim.vhd"/>
-      <outfile xil_pn:name="../Src_4sim/Fetch_Unit.vhd"/>
-      <outfile xil_pn:name="../Src_4sim/GPR.vhd"/>
-      <outfile xil_pn:name="../Src_4sim/HW2_top_4sim.vhd"/>
-      <outfile xil_pn:name="../Src_4sim/SIM_GPR_TB.vhd"/>
-      <outfile xil_pn:name="../Src_4sim/SIM_HW2_TB.vhd"/>
-      <outfile xil_pn:name="../Src_4sim/SIM_HW2_filenames.vhd"/>
-      <outfile xil_pn:name="../Src_4sim/SIM_HW3_ALU_filenames.vhd"/>
-      <outfile xil_pn:name="../Src_4sim/SIM_HW3_GPR_filenames.vhd"/>
-      <outfile xil_pn:name="../Src_4sim/SIM_MIPS_ALU_TB.vhd"/>
-      <outfile xil_pn:name="../Src_4sim/single_port_memory.vhd"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1495018412" xil_pn:in_ck="-223768313753670074" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="845655599244321784" xil_pn:start_ts="1495018409">
       <status xil_pn:value="FailedRun"/>
@@ -97,6 +87,7 @@
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1495018313" xil_pn:in_ck="-5422291142660695208" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4647119801188187494" xil_pn:start_ts="1495018312">
       <status xil_pn:value="AbortedRun"/>
