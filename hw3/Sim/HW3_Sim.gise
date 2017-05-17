@@ -22,8 +22,19 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="HW3_Sim.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="BYOC_filenames.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="BYOC_filenames.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="BYOC_filenames.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="GPR_TB_stx_beh.prj"/>
-    <file xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="GPR_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="GPR_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="GPR_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="single_port_memory_no_CK_read_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
@@ -31,7 +42,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1495017804" xil_pn:in_ck="-223768313753670074" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1495017804">
+    <transform xil_pn:end_ts="1495018700" xil_pn:in_ck="-223768313753670074" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1495018700">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../Src_4sim/BYOC_Clock_driver_4sim.vhd"/>
@@ -46,6 +57,56 @@
       <outfile xil_pn:name="../Src_4sim/SIM_HW3_GPR_filenames.vhd"/>
       <outfile xil_pn:name="../Src_4sim/SIM_MIPS_ALU_TB.vhd"/>
       <outfile xil_pn:name="../Src_4sim/single_port_memory.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1495018409" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="242190141264199682" xil_pn:start_ts="1495018409">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1495018409" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5542874588264233604" xil_pn:start_ts="1495018409">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1495018307" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-6909467997851414291" xil_pn:start_ts="1495018307">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1495018409" xil_pn:in_ck="-223768313753670074" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1495018409">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="../Src_4sim/BYOC_Clock_driver_4sim.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/BYOC_Host_Intf_4sim.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/Fetch_Unit.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/GPR.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/HW2_top_4sim.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/SIM_GPR_TB.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/SIM_HW2_TB.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/SIM_HW2_filenames.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/SIM_HW3_ALU_filenames.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/SIM_HW3_GPR_filenames.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/SIM_MIPS_ALU_TB.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/single_port_memory.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1495018412" xil_pn:in_ck="-223768313753670074" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="845655599244321784" xil_pn:start_ts="1495018409">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1495018313" xil_pn:in_ck="-5422291142660695208" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4647119801188187494" xil_pn:start_ts="1495018312">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForced"/>
+      <outfile xil_pn:name="GPR_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
     </transform>
   </transforms>
 
