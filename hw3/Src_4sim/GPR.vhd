@@ -59,6 +59,20 @@ begin
 
 -- enter your design here
 
+DUAL_PORT_MEMORY:	dual_port_memory_no_CK_read
+	port map(
+	wr_address => conv_integer(wr_reg),
+	wr_data => wr_data,
+	wr_clk => CK,
+	wr_en => GPR_we,
+	rd1_address => conv_integer(rd_reg1),
+	rd1_data => GPR_data_out1,
+	rd2_address => conv_integer(rd_reg2),
+	rd2_data => GPR_data_out2);
+
+
+
+
 process(rd_reg1)
 begin
 	if conv_integer(rd_reg1) = 0 then
