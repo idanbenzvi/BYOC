@@ -5,5 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"/media/sf_shared_with_vm/byoc2017/projects/shared/hw3/Sim/../Src_4sim/SIM_MIPS_ALU_TB.vhd" Line 60: &lt;<arg fmt="%s" index="1">alu_data_in_file_name</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="854" delta="unknown" >"/media/sf_shared_with_vm/byoc2017/projects/shared/hw3/Sim/../Src_4sim/SIM_MIPS_ALU_TB.vhd" Line 21: Unit &lt;<arg fmt="%s" index="1">testing</arg>&gt; ignored due to previous errors.
+</msg>
+
 </messages>
 
