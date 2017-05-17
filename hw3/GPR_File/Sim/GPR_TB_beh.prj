@@ -1,3 +1,0 @@
-vhdl work "../Src_4sim/SIM_HW3_GPR_filenames.vhd"
-vhdl work "../Src_4sim/GPR.vhd"
-vhdl work "../Src_4sim/SIM_GPR_TB.vhd"

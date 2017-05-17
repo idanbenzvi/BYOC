@@ -1,3 +1,0 @@
-vhdl isim_temp "../Src_4sim/SIM_HW3_GPR_filenames.vhd"
-vhdl isim_temp "../Src_4sim/MIPS_ALU.vhd"
-vhdl isim_temp "../Src_4sim/SIM_MIPS_ALU_TB.vhd"
