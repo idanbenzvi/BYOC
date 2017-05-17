@@ -1,3 +1,0 @@
-COM13     # put here your com port name
-1        # delay [mS] - delay after each transaction in milli Seconds
----
