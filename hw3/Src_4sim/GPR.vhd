@@ -57,27 +57,27 @@ END COMPONENT;
 
 begin 
 
-
 -- enter your design here
-process(read_reg1)
+
+process(rd_reg1)
 begin
-	if reg_read1 = '0' then
+	if conv_integer(rd_reg1) = 0 then
 		rd_data1 <= x"00000000";
-	end if
-end process;
-
-process(read_reg2)
-begin
-	if reg_read2 = '0' then
-		rd_data2 <= x"00000000";
-	end if
-end process;
-
-process(GPR_hold)
-begin
-	if GPR_hold = '1' then
-		wr_en <= b"0";
 	end if;
+end process;
+
+process(rd_reg2)
+begin
+	if conv_integer(rd_reg2) = 0 then
+		rd_data2 <= x"00000000";
+	end if;
+end process;
+
+--wr_en <= GPR_we;
+
+process(GPR_hold, Reg_Write)
+begin
+	GPR_we <= (not GPR_Hold) and Reg_Write;
 end process;
 	
 end Behavioral;
