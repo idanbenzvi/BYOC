@@ -47,9 +47,17 @@ signal  ALU_output : STD_LOGIC_VECTOR  (31 downto 0);
 
 begin
 
+ALU_A_in <= A_in;
 
 -- enter your design here
-
+process(sext_imm, B_in, ALUsrcB)
+begin
+	if ALUsrcB = '0' then
+		ALU_B_in <= B_in;
+	else
+		ALU_B_in <= sext_imm;
+	end if;
+end process;
 
 
 end Behavioral;
