@@ -93,7 +93,17 @@ process(GPR_hold, Reg_Write)
 begin
 	GPR_we <= (not GPR_Hold) and Reg_Write;
 end process;
-	
+
+process(rd_reg1, GPR_rd_data1)
+begin
+	GPR_data_out1 <= (not rd_reg1) and GPR_rd_data1;
+end process;
+
+process(rd_reg2, GPR_rd_data2)
+begin
+	GPR_data_out2 <= (not rd_reg2) and GPR_rd_data2;
+end process;
+
 end Behavioral;
 
 
