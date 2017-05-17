@@ -59,8 +59,26 @@ begin
 
 
 -- enter your design here
+process(read_reg1)
+begin
+	if reg_read1 = '0' then
+		rd_data1 <= x"00000000";
+	end if
+end process;
 
+process(read_reg2)
+begin
+	if reg_read2 = '0' then
+		rd_data2 <= x"00000000";
+	end if
+end process;
 
+process(GPR_hold)
+begin
+	if GPR_hold = '1' then
+		wr_en <= b"0";
+	end if;
+end process;
 	
 end Behavioral;
 
