@@ -66,9 +66,9 @@ DUAL_PORT_MEMORY:	dual_port_memory_no_CK_read
 	wr_clk => CK,
 	wr_en => GPR_we,
 	rd1_address => conv_integer(rd_reg1),
-	rd1_data => GPR_data_out1,
+	rd1_data => GPR_rd_data1,
 	rd2_address => conv_integer(rd_reg2),
-	rd2_data => GPR_data_out2);
+	rd2_data => GPR_rd_data2);
 
 
 
