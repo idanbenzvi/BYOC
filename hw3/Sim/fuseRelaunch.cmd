@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/media/sf_shared_with_vm/byoc2017/projects/shared/hw3/Sim/GPR_TB_isim_beh.exe" -prj "/media/sf_shared_with_vm/byoc2017/projects/shared/hw3/Sim/GPR_TB_beh.prj" "work.GPR_TB" 
