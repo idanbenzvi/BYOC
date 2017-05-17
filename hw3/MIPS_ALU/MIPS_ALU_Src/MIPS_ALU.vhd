@@ -60,6 +60,23 @@ begin
 end process;
 
 
+process(Funct, ALUOP)
+begin
+	case ALUOP is
+		when b"00" => ALU_cmd <= b"010";
+		when b"01" => ALU_cmd <= b"110";
+		when b"10" =>
+			case Funct is
+				when b"100000" => ALU_cmd <= b"010"; -- Addition
+				when b"100010" => ALU_cmd <= b"110"; -- Subtraction
+				when b"100100" => ALU_cmd <= b"000"; -- AND
+				when b"100101" => ALU_cmd <= b"001"; -- OR
+				when b"100110" => ALU_cmd <= b"011"; -- XOR
+				when b"101010" => ALU_cmd <= b"111"; -- SLT
+			end case;
+		end case;
+end process;
+
 end Behavioral;
 
 -- *************************************************************************************************
