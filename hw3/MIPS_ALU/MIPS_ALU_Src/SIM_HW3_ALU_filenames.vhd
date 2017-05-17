@@ -15,7 +15,8 @@ use ieee.std_logic_1164.all;
 use std.textio.all;
 use IEEE.NUMERIC_STD.all;
 
-constant	ALU_data_in_file_name 		: string := "..\..\HW3_MIPS_ALU_src_for_sim\SIM_MIPS_ALU_TB_data.dat";
+--constant	ALU_data_in_file_name 		: string := "..\..\HW3_MIPS_ALU_src_for_sim\SIM_MIPS_ALU_TB_data.dat";
+constant	ALU_data_in_file_name 		: string := "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/MIPS_ALU/MIPS_ALU_Src/SIM_MIPS_ALU_TB_data.dat";
 
 signal 		no_hold					: STD_LOGIC := '0';-- MUST be '0' for correct TB messages!!!
 
