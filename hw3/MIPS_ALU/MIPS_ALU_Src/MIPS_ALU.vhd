@@ -77,6 +77,26 @@ begin
 		end case;
 end process;
 
+process(ALU_cmd, ALU_A_in, ALU_B_in)
+begin
+	-- ALU_Out
+	case ALU_cmd is
+		when b"000" => ALU_out <= (ALU_A_in and ALU_B_in);
+		when b"001" => ALU_out <= (ALU_A_in or ALU_B_in);
+		when b"010" => ALU_out <= (ALU_A_in + ALU_B_in);
+		when b"011" => ALU_out <= (ALU_A_in xor ALU_B_in);		
+		--when b"100" => ALU_out <= (ALU_A_in nand ALU_B_in);
+		--when b"101" => ALU_out <= (ALU_A_in nor ALU_B_in);
+		when b"110" => ALU_out <= (ALU_A_in - ALU_B_in);
+		when b"111" => 
+			if conv_integer(ALU_A_in) < conv_integer(ALU_B_in) then
+				ALU_out <= x"00000001";
+			else
+				ALU_out <= x"00000000";
+			end if;
+	end case;
+end process;
+
 end Behavioral;
 
 -- *************************************************************************************************
