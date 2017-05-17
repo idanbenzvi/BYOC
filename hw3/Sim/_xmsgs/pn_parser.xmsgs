@@ -11,20 +11,5 @@
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/media/sf_shared_with_vm/byoc2017/projects/shared/hw3/Src_4sim/GPR.vhd&quot; into library work</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw3/Src_4sim/GPR.vhd</arg>&quot; Line <arg fmt="%d" index="2">67</arg>. <arg fmt="%s" index="3">Syntax error near &quot;end&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw3/Src_4sim/GPR.vhd</arg>&quot; Line <arg fmt="%d" index="2">70</arg>. <arg fmt="%s" index="3">Syntax error near &quot;begin&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw3/Src_4sim/GPR.vhd</arg>&quot; Line <arg fmt="%d" index="2">74</arg>. <arg fmt="%s" index="3">Syntax error near &quot;end&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw3/Src_4sim/GPR.vhd</arg>&quot; Line <arg fmt="%d" index="2">77</arg>. <arg fmt="%s" index="3">Syntax error near &quot;begin&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw3/Src_4sim/GPR.vhd</arg>&quot; Line <arg fmt="%d" index="2">81</arg>. <arg fmt="%s" index="3">Syntax error near &quot;process&quot;.</arg>
-</msg>
-
 </messages>
 
