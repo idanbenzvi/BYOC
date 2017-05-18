@@ -66,9 +66,9 @@ DUAL_PORT_MEMORY:	dual_port_memory_no_CK_read
 	wr_clk => CK,
 	wr_en => GPR_we,
 	rd1_address => conv_integer(rd_reg1),
-	rd1_data => GPR_rd_data1,
-	rd2_address => conv_integer(rd_reg2),
-	rd2_data => GPR_rd_data2);
+	--rd1_data => GPR_rd_data1,
+	rd2_address => conv_integer(rd_reg2));
+	--rd2_data => GPR_rd_data2);
 
 
 
@@ -89,20 +89,33 @@ end process;
 
 --wr_en <= GPR_we;
 
-process(GPR_hold, Reg_Write)
-begin
+--TODO: not needed since there is no logic here and the 2 sensitivities are always regarded when looking at
+-- combinational logic. we only need to use process if the sensitivity is not trivial.
+--process(GPR_hold, Reg_Write)
+--begin
 	GPR_we <= (not GPR_Hold) and Reg_Write;
-end process;
+--end process;
 
-process(rd_reg1, GPR_rd_data1)
+process( rd_reg1)
 begin
-	GPR_data_out1 <= (not rd_reg1) and GPR_rd_data1;
+	if rd_reg1 = b"00000" then
+		GPR_data_out1 <= x"00000000";
+	else
+		GPR_data_out1 <= GPR_rd_data1;
+	end if;
 end process;
+rd_data1 <= GPR_data_out1;
 
-process(rd_reg2, GPR_rd_data2)
+process(rd_reg2)
 begin
-	GPR_data_out2 <= (not rd_reg2) and GPR_rd_data2;
+	if rd_reg2 = b"00000" then
+		GPR_data_out2 <= x"00000000";
+	else
+		GPR_data_out2 <= GPR_rd_data2;
+	end if;
 end process;
+rd_data2 <= GPR_data_out2;
+
 
 end Behavioral;
 
