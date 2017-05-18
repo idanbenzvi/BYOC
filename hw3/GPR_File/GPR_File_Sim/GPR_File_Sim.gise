@@ -39,13 +39,16 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1495116427" xil_pn:in_ck="8683692851084495690" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1495116427">
+    <transform xil_pn:end_ts="1495138441" xil_pn:in_ck="-7916418813112088237" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1495138441">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="../GPR_File_Src/BYOC_Clock_driver_4sim.vhd"/>
+      <outfile xil_pn:name="../GPR_File_Src/BYOC_Host_Intf_4sim.vhd"/>
+      <outfile xil_pn:name="../GPR_File_Src/Fetch_Unit.vhd"/>
+      <outfile xil_pn:name="../GPR_File_Src/GPR.vhd"/>
+      <outfile xil_pn:name="../GPR_File_Src/SIM_GPR_TB.vhd"/>
+      <outfile xil_pn:name="../GPR_File_Src/SIM_HW3_GPR_filenames.vhd"/>
+      <outfile xil_pn:name="../GPR_File_Src/dual_port_memory.vhd"/>
     </transform>
     <transform xil_pn:end_ts="1495116474" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="242190141264199682" xil_pn:start_ts="1495116474">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -59,36 +62,44 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1495116427" xil_pn:in_ck="8683692851084495690" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1495116427">
+    <transform xil_pn:end_ts="1495137213" xil_pn:in_ck="-7916418813112088237" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1495137213">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="../GPR_File_Src/BYOC_Clock_driver_4sim.vhd"/>
+      <outfile xil_pn:name="../GPR_File_Src/BYOC_Host_Intf_4sim.vhd"/>
+      <outfile xil_pn:name="../GPR_File_Src/Fetch_Unit.vhd"/>
+      <outfile xil_pn:name="../GPR_File_Src/GPR.vhd"/>
+      <outfile xil_pn:name="../GPR_File_Src/SIM_GPR_TB.vhd"/>
+      <outfile xil_pn:name="../GPR_File_Src/SIM_HW3_GPR_filenames.vhd"/>
+      <outfile xil_pn:name="../GPR_File_Src/dual_port_memory.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1495137217" xil_pn:in_ck="-7916418813112088237" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="845655599244321784" xil_pn:start_ts="1495137213">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
-    </transform>
-    <transform xil_pn:end_ts="1495116477" xil_pn:in_ck="8683692851084495690" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="845655599244321784" xil_pn:start_ts="1495116474">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="GPR_TB_beh.prj"/>
+      <outfile xil_pn:name="GPR_TB_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1495116477" xil_pn:in_ck="-3917199609493237310" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5604815061451793147" xil_pn:start_ts="1495116477">
+    <transform xil_pn:end_ts="1495137217" xil_pn:in_ck="-3917199609493237310" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5604815061451793147" xil_pn:start_ts="1495137217">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="GPR_TB_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
     </transform>
   </transforms>
 

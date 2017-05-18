@@ -57,7 +57,4 @@ begin
    rd2_data <= Memory_array(rd2_address);
 end process Memory_rddata ;
 
-
-
-
 END ARCHITECTURE dual_port_memory;

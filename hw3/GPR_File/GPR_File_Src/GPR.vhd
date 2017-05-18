@@ -66,26 +66,9 @@ DUAL_PORT_MEMORY:	dual_port_memory_no_CK_read
 	wr_clk => CK,
 	wr_en => GPR_we,
 	rd1_address => conv_integer(rd_reg1),
-	--rd1_data => GPR_rd_data1,
-	rd2_address => conv_integer(rd_reg2));
-	--rd2_data => GPR_rd_data2);
-
-
-
-
-process(rd_reg1)
-begin
-	if conv_integer(rd_reg1) = 0 then
-		rd_data1 <= x"00000000";
-	end if;
-end process;
-
-process(rd_reg2)
-begin
-	if conv_integer(rd_reg2) = 0 then
-		rd_data2 <= x"00000000";
-	end if;
-end process;
+	rd1_data => GPR_rd_data1,
+	rd2_address => conv_integer(rd_reg2),
+	rd2_data => GPR_rd_data2);
 
 --wr_en <= GPR_we;
 
@@ -96,7 +79,7 @@ end process;
 	GPR_we <= (not GPR_Hold) and Reg_Write;
 --end process;
 
-process( rd_reg1)
+process(rd_reg1, GPR_rd_Data1, GPR_data_out1)
 begin
 	if rd_reg1 = b"00000" then
 		GPR_data_out1 <= x"00000000";
@@ -106,7 +89,7 @@ begin
 end process;
 rd_data1 <= GPR_data_out1;
 
-process(rd_reg2)
+process(rd_reg2,GPR_rd_Data2,GPR_data_out2)
 begin
 	if rd_reg2 = b"00000" then
 		GPR_data_out2 <= x"00000000";
