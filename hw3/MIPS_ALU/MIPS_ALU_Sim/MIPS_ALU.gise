@@ -30,8 +30,9 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1495022843" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1495022843">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1495023444" xil_pn:in_ck="384131752549718933" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1495023444">
+    <transform xil_pn:end_ts="1495138891" xil_pn:in_ck="7963390990127455820" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1495138891">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../MIPS_ALU_Src/BYOC_Clock_driver_4sim.vhd"/>
@@ -41,7 +42,33 @@
       <outfile xil_pn:name="../MIPS_ALU_Src/SIM_HW3_ALU_filenames.vhd"/>
       <outfile xil_pn:name="../MIPS_ALU_Src/SIM_MIPS_ALU_TB.vhd"/>
       <outfile xil_pn:name="../MIPS_ALU_Src/dual_port_memory.vhd"/>
-      <outfile xil_pn:name="../MIPS_ALU_Src/single_port_memory.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1495138895" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6233880315432960845" xil_pn:start_ts="1495138895">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1495138895" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1696669152902195573" xil_pn:start_ts="1495138895">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1495138895" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-4035542177639321189" xil_pn:start_ts="1495138895">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1495138895" xil_pn:in_ck="7963390990127455820" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1495138895">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../MIPS_ALU_Src/BYOC_Clock_driver_4sim.vhd"/>
+      <outfile xil_pn:name="../MIPS_ALU_Src/BYOC_Host_Intf_4sim.vhd"/>
+      <outfile xil_pn:name="../MIPS_ALU_Src/Fetch_Unit.vhd"/>
+      <outfile xil_pn:name="../MIPS_ALU_Src/MIPS_ALU.vhd"/>
+      <outfile xil_pn:name="../MIPS_ALU_Src/SIM_HW3_ALU_filenames.vhd"/>
+      <outfile xil_pn:name="../MIPS_ALU_Src/SIM_MIPS_ALU_TB.vhd"/>
+      <outfile xil_pn:name="../MIPS_ALU_Src/dual_port_memory.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1495138897" xil_pn:in_ck="7963390990127455820" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2177065065087097658" xil_pn:start_ts="1495138895">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
   </transforms>
 

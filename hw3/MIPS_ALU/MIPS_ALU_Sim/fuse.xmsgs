@@ -5,5 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="HDLCompiler" num="299" delta="unknown" >"/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/MIPS_ALU/MIPS_ALU_Sim/../MIPS_ALU_Src/MIPS_ALU.vhd" Line 65: case statement does not cover all choices. &apos;others&apos; clause is needed
+</msg>
+
+<msg type="error" file="Simulator" num="777" delta="unknown" >Static elaboration of top level VHDL design unit <arg fmt="%s" index="1">mips_alu_tb</arg> in library <arg fmt="%s" index="2">work</arg> failed
+</msg>
+
 </messages>
 

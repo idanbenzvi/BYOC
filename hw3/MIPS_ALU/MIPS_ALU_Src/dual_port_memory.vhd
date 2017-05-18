@@ -42,7 +42,7 @@ begin
 if wr_clk'event and wr_clk = '1' then
    if wr_en = '1' then
      --added conversion from int.
-      Memory_array(conv_integer(wr_address)) := wr_data ;
+      Memory_array(wr_address) := wr_data ;
    end if;
 end if ;
 end process Memory_wrdata;
@@ -54,8 +54,8 @@ Memory_rddata : PROCESS (rd1_address,rd2_address,wr_clk)  -- need to add wr_clk,
                                              -- we write new data (in simulation)
 begin
   --added conversion from int
-   rd1_data <= Memory_array(conv_integer(rd1_address));
-   rd2_data <= Memory_array(conv_integer(rd2_address));
+   rd1_data <= Memory_array(rd1_address);
+   rd2_data <= Memory_array(rd2_address);
 end process Memory_rddata ;
 
 

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-05-17T15:03:06</DateModified>
+  <DateModified>2017-05-18T23:17:44</DateModified>
   <ModuleName>MIPS_ALU_TB</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/media/sf_shared_with_vm/byoc2017/projects/shared/hw3/MIPS_ALU/MIPS_ALU_Sim/iseconfig/MIPS_ALU_TB.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/media/sf_shared_with_vm/byoc2017/projects/shared/hw3/MIPS_ALU/MIPS_ALU_Sim</ImplementationReportsDirectory>
+  <SavedFilePath>/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/MIPS_ALU/MIPS_ALU_Sim/iseconfig/MIPS_ALU_TB.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/MIPS_ALU/MIPS_ALU_Sim/</ImplementationReportsDirectory>
   <DateInitialized>2017-05-17T15:03:05</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
