@@ -1,0 +1,1 @@
+vhdl isim_temp "../MIPS_ALU_Src/MIPS_ALU.vhd"

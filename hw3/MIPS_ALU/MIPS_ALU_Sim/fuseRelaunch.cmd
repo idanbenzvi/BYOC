@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/MIPS_ALU/MIPS_ALU_Sim/MIPS_ALU_TB_isim_beh.exe" -prj "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/MIPS_ALU/MIPS_ALU_Sim/MIPS_ALU_TB_beh.prj" "work.MIPS_ALU_TB" 

@@ -1,0 +1,3 @@
+vhdl work "../MIPS_ALU_Src/SIM_HW3_ALU_filenames.vhd"
+vhdl work "../MIPS_ALU_Src/MIPS_ALU.vhd"
+vhdl work "../MIPS_ALU_Src/SIM_MIPS_ALU_TB.vhd"
