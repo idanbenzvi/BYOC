@@ -8,7 +8,25 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/MIPS_ALU/MIPS_ALU_Src/BYOC_Clock_driver_4sim.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/MIPS_ALU/MIPS_ALU_Src/BYOC_Host_Intf_4sim.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/MIPS_ALU/MIPS_ALU_Src/Fetch_Unit.vhd&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/MIPS_ALU/MIPS_ALU_Src/MIPS_ALU.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/MIPS_ALU/MIPS_ALU_Src/SIM_HW3_ALU_filenames.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/MIPS_ALU/MIPS_ALU_Src/SIM_MIPS_ALU_TB.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/MIPS_ALU/MIPS_ALU_Src/dual_port_memory.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

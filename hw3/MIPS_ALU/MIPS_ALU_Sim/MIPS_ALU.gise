@@ -75,6 +75,8 @@
     <transform xil_pn:end_ts="1495382003" xil_pn:in_ck="7963390990127455820" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2177065065087097658" xil_pn:start_ts="1495381999">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="MIPS_ALU_TB_beh.prj"/>
       <outfile xil_pn:name="MIPS_ALU_TB_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -84,6 +86,8 @@
     <transform xil_pn:end_ts="1495382003" xil_pn:in_ck="2156078821219233502" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7647748351652096761" xil_pn:start_ts="1495382003">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="MIPS_ALU_TB_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
     </transform>

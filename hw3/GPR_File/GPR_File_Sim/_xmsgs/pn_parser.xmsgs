@@ -8,7 +8,25 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/GPR_File/GPR_File_Src/BYOC_Clock_driver_4sim.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/GPR_File/GPR_File_Src/BYOC_Host_Intf_4sim.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/GPR_File/GPR_File_Src/Fetch_Unit.vhd&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/GPR_File/GPR_File_Src/GPR.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/GPR_File/GPR_File_Src/SIM_GPR_TB.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/GPR_File/GPR_File_Src/SIM_HW3_GPR_filenames.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw3/GPR_File/GPR_File_Src/dual_port_memory.vhd&quot; into library work</arg>
 </msg>
 
 </messages>
