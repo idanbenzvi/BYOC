@@ -27,6 +27,7 @@
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="GPR_TB_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="GPR_TB_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="dual_port_memory_no_ck_read_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="dual_port_memory_no_ck_read_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
@@ -53,10 +54,12 @@
     <transform xil_pn:end_ts="1495116474" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="242190141264199682" xil_pn:start_ts="1495116474">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1495116474" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5542874588264233604" xil_pn:start_ts="1495116474">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1495032175" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-316323440072147350" xil_pn:start_ts="1495032175">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -65,6 +68,7 @@
     <transform xil_pn:end_ts="1495138443" xil_pn:in_ck="-7916418813112088237" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1495138443">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="../GPR_File_Src/BYOC_Clock_driver_4sim.vhd"/>
       <outfile xil_pn:name="../GPR_File_Src/BYOC_Host_Intf_4sim.vhd"/>
       <outfile xil_pn:name="../GPR_File_Src/Fetch_Unit.vhd"/>
@@ -77,6 +81,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="GPR_TB_beh.prj"/>

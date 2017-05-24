@@ -335,7 +335,6 @@ signal  RegWrite_pEX   : STD_LOGIC;
 
 
 
-
 --=========================== WB phase ===============================================
 --===================================================================================
 --Registers valid in WB phase 
@@ -567,8 +566,23 @@ RESET <= switches_in(6) or RESET_from_Host_Intf;
 
 
 -- Control decoder  - calculates the signals in ID phase
-
-
+process(IR_reg)
+begin 
+	case IR_reg(31 downto 26) is
+		when b"000000" =>
+		case funct is
+		
+		 -- all R type instructions
+		-- addi - 0 (also with sub)
+		-- add
+		end case;
+		
+		-- beq - 4 
+		-- bne - 5
+		
+		-- j
+		end case;
+end process;
 -- ============================= EX phase processes ========================================
 -- ======================================================================================
 -- A & B registers
