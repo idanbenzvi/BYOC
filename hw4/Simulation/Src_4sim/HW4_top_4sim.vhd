@@ -569,32 +569,32 @@ RESET <= switches_in(6) or RESET_from_Host_Intf;
 process(IR_reg)
 begin 
 	case IR_reg(31 downto 26) is
-		when b"000000" => ALUOP <= b"10"; -- unique to R-type instructions
+		when b"000000" => 
+								ALUOP <= b"10"; -- unique to R-type instructions
 								ALUsrcB <= '0';
 								RegDst <= '1';
 								RegWrite <= '1';
 		when b"001000" => ALUOP <= b"00"; -- addi - I type command
 								RegWrite <= '1';
 								RegDst <= '0'; 
-								ALUsrcB <= '1'
+								ALUsrcB <= '1';
 		when b"000100" => -- beq - 4
 								ALUOP <= b"01";
 								ALUsrcB <= '0';
-								--RegDst <= ; doesn't matter
+								RegDst <= '0'; --doesn't matter
 								RegWrite <= '0';
 		when b"000101" => -- bne - 5 --TODO finish
-								ALUOP <= b"";
-								RegDst <= ;
-								ALUsrcB <= ;
+								ALUOP <= b"01"; --sub
+								RegDst <= '0'; -- doesn't matter
+								ALUsrcB <= '0' ;
+								RegWrite <= '0';
 		when b"000010" => -- jump - 2
 								ALUOP		 <= "10";  --don't care
 								RegWrite	<= '0';
-								RegDst		<= "00"; --don't care
+								RegDst		<= '0'; --don't care
 								ALUsrcB		<= '0';
-								
-								
-		-- addi - 0 (also with sub)
-		-- add
+								--handle all other cases as null
+		when other => null;
 		end case;
 		
 		-- beq - 4 
