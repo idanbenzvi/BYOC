@@ -1,0 +1,68 @@
+; Initialize the variables to 1 till 16
+addi $at,$zero,1
+addi $v0,$zero,2
+addi $v1,$zero,3
+addi $a0,$zero,4
+addi $a1,$zero,5
+addi $a2,$zero,6
+addi $a3,$zero,7
+addi $t0,$zero,8
+addi $t1,$zero,9
+addi $t2,$zero,10
+addi $t3,$zero,11
+addi $t4,$zero,12
+addi $t5,$zero,13
+addi $t6,$zero,14
+addi $t7,$zero,15
+addi $s0,$zero,16
+
+; Initialize the rest of the registers to power of 2
+addi $s1,$zero,1
+addi $s2,$zero,2
+addi $s3,$zero,4
+addi $s4,$zero,8
+addi $s5,$zero,16
+addi $s6,$zero,32
+addi $s7,$zero,64
+addi $t8,$zero,128
+addi $t9,$zero,256
+addi $k1,$zero,512
+addi $gp,$zero,1024
+addi $sp,$zero,2048
+addi $s8,$zero,4096
+addi $ra,$zero,8192
+
+
+add $s0,$s0,$at ; s0 = 16 + 1
+add $s0,$s0,$v0 ; s0 = 17 + 4
+add $s0,$s0,$v1 ; s0 = 21 + 3
+add $s0,$s0,$a0 ; s0 = 24 + 4
+
+add $at,$at,$v0 ; at = 1 + 4 
+add $at,$at,$v1 ; at = 5 + 3
+add $at,$a0,$at ; at = 4 + 8
+add $at,$a1,$at ; at = 5 + 12
+add $at,$at,$a2 ; at = 17 + 6
+
+add $a3,$a3,$t0 ; a3 = 7 + 8
+
+add $at,$a3,$t1 ; at = 15 + 9
+add $at,$at,$t2 ; at = 24 + 10
+add $at,$at,$t3 ; at = 34 + 11
+add $at,$at,$t4 ; at = 45 + 12
+add $at,$at,$t5 ; at = 57 + 13
+add $at,$at,$t6 ; at = 70 + 14
+add $at,$at,$t7 ; at = 84 + 15
+add $s0,$zero,$zero ; s0 = 0
+addi $t7,$zero,3 ; t7 = 0 + 3
+addi $s0,$s0,1 ; s0 = 0 + 1
+nop ; no op
+addi $t7,$t7,-1 ; t7 = 3 - 1
+beqz $t7,0x400164 ; branch if equal zero - will not jump
+nop ; no op
+nop ; no op
+j 0x400144 ; jump to "addi $s0, $s0, 1"
+nop ; no op
+j 0x400164 ; jump to self
+nop ; no op
+nop ; no op

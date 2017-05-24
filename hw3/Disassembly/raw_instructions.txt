@@ -1,0 +1,82 @@
+
+hw3.bin:     file format binary
+
+
+Disassembly of section .data:
+
+00400000 <.data>:
+  400000:	20010001 	addi	at,zero,1
+  400004:	20020002 	addi	v0,zero,2
+  400008:	20030003 	addi	v1,zero,3
+  40000c:	20040004 	addi	a0,zero,4
+  400010:	20050005 	addi	a1,zero,5
+  400014:	20060006 	addi	a2,zero,6
+  400018:	20070007 	addi	a3,zero,7
+  40001c:	20080008 	addi	t0,zero,8
+  400020:	20090009 	addi	t1,zero,9
+  400024:	200a000a 	addi	t2,zero,10
+  400028:	200b000b 	addi	t3,zero,11
+  40002c:	200c000c 	addi	t4,zero,12
+  400030:	200d000d 	addi	t5,zero,13
+  400034:	200e000e 	addi	t6,zero,14
+  400038:	200f000f 	addi	t7,zero,15
+  40003c:	20100010 	addi	s0,zero,16
+  400040:	20110001 	addi	s1,zero,1
+  400044:	20120002 	addi	s2,zero,2
+  400048:	20130004 	addi	s3,zero,4
+  40004c:	20140008 	addi	s4,zero,8
+  400050:	20150010 	addi	s5,zero,16
+  400054:	20160020 	addi	s6,zero,32
+  400058:	20170040 	addi	s7,zero,64
+  40005c:	20180080 	addi	t8,zero,128
+  400060:	20190100 	addi	t9,zero,256
+  400064:	201b0200 	addi	k1,zero,512
+  400068:	201c0400 	addi	gp,zero,1024
+  40006c:	201d0800 	addi	sp,zero,2048
+  400070:	201e1000 	addi	s8,zero,4096
+  400074:	201f2000 	addi	ra,zero,8192
+  400078:	02018020 	add	s0,s0,at
+  40007c:	02028020 	add	s0,s0,v0
+  400080:	02038020 	add	s0,s0,v1
+  400084:	02048020 	add	s0,s0,a0
+	...
+  400094:	00220820 	add	at,at,v0
+	...
+  4000a0:	00230820 	add	at,at,v1
+	...
+  4000ac:	00810820 	add	at,a0,at
+	...
+  4000b8:	00a10820 	add	at,a1,at
+	...
+  4000c4:	00260820 	add	at,at,a2
+	...
+  4000d0:	00e83820 	add	a3,a3,t0
+	...
+  4000dc:	00e90820 	add	at,a3,t1
+	...
+  4000e8:	002a0820 	add	at,at,t2
+	...
+  4000f4:	002b0820 	add	at,at,t3
+	...
+  400100:	002c0820 	add	at,at,t4
+	...
+  40010c:	002d0820 	add	at,at,t5
+	...
+  400118:	002e0820 	add	at,at,t6
+	...
+  400124:	002f0820 	add	at,at,t7
+	...
+  400130:	00008020 	add	s0,zero,zero
+  400134:	200f0003 	addi	t7,zero,3
+	...
+  400144:	22100001 	addi	s0,s0,1
+  400148:	00000000 	nop
+  40014c:	21efffff 	addi	t7,t7,-1
+  400150:	11e00004 	beqz	t7,0x400164
+  400154:	00000000 	nop
+  400158:	00000000 	nop
+  40015c:	08100051 	j	0x400144
+  400160:	00000000 	nop
+  400164:	08100059 	j	0x400164
+  400168:	00000000 	nop
+  40016c:	00000000 	nop
