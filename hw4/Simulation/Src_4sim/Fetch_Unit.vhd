@@ -21,10 +21,13 @@ Port	(
 CK_25MHz 		: in STD_LOGIC;
 RESET_in 		: in STD_LOGIC;
 HOLD_in 		: in STD_LOGIC;
+IR_reg_pID		:	out		STD_LOGIC_VECTOR  (31 downto 0);-- The IR_reg (instruction) to be used in ID 
+sext_imm_pID	:	out		STD_LOGIC_VECTOR  (31 downto 0);-- The sext_imm to be used in ID 
+PC_reg_pIF		:	out		STD_LOGIC_VECTOR  (31 downto 0);-- The PC_reg value in IF. To be read by TB in simulation and rdbk in implementation - for verification purposes 
+Rs_equals_Rt_pID  : in  	STD_LOGIC;-- '1' if value read from Rs equals the value read from Rt, '0' otherwise. Used in branch instructions.
 -- IMem signals
 MIPS_IMem_adrs	     : out STD_LOGIC_VECTOR (31 downto 0);
 MIPS_IMem_rd_data     : in STD_LOGIC_VECTOR (31 downto 0)
---rdbk signals - removed from fetch unit (not relevant)
 		);
 end Fetch_Unit;
 
@@ -70,12 +73,6 @@ signal  jr_adrs 		: STD_LOGIC_VECTOR  (31 downto 0);
 -- output
 signal  PC_mux_out		: STD_LOGIC_VECTOR  (31 downto 0);
 signal PC_plus_4_pID 	: STD_LOGIC_VECTOR  (31 downto 0);
--- added signals (3 signals requried for fetch unit)
-signal IR_reg_pID 		: STD_LOGIC_VECTOR  (31 downto 0);
-signal sext_imm_pID 		: STD_LOGIC_VECTOR  (31 downto 0);
-signal PC_reg_pIF 		: STD_LOGIC_VECTOR  (31 downto 0);
--- added signal branching 
-signal Rs_equals_Rt_pID : STD_LOGIC;
 
 -- ================== End of MIPS signals ==========================================
 -- =================================================================================
