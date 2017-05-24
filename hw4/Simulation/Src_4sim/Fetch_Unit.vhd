@@ -53,7 +53,7 @@ signal  IMem_rd_data	: STD_LOGIC_VECTOR  (31 downto 0);
 signal  IR_reg			: STD_LOGIC_VECTOR  (31 downto 0) := x"00000000";
 signal  imm 			: STD_LOGIC_VECTOR  (15 downto 0);
 signal  sext_imm 		: STD_LOGIC_VECTOR  (31 downto 0);
-signal  opcode 			: STD_LOGIC_VECTOR  (5 downto 0);
+signal  opcode 		: STD_LOGIC_VECTOR  (5 downto 0);
 signal  funct 			: STD_LOGIC_VECTOR  (5 downto 0);
 
 -- PC
@@ -69,9 +69,14 @@ signal  branch_adrs 	: STD_LOGIC_VECTOR  (31 downto 0);
 signal  jr_adrs 		: STD_LOGIC_VECTOR  (31 downto 0);
 -- output
 signal  PC_mux_out		: STD_LOGIC_VECTOR  (31 downto 0);
+signal PC_plus_4_pID 	: STD_LOGIC_VECTOR  (31 downto 0);
+-- added signals (3 signals requried for fetch unit)
+signal IR_reg_pID 		: STD_LOGIC_VECTOR  (31 downto 0);
+signal sext_imm_pID 		: STD_LOGIC_VECTOR  (31 downto 0);
+signal PC_reg_pIF 		: STD_LOGIC_VECTOR  (31 downto 0);
+-- added signal branching 
+signal Rs_equals_Rt_pID : STD_LOGIC;
 
-
-signal  PC_plus_4_pID 	: STD_LOGIC_VECTOR  (31 downto 0);
 -- ================== End of MIPS signals ==========================================
 -- =================================================================================
 
