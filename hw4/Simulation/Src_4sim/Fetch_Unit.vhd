@@ -23,7 +23,7 @@ RESET_in 		: in STD_LOGIC;
 HOLD_in 		: in STD_LOGIC;
 -- IMem signals
 MIPS_IMem_adrs	     : out STD_LOGIC_VECTOR (31 downto 0);
-MIPS_IMem_rd_data     : in STD_LOGIC_VECTOR (31 downto 0);
+MIPS_IMem_rd_data     : in STD_LOGIC_VECTOR (31 downto 0)
 --rdbk signals - removed from fetch unit (not relevant)
 		);
 end Fetch_Unit;
