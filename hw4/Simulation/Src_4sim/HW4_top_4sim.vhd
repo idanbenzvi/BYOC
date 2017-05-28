@@ -600,22 +600,29 @@ end process;
 -- ============================= EX phase processes ========================================
 -- ======================================================================================
 -- A & B registers
-process(rd_data1)
+process(GPR_rd_data1)
 begin
 	if CK'event and CK = '1' then
-		A_reg <= rd_data1;
+		A_reg <= GPR_rd_data1;
 	end if;
 end process;
 
 
-process(rd_data2)
+process(GPR_rd_data2)
 begin
 	if CK'event and CK = '1' then
-		B_reg <= rd_data2;
+		B_reg <= GPR_rd_data2;
 	end if;
 end process;
 
 -- sext_imm register
+
+process(sext_imm)
+begin
+	if CK'event and CK = '1' then
+		sext_imm_reg <= sext_imm;
+	end if;
+end process;
 
 -- Rt register 
 

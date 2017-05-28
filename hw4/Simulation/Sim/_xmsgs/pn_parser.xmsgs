@@ -8,31 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/BYOC_Clock_driver_4sim.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/BYOC_Host_Intf_4sim.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/Fetch_Unit.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/GPR.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/HW4_top_4sim.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/MIPS_ALU.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/SIM_HW4_TB.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/SIM_HW4_filenames.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/dual_port_memory.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/media/sf_shared_with_vm/byoc2017/projects/shared/hw4/Simulation/Src_4sim/HW4_top_4sim.vhd&quot; into library work</arg>
 </msg>
 
 </messages>
