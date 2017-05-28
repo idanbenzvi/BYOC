@@ -178,8 +178,20 @@ begin
 	case opcode is
 		when b"000010" => PC_source <= b"11"; --j
 		when b"000011" => PC_source <= b"11"; --jal
-		when b"000100" => PC_source <= b"01"; --beq
-		when b"000101" => PC_source <= b"01"; --bne
+		when b"000100" => 
+			if(Rs_equals_Rt_pID = '1') then
+				PC_source <= b"01"; --beq
+			else
+				-- do nothing
+				PC_source <= b"00";
+			end if;
+		when b"000101" =>
+			if(Rs_equals_Rt_pID = '1') then
+				PC_source <= b"01"; --bne
+			else
+				-- do nothing
+				PC_source <= b"00";
+			end if;
 		when b"000000" =>
 			if funct = b"001000" then
 				PC_source <= b"10"; -- jr
