@@ -652,7 +652,12 @@ end process;
 -- ============================= WB phase processes ========================================
 -- ========================================================================================
 -- ALUOUT register
-
+process(ALU_output)
+begin
+	if CK'event and CK = '1' then
+		ALUout_reg <= ALU_output;
+	end if;
+end process;
 
 -- RegDst mux and Rd_pWB register
 
