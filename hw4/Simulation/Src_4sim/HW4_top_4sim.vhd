@@ -600,6 +600,20 @@ end process;
 -- ============================= EX phase processes ========================================
 -- ======================================================================================
 -- A & B registers
+process(rd_data1)
+begin
+	if CK'event and CK = '1' then
+		A_reg <= rd_data1;
+	end if;
+end process;
+
+
+process(rd_data2)
+begin
+	if CK'event and CK = '1' then
+		B_reg <= rd_data2;
+	end if;
+end process;
 
 -- sext_imm register
 
