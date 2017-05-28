@@ -288,7 +288,7 @@ signal  PC_reg	: STD_LOGIC_VECTOR  (31 downto 0);
 -- ID phase  (a register with valid value along the ID phase)
 signal  IR_reg	: STD_LOGIC_VECTOR  (31 downto 0) ;
 -- IR reg signals   (valid in ID phase)
-signal  Opcode	: STD_LOGIC_VECTOR  (5 downto 0); -- IR[5:0]
+signal  Opcode	: STD_LOGIC_VECTOR  (31 downto 29);
 signal  Rs : STD_LOGIC_VECTOR  (4 downto 0); -- IR[25:21]
 signal  Rt : STD_LOGIC_VECTOR  (4 downto 0); -- IR[20:16]
 signal  Rd : STD_LOGIC_VECTOR  (4 downto 0); --IR[15:11]
@@ -627,7 +627,7 @@ end process;
 -- Rt register 
 
 -- Rd register
-process(CK)
+process(CK,HOLD,RESET)
 begin
 	if CK'event and CK='1' then
 		Rt_pEX <= Rt;
@@ -637,7 +637,7 @@ begin
 end process;
 
 -- control signals regs
-process(CK)
+process(CK,HOLD,RESET)
 begin
 	if CK'event and CK='1' then
 		ALUsrcB_pEX	<=	ALUsrcB;
@@ -646,7 +646,6 @@ begin
 		RegWrite_pEX <= RegWrite; 
 	end if;
 end process;
-
 
 
 -- ============================= WB phase processes ========================================
@@ -660,10 +659,23 @@ begin
 end process;
 
 -- RegDst mux and Rd_pWB register
-
+process(CK,HOLD,RESET) --TODO : make sure this doesn't cause errors from now on...
+begin
+	if CK'event and CK='1' then	
+		if RegDst_pEX == b"1" then
+			rd_pWB <= rd_pEX;
+		else
+			rd_pWB <= rt_PEX;
+		end if;
+end proces;
 
 -- RegWrite_pWB FF
-
+process(CK,HOLD,RESET) --TODO : make sure this doesn't cause errors from now on...
+begin
+	if CK'event and CK='1' then	
+		RegWrite_pWB <= RegWrite_pEX ;
+	end;
+end proces;
 
 
 
