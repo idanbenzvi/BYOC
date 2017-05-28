@@ -24,7 +24,7 @@ HOLD_in 		: in STD_LOGIC;
 IR_reg_pID		:	out		STD_LOGIC_VECTOR  (31 downto 0);-- The IR_reg (instruction) to be used in ID 
 sext_imm_pID	:	out		STD_LOGIC_VECTOR  (31 downto 0);-- The sext_imm to be used in ID 
 PC_reg_pIF		:	out		STD_LOGIC_VECTOR  (31 downto 0);-- The PC_reg value in IF. To be read by TB in simulation and rdbk in implementation - for verification purposes 
-Rs_equals_Rt_pID  : in  	STD_LOGIC;-- '1' if value read from Rs equals the value read from Rt, '0' otherwise. Used in branch instructions.
+Rs_equals_Rt_pID  : out  	STD_LOGIC;-- '1' if value read from Rs equals the value read from Rt, '0' otherwise. Used in branch instructions.
 -- IMem signals
 MIPS_IMem_adrs	     : out STD_LOGIC_VECTOR (31 downto 0);
 MIPS_IMem_rd_data     : in STD_LOGIC_VECTOR (31 downto 0)
@@ -178,8 +178,12 @@ begin
 	case opcode is
 		when b"000010" => PC_source <= b"11"; --j
 		when b"000011" => PC_source <= b"11"; --jal
-		when b"000100" => PC_source <= b"01"; --beq
-		when b"000101" => PC_source <= b"01"; --bne
+		when b"000100" =>
+			PC_source <= b"01"; --beq
+			Rs_equals_Rt_pID <= '1';
+		when b"000101" =>
+			PC_source <= b"01"; --bne
+			Rs_equals_Rt_pID <= '0';
 		when b"000000" =>
 			if funct = b"001000" then
 				PC_source <= b"10"; -- jr
