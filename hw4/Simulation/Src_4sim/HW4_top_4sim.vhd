@@ -606,9 +606,25 @@ end process;
 -- Rt register 
 
 -- Rd register
-
+process(CK)
+begin
+	if CK'event and CK='1' then
+		Rt_pEX <= Rt;
+		Rd_pEX <= Rd;
+		funct_pEX <= funct;
+	end if;
+end process;
 
 -- control signals regs
+process(CK)
+begin
+	if CK'event and CK='1' then
+		ALUsrcB_pEX	<=	ALUsrcB;
+		ALUOP_pEX <= ALUOP;
+		RegDst_pEX <= RegDst;
+		RegWrite_pEX <= RegWrite; 
+	end if;
+end process;
 
 
 

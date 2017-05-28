@@ -146,9 +146,6 @@ signal HI_rdbk15	:	STD_LOGIC_VECTOR (31 downto 0);
 --
 signal HI_RS232_Rx		: STD_LOGIC;
 
-
-
-
 -- ***************************************************************************************************
 -- To create a reset signal at startup
 signal  reset_cntr	: STD_LOGIC_VECTOR  (3 downto 0) := x"0";
