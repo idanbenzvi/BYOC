@@ -662,20 +662,21 @@ end process;
 process(CK,HOLD,RESET) --TODO : make sure this doesn't cause errors from now on...
 begin
 	if CK'event and CK='1' then	
-		if RegDst_pEX == b"1" then
+		if RegDst_pEX = '1' then
 			rd_pWB <= rd_pEX;
 		else
 			rd_pWB <= rt_PEX;
 		end if;
-end proces;
+	end if;	
+end process;
 
 -- RegWrite_pWB FF
 process(CK,HOLD,RESET) --TODO : make sure this doesn't cause errors from now on...
 begin
 	if CK'event and CK='1' then	
 		RegWrite_pWB <= RegWrite_pEX ;
-	end;
-end proces;
+	end if;
+end process;
 
 
 
