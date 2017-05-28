@@ -594,12 +594,8 @@ begin
 								RegDst		<= '0'; --don't care
 								ALUsrcB		<= '0';
 								--handle all other cases as null
-		when other => null;
+		when others => null;
 		end case;
-		
-		-- beq - 4 
-		-- bne - 5		
-		-- j
 end process;
 -- ============================= EX phase processes ========================================
 -- ======================================================================================
