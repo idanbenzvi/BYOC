@@ -26,9 +26,29 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="HW4_top.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="HW4_top.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="HW4_top.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="HW4_top_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1495987468" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1495987468">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1495987526" xil_pn:in_ck="4464183392340638304" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1495987526">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../Src_4sim/BYOC_Clock_driver_4sim.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/BYOC_Host_Intf_4sim.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/Fetch_Unit.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/GPR.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/HW4_top_4sim.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/MIPS_ALU.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/SIM_HW4_TB.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/SIM_HW4_filenames.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/dual_port_memory.vhd"/>
+    </transform>
+  </transforms>
 
 </generated_project>
