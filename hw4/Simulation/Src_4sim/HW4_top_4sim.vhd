@@ -563,7 +563,14 @@ RESET <= switches_in(6) or RESET_from_Host_Intf;
 -- IR fields signals
 
 --beq/bne comparator
-
+process(GPR_rd_data1, GPR_rd_data2)
+begin
+	if(GPR_rd_data = GPR_rd_data2) then
+		Rs_equals_Rt <= '1';
+	else
+		Rs_equals_Rt <= '0';
+	end if;
+end process;
 
 -- Control decoder  - calculates the signals in ID phase
 process(IR_reg)
