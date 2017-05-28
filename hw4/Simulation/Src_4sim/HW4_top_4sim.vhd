@@ -288,7 +288,7 @@ signal  PC_reg	: STD_LOGIC_VECTOR  (31 downto 0);
 -- ID phase  (a register with valid value along the ID phase)
 signal  IR_reg	: STD_LOGIC_VECTOR  (31 downto 0) ;
 -- IR reg signals   (valid in ID phase)
-signal  Opcode	: STD_LOGIC_VECTOR  (31 downto 29);
+signal  Opcode	: STD_LOGIC_VECTOR  (31 downto 26);
 signal  Rs : STD_LOGIC_VECTOR  (4 downto 0); -- IR[25:21]
 signal  Rt : STD_LOGIC_VECTOR  (4 downto 0); -- IR[20:16]
 signal  Rd : STD_LOGIC_VECTOR  (4 downto 0); --IR[15:11]
@@ -636,7 +636,11 @@ end process;
 -- Rd register
 process(CK,HOLD,RESET)
 begin
-	if CK'event and CK='1' then
+	if RESET='1' then
+		Rt_pEX <= x"00000000";
+		Rd_pEX <= x"00000000";
+		funct_pEX <= b"00000";
+	elsif CK'event and CK='1' and HOLD='0' then
 		Rt_pEX <= Rt;
 		Rd_pEX <= Rd;
 		funct_pEX <= funct;
@@ -646,7 +650,12 @@ end process;
 -- control signals regs
 process(CK,HOLD,RESET)
 begin
-	if CK'event and CK='1' then
+	if RESET='1' then
+		ALUsrcB_pEX	<=	x"0000000";
+		ALUOP_pEX <= x"0000000";
+		RegDst_pEX <= '0';
+		RegWrite_pEX <= '0';	
+	elsif CK'event and CK='1' and HOLD='0' then
 		ALUsrcB_pEX	<=	ALUsrcB;
 		ALUOP_pEX <= ALUOP;
 		RegDst_pEX <= RegDst;
@@ -668,25 +677,35 @@ end process;
 -- RegDst mux and Rd_pWB register
 process(CK,HOLD,RESET) --TODO : make sure this doesn't cause errors from now on...
 begin
-	if CK'event and CK='1' then	
-		if RegDst_pEX = '1' then
-			rd_pWB <= rd_pEX;
-		else
-			rd_pWB <= rt_PEX;
-		end if;
+	if RESET='1' then
+		RegDst_pEX <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then	
+			if RegDst_pEX = '1' then
+				rd_pWB <= rd_pEX;
+			else
+				rd_pWB <= rt_pEX;
+			end if;		
 	end if;	
 end process;
 
 -- RegWrite_pWB FF
 process(CK,HOLD,RESET) --TODO : make sure this doesn't cause errors from now on...
 begin
-	if CK'event and CK='1' then	
+	if RESET='1' then
+		RegWrite_pWb <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then	
 		RegWrite_pWB <= RegWrite_pEX ;
 	end if;
 end process;
 
-
-
+------------------------ TODO --------------
+-- RESET and HOLD structure for our registers
+--if RESET = '1' then
+--	PC_reg <= x"00400000";
+--elsif CK'event and CK='1' and HOLD ='0' then -- ASK GENERIC DANNY
+--	PC_reg <= PC_mux_out ;
+--end if;
+--------------------------------------------
 
 
 -- ***************************************************************************************************
