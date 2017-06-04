@@ -600,7 +600,7 @@ begin
 								ALUsrcB <= '0' ;
 								RegWrite <= '0';
 		when b"000010" => -- jump - 2
-								ALUOP		 <= "10";  --don't care
+								ALUOP		 <= "00";  --don't care
 								RegWrite	<= '0';
 								RegDst		<= '0'; --don't care
 								ALUsrcB		<= '0';
