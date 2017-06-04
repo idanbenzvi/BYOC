@@ -561,6 +561,10 @@ RESET <= switches_in(6) or RESET_from_Host_Intf;
 -- ============================= ID phase processes ========================================
 -- ============================= =========================================================
 -- IR fields signals
+Rs <= IR_reg(25 downto 21);
+Rt <= IR_reg(20 downto 16);
+Rd <= IR_reg(15 downto 11);
+Funct <= IR_reg(5 downto 0);
 
 --beq/bne comparator
 process(GPR_rd_data1, GPR_rd_data2)
@@ -673,11 +677,11 @@ end process;
 -- ============================= WB phase processes ========================================
 -- ========================================================================================
 -- ALUOUT register
-process(ALU_output)
+process(ALU_output,CK,RESET,HOLD)
 begin
 	if RESET='1' then
 		ALUout_reg <= x"00000000";
-	elsif CK'event and CK = '1' then
+	elsif CK'event and CK = '1' and HOLD = '0' then
 		ALUout_reg <= ALU_output;
 	end if;
 end process;

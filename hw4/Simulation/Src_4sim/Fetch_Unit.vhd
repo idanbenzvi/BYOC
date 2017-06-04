@@ -144,7 +144,7 @@ imm <=  IR_reg(15 downto 0);
 process(imm)
 begin
 	if imm(15) = '1' then
-			sext_imm(31 downto 16) <= x"ffff";
+		  sext_imm(31 downto 16) <= x"ffff";
 	else
 		  sext_imm(31 downto 16) <= x"0000";
 	end if;
