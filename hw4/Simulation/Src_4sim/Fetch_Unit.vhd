@@ -43,7 +43,7 @@ architecture Behavioral of Fetch_Unit is
 signal  RESET 			:STD_LOGIC;-- is coming directly from the Fetch_Unit_Host_intf
 signal  CK 				:STD_LOGIC;-- is coming directly from the Fetch_Unit_Host_intf
 signal  HOLD 			:STD_LOGIC;-- is coming directly from the Fetch_Unit_Host_intf
-signal	IMem_adrs 		: STD_LOGIC_VECTOR  (31 downto 0);
+signal  IMem_adrs 		: STD_LOGIC_VECTOR  (31 downto 0);
 signal  IMem_rd_data	: STD_LOGIC_VECTOR  (31 downto 0);
 
 
@@ -118,8 +118,8 @@ end process;
 
 IMem_adrs <= PC_reg; -- connect PC_reg to IMem
 PC_reg_pIF <= PC_reg; -- connect to pIF signal for the TB as spcified inthe Top_4sim
---PC source mux
 
+--PC source mux
 process(PC_Source,PC_plus_4, branch_adrs, jr_adrs, jump_adrs)
 begin
 	case PC_Source is
@@ -140,6 +140,7 @@ IR_reg_pID <= IR_reg; -- added for the ID phase (output)
 -- imm sign extension	  (create the sext_imm signal)
 imm <=  IR_reg(15 downto 0);
 
+
 process(imm)
 begin
 	if imm(15) = '1' then
@@ -149,6 +150,8 @@ begin
 	end if;
 	sext_imm(15 downto 0) <= imm;
 end process;
+
+sext_imm_pID <= sext_imm; -- output signal to the ID phase
 
 -- BRANCH address  (create the branch_adrs signal)
 branch_adrs <= (sext_imm(29 downto 0) & b"00") + PC_plus_4_pID;

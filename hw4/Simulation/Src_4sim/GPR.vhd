@@ -15,16 +15,15 @@ Port (
 CK				: 	in   	STD_LOGIC;
 rd_reg1 		: 	in  	STD_LOGIC_VECTOR (4 downto 0); -- Rs
 rd_reg2 		: 	in  	STD_LOGIC_VECTOR (4 downto 0); -- Rt
-wr_reg	 		: 	in  	STD_LOGIC_VECTOR (4 downto 0); -- Rd (in R-Type instruction, Rt in LW)
-rd_data1 		: 	out 	STD_LOGIC_VECTOR (31 downto 0); -- Rs contents (or 0 if Rs==0)
-rd_data2 		: 	out 	STD_LOGIC_VECTOR (31 downto 0); -- Rt contents (or 0 if Rr==0)
+wr_reg	 	: 	in  	STD_LOGIC_VECTOR (4 downto 0); -- Rd (in R-Type instruction, Rt in LW)
+rd_data1 	: 	out 	STD_LOGIC_VECTOR (31 downto 0); -- Rs contents (or 0 if Rs==0)
+rd_data2 	: 	out 	STD_LOGIC_VECTOR (31 downto 0); -- Rt contents (or 0 if Rr==0)
 wr_data 		: 	in	 	STD_LOGIC_VECTOR (31 downto 0); -- contents to be written into Rd (or Rt)
-Reg_Write 		: 	in  	STD_LOGIC;-- "0" means no register is written into
+Reg_Write 	: 	in  	STD_LOGIC;-- "0" means no register is written into
 GPR_hold		: 	in  	STD_LOGIC-- "1" means no register is written into
 	   );
 end GPR;
 
-	
 architecture Behavioral of GPR is
 
 -- signals used
@@ -58,7 +57,6 @@ END COMPONENT;
 begin 
 
 -- enter your design here
-
 DUAL_PORT_MEMORY:	dual_port_memory_no_CK_read
 	port map(
 	wr_address => conv_integer(wr_reg),
@@ -101,5 +99,3 @@ rd_data2 <= GPR_data_out2;
 
 
 end Behavioral;
-
-
