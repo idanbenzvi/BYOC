@@ -70,12 +70,7 @@ DUAL_PORT_MEMORY:	dual_port_memory_no_CK_read
 
 --wr_en <= GPR_we;
 
---TODO: not needed since there is no logic here and the 2 sensitivities are always regarded when looking at
--- combinational logic. we only need to use process if the sensitivity is not trivial.
---process(GPR_hold, Reg_Write)
---begin
 	GPR_we <= (not GPR_Hold) and Reg_Write;
---end process;
 
 process(rd_reg1, GPR_rd_Data1, GPR_data_out1)
 begin

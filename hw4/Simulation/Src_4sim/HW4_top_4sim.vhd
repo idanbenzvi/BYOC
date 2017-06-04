@@ -275,7 +275,7 @@ signal	leds_out_from_host_intf	: STD_LOGIC_VECTOR  (7 downto 0); -- 7=Flash_stts
 -- almost all signals are inside the Fetch Unit
 
 -- except IMem signals
-signal	IMem_adrs 	: STD_LOGIC_VECTOR  (31 downto 0);
+signal  IMem_adrs 	: STD_LOGIC_VECTOR  (31 downto 0);
 signal  IMem_rd_data	: STD_LOGIC_VECTOR  (31 downto 0);
 
 -- and we have the PC_reg (PC_reg_pIF) coming out of the Fetch_Unit for rdbk to Host_Intf  & TB
