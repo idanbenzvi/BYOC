@@ -177,7 +177,7 @@ opcode <= IR_reg(31 downto 26);
 funct  <= IR_reg(5 downto 0);
 
 -- PC_source decoder  (create the PC_source signal)
-process(opcode) --sensitive to changes in the opcode
+process(opcode, PC_source, Rs_equals_Rt_pID, funct) --sensitive to changes in the opcode
 begin
 	case opcode is
 		when b"000010" => PC_source <= b"11"; --j
