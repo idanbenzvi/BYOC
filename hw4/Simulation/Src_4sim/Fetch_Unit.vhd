@@ -117,7 +117,7 @@ end if;
 end process;
 
 IMem_adrs <= PC_reg; -- connect PC_reg to IMem
-
+PC_reg_pIF <= PC_reg; -- connect to pIF signal for the TB as spcified inthe Top_4sim
 --PC source mux
 
 process(PC_Source,PC_plus_4, branch_adrs, jr_adrs, jump_adrs)
@@ -135,6 +135,7 @@ PC_plus_4 <= PC_reg + 4;
 
 -- IR_reg   (rename of the IMem_rd_data signal)
 IR_reg <= IMem_rd_data;
+IR_reg_pID <= IR_reg; -- added for the ID phase (output)
 
 -- imm sign extension	  (create the sext_imm signal)
 imm <=  IR_reg(15 downto 0);

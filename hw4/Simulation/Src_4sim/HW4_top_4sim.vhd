@@ -607,26 +607,32 @@ end process;
 -- ============================= EX phase processes ========================================
 -- ======================================================================================
 -- A & B registers
-process(GPR_rd_data1)
+process(GPR_rd_data1,CK,HOLD,RESET)
 begin
-	if CK'event and CK = '1' then
+	if RESET='1' then
+		A_reg <= x"00000000";
+	elsif CK'event and CK = '1' and HOLD='0' then
 		A_reg <= GPR_rd_data1;
 	end if;
 end process;
 
 
-process(GPR_rd_data2)
+process(GPR_rd_data2,CK,HOLD,RESET)
 begin
-	if CK'event and CK = '1' then
+	if RESET='1' then
+		B_reg <= x"00000000";
+	elsif CK'event and CK = '1' and HOLD='0' then
 		B_reg <= GPR_rd_data2;
 	end if;
 end process;
 
 -- sext_imm register
 
-process(sext_imm)
+process(sext_imm,CK,HOLD,RESET)
 begin
-	if CK'event and CK = '1' then
+	if RESET='1' then
+		sext_imm_reg <= x"00000000";
+	elsif CK'event and CK = '1' and HOLD='0' then
 		sext_imm_reg <= sext_imm;
 	end if;
 end process;
@@ -637,9 +643,9 @@ end process;
 process(CK,HOLD,RESET)
 begin
 	if RESET='1' then
-		Rt_pEX <= x"00000000";
-		Rd_pEX <= x"00000000";
-		funct_pEX <= b"00000";
+		Rt_pEX <= b"00000";
+		Rd_pEX <= b"00000";
+		funct_pEX <= b"000000";
 	elsif CK'event and CK='1' and HOLD='0' then
 		Rt_pEX <= Rt;
 		Rd_pEX <= Rd;
@@ -651,8 +657,8 @@ end process;
 process(CK,HOLD,RESET)
 begin
 	if RESET='1' then
-		ALUsrcB_pEX	<=	x"0000000";
-		ALUOP_pEX <= x"0000000";
+		ALUsrcB_pEX	<=	'0';
+		ALUOP_pEX <= b"00";
 		RegDst_pEX <= '0';
 		RegWrite_pEX <= '0';	
 	elsif CK'event and CK='1' and HOLD='0' then
@@ -675,7 +681,7 @@ begin
 end process;
 
 -- RegDst mux and Rd_pWB register
-process(CK,HOLD,RESET) --TODO : make sure this doesn't cause errors from now on...
+process(CK,HOLD,RESET) 
 begin
 	if RESET='1' then
 		RegDst_pEX <= '0';
@@ -697,15 +703,6 @@ begin
 		RegWrite_pWB <= RegWrite_pEX ;
 	end if;
 end process;
-
------------------------- TODO --------------
--- RESET and HOLD structure for our registers
---if RESET = '1' then
---	PC_reg <= x"00400000";
---elsif CK'event and CK='1' and HOLD ='0' then -- ASK GENERIC DANNY
---	PC_reg <= PC_mux_out ;
---end if;
---------------------------------------------
 
 
 -- ***************************************************************************************************
