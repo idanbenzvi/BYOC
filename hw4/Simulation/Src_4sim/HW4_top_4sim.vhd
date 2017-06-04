@@ -689,7 +689,8 @@ end process;
 process(CK,HOLD,RESET, rd_pEX, rt_pEX) 
 begin
 	if RESET='1' then
-		RegDst_pEX <= '0';
+		--RegDst_pEX <= '0';
+		Rd_pWB <= b"00000";
 	elsif CK'event and CK='1' and HOLD='0' then	
 			if RegDst_pEX = '1' then
 				Rd_pWB <= rd_pEX;
