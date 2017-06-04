@@ -1,6 +1,6 @@
 --
 -- 
--- This module is the HW4_top entity for implementation 
+-- This module is the HW4_top entity for simulation 
 --  
 --
 ------------------------------------------------------------------------------------
@@ -47,7 +47,7 @@ CK_50MHz 		:	in		STD_LOGIC;
 buttons_in		:	in		STD_LOGIC_vector(3 downto 0) ;--  btn0 is single clock (manual clock), btn3 is manual reset
 switches_in 	:	in		STD_LOGIC_VECTOR (7 downto 0);-- 4-0 to select which part to be displayed on the 7Segnets LEDs
 sevenseg_out	:	out		STD_LOGIC_VECTOR (6 downto 0);-- to the 7 seg LEDs
-anodes_out		:	out		STD_LOGIC_VECTOR (3 downto 0) -- to the 7 seg LEDs
+anodes_out		:	out		STD_LOGIC_VECTOR (3 downto 0)-- to the 7 seg LEDs
 		);
 end HW4_top; 
 
@@ -255,7 +255,7 @@ signal	leds_out_from_host_intf	: STD_LOGIC_VECTOR  (7 downto 0); -- 7=Flash_stts
 -- almost all signals are inside the Fetch Unit
 
 -- except IMem signals
-signal	IMem_adrs 	: STD_LOGIC_VECTOR  (31 downto 0);
+signal  IMem_adrs 	: STD_LOGIC_VECTOR  (31 downto 0);
 signal  IMem_rd_data	: STD_LOGIC_VECTOR  (31 downto 0);
 
 -- and we have the PC_reg (PC_reg_pIF) coming out of the Fetch_Unit for rdbk to Host_Intf  & TB
@@ -268,7 +268,7 @@ signal  PC_reg	: STD_LOGIC_VECTOR  (31 downto 0);
 -- ID phase  (a register with valid value along the ID phase)
 signal  IR_reg	: STD_LOGIC_VECTOR  (31 downto 0) ;
 -- IR reg signals   (valid in ID phase)
-signal  Opcode	: STD_LOGIC_VECTOR  (5 downto 0); -- IR[5:0]
+signal  Opcode	: STD_LOGIC_VECTOR  (31 downto 26);
 signal  Rs : STD_LOGIC_VECTOR  (4 downto 0); -- IR[25:21]
 signal  Rt : STD_LOGIC_VECTOR  (4 downto 0); -- IR[20:16]
 signal  Rd : STD_LOGIC_VECTOR  (4 downto 0); --IR[15:11]
@@ -312,7 +312,6 @@ signal  Funct_pEX	   : STD_LOGIC_VECTOR  (5 downto 0);--IR[5:0]
 signal  ALUOP_pEX      : STD_LOGIC_VECTOR  (1 downto 0);
 signal  RegDst_pEX     : STD_LOGIC;
 signal  RegWrite_pEX   : STD_LOGIC;
-
 
 
 
@@ -542,41 +541,154 @@ RESET <= switches_in(6) or RESET_from_Host_Intf;
 -- ============================= ID phase processes ========================================
 -- ============================= =========================================================
 -- IR fields signals
+Rs <= IR_reg(25 downto 21);
+Rt <= IR_reg(20 downto 16);
+Rd <= IR_reg(15 downto 11);
+Funct <= IR_reg(5 downto 0);
 
 --beq/bne comparator
-
+process(GPR_rd_data1, GPR_rd_data2)
+begin
+	if(GPR_rd_data1 = GPR_rd_data2) then
+		Rs_equals_Rt <= '1';
+	else
+		Rs_equals_Rt <= '0';
+	end if;
+end process;
 
 -- Control decoder  - calculates the signals in ID phase
-
-
+process(IR_reg, ALUOP, ALUsrcB, RegDst, RegWrite)
+begin 
+	case IR_reg(31 downto 26) is
+		when b"000000" => 
+								ALUOP <= b"10"; -- unique to R-type instructions
+								ALUsrcB <= '0';
+								RegDst <= '1';
+								RegWrite <= '1';
+		when b"001000" => ALUOP <= b"00"; -- addi - I type command
+								RegWrite <= '1';
+								RegDst <= '0'; 
+								ALUsrcB <= '1';
+		when b"000100" => -- beq - 4
+								ALUOP <= b"01";
+								ALUsrcB <= '0';
+								RegDst <= '0'; --doesn't matter
+								RegWrite <= '0';
+		when b"000101" => -- bne - 5 --TODO finish
+								ALUOP <= b"01"; --sub
+								RegDst <= '0'; -- doesn't matter
+								ALUsrcB <= '0' ;
+								RegWrite <= '0';
+		when b"000010" => -- jump - 2
+								ALUOP		 <= "00";  --don't care
+								RegWrite	<= '0';
+								RegDst		<= '0'; --don't care
+								ALUsrcB		<= '0';
+								--handle all other cases as null
+		when others => null;
+		end case;
+end process;
 -- ============================= EX phase processes ========================================
 -- ======================================================================================
 -- A & B registers
+process(GPR_rd_data1,CK,HOLD,RESET)
+begin
+	if RESET='1' then
+		A_reg <= x"00000000";
+	elsif CK'event and CK = '1' and HOLD='0' then
+		A_reg <= GPR_rd_data1;
+	end if;
+end process;
+
+
+process(GPR_rd_data2,CK,HOLD,RESET)
+begin
+	if RESET='1' then
+		B_reg <= x"00000000";
+	elsif CK'event and CK = '1' and HOLD='0' then
+		B_reg <= GPR_rd_data2;
+	end if;
+end process;
 
 -- sext_imm register
 
+process(sext_imm,CK,HOLD,RESET)
+begin
+	if RESET='1' then
+		sext_imm_reg <= x"00000000";
+	elsif CK'event and CK = '1' and HOLD='0' then
+		sext_imm_reg <= sext_imm;
+	end if;
+end process;
+
 -- Rt register 
-
 -- Rd register
-
+process(CK,HOLD,RESET, Rt, Rd, funct)
+begin
+	if RESET='1' then
+		Rt_pEX <= b"00000";
+		Rd_pEX <= b"00000";
+		funct_pEX <= b"000000";
+	elsif CK'event and CK='1' and HOLD='0' then
+		Rt_pEX <= Rt;
+		Rd_pEX <= Rd;
+		funct_pEX <= funct;
+	end if;
+end process;
 
 -- control signals regs
-
+process(CK,HOLD,RESET, ALUsrcB, ALUOP, RegDst, RegWrite)
+begin
+	if RESET='1' then
+		ALUsrcB_pEX	<=	'0';
+		ALUOP_pEX <= b"00";
+		RegDst_pEX <= '0';
+		RegWrite_pEX <= '0';	
+	elsif CK'event and CK='1' and HOLD='0' then
+		ALUsrcB_pEX	<=	ALUsrcB;
+		ALUOP_pEX <= ALUOP;
+		RegDst_pEX <= RegDst;
+		RegWrite_pEX <= RegWrite; 
+	end if;
+end process;
 
 
 -- ============================= WB phase processes ========================================
 -- ========================================================================================
 -- ALUOUT register
-
+process(ALU_output,CK,RESET,HOLD)
+begin
+	if RESET='1' then
+		ALUout_reg <= x"00000000";
+	elsif CK'event and CK = '1' and HOLD = '0' then
+		ALUout_reg <= ALU_output;
+	end if;
+end process;
 
 -- RegDst mux and Rd_pWB register
-
+process(CK,HOLD,RESET, rd_pEX, rt_pEX) 
+begin
+	if RESET='1' then
+		--RegDst_pEX <= '0';
+		Rd_pWB <= b"00000";
+	elsif CK'event and CK='1' and HOLD='0' then	
+			if RegDst_pEX = '1' then
+				Rd_pWB <= rd_pEX;
+			else
+				Rd_pWB <= rt_pEX;
+			end if;		
+	end if;	
+end process;
 
 -- RegWrite_pWB FF
-
-
-
-
+process(CK,HOLD,RESET, RegWrite_pEX) --TODO : make sure this doesn't cause errors from now on...
+begin
+	if RESET='1' then
+		RegWrite_pWb <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then	
+		RegWrite_pWB <= RegWrite_pEX ;
+	end if;
+end process;
 
 
 -- ***************************************************************************************************
@@ -585,12 +697,6 @@ rdbk3_vec   <=	b"000" & Rs  &  b"000" & Rt  &  b"000" & Rd  &  b"00" & Funct;
 rdbk4_vec   <=	b"000" & RegWrite & b"0000"  &  b"00000000"  &  b"00000000"  &  b"0000" & b"000" & Rs_equals_Rt;
 rdbk7_vec   <=  b"000" & ALUsrcB_pEX & b"0000"  & b"00000000" & b"0000"   &  b"00" & ALUOP_pEX & "00" & Funct_pEX;
 rdbk13_vec  <=	b"00000000" & b"000" &  Rd_pWB &  b"00000000"  &  b"0000" & "000" & RegWrite_pWB;
-
-
-
--- ***************************************************************************************************
--- **************************************************************************************************
-
 
 
 end  Behavioral;
