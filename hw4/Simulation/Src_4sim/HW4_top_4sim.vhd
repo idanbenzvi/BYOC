@@ -573,7 +573,7 @@ begin
 end process;
 
 -- Control decoder  - calculates the signals in ID phase
-process(IR_reg)
+process(IR_reg, ALUOP, ALUsrcB, RegDst, RegWrite)
 begin 
 	case IR_reg(31 downto 26) is
 		when b"000000" => 
@@ -640,7 +640,7 @@ end process;
 -- Rt register 
 
 -- Rd register
-process(CK,HOLD,RESET)
+process(CK,HOLD,RESET, Rt, Rd, funct)
 begin
 	if RESET='1' then
 		Rt_pEX <= b"00000";
@@ -654,7 +654,7 @@ begin
 end process;
 
 -- control signals regs
-process(CK,HOLD,RESET)
+process(CK,HOLD,RESET, ALUsrcB, ALUOP, RegDst, RegWrite)
 begin
 	if RESET='1' then
 		ALUsrcB_pEX	<=	'0';
@@ -683,7 +683,7 @@ begin
 end process;
 
 -- RegDst mux and Rd_pWB register
-process(CK,HOLD,RESET) 
+process(CK,HOLD,RESET, rd_pEX, rt_pEX) 
 begin
 	if RESET='1' then
 		RegDst_pEX <= '0';
@@ -697,7 +697,7 @@ begin
 end process;
 
 -- RegWrite_pWB FF
-process(CK,HOLD,RESET) --TODO : make sure this doesn't cause errors from now on...
+process(CK,HOLD,RESET, RegWrite_pEX) --TODO : make sure this doesn't cause errors from now on...
 begin
 	if RESET='1' then
 		RegWrite_pWb <= '0';
