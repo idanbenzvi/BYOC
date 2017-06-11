@@ -1,0 +1,15 @@
+PH byoc_filenames NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/SIM_HW4_filenames.vhd sub00/vhpl02 1495994626
+AR hw4_top behavioral /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/HW4_top_4sim.vhd sub00/vhpl14 1495992861
+EN clock_driver NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/BYOC_Clock_driver_4sim.vhd sub00/vhpl03 1495994627
+EN dual_port_memory_no_ck_read NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/dual_port_memory.vhd sub00/vhpl00 1495994624
+EN mips_alu NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/MIPS_ALU.vhd sub00/vhpl11 1495994635
+EN byoc_host_intf NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/BYOC_Host_Intf_4sim.vhd sub00/vhpl05 1495994629
+AR fetch_unit behavioral /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/Fetch_Unit.vhd sub00/vhpl08 1495994632
+EN fetch_unit NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/Fetch_Unit.vhd sub00/vhpl07 1495994631
+AR gpr behavioral /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/GPR.vhd sub00/vhpl10 1495994634
+AR mips_alu behavioral /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/MIPS_ALU.vhd sub00/vhpl12 1495994636
+AR dual_port_memory_no_ck_read dual_port_memory /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/dual_port_memory.vhd sub00/vhpl01 1495994625
+AR byoc_host_intf behavioral /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/BYOC_Host_Intf_4sim.vhd sub00/vhpl06 1495994630
+EN gpr NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/GPR.vhd sub00/vhpl09 1495994633
+EN hw4_top NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/HW4_top_4sim.vhd sub00/vhpl13 1495994637
+AR clock_driver clock_divider /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/BYOC_Clock_driver_4sim.vhd sub00/vhpl04 1495994628

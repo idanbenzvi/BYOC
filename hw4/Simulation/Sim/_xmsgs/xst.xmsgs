@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLParsers" num="3384" delta="old" >&quot;<arg fmt="%s" index="1">/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/HW4_top_4sim.vhd</arg>&quot; Line <arg fmt="%d" index="2">646</arg>. Size mismatch.  String literal &quot;<arg fmt="%s" index="3">0000000000000000</arg>&quot; is of size <arg fmt="%u" index="4">16</arg> but is expected to be of size <arg fmt="%u" index="5">5</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="3384" delta="old" >&quot;<arg fmt="%s" index="1">/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/HW4_top_4sim.vhd</arg>&quot; Line <arg fmt="%d" index="2">647</arg>. Size mismatch.  String literal &quot;<arg fmt="%s" index="3">00000000000000000000000000000000</arg>&quot; is of size <arg fmt="%u" index="4">32</arg> but is expected to be of size <arg fmt="%u" index="5">5</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="3384" delta="old" >&quot;<arg fmt="%s" index="1">/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/HW4_top_4sim.vhd</arg>&quot; Line <arg fmt="%d" index="2">648</arg>. Size mismatch.  String literal &quot;<arg fmt="%s" index="3">00000</arg>&quot; is of size <arg fmt="%u" index="4">5</arg> but is expected to be of size <arg fmt="%u" index="5">6</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="3384" delta="old" >&quot;<arg fmt="%s" index="1">/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/HW4_top_4sim.vhd</arg>&quot; Line <arg fmt="%d" index="2">661</arg>. Size mismatch.  String literal &quot;<arg fmt="%s" index="3">0000000000000000000000000000</arg>&quot; is of size <arg fmt="%u" index="4">28</arg> but is expected to be of size <arg fmt="%u" index="5">2</arg>.
+</msg>
+
+</messages>
+

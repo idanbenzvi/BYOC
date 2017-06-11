@@ -698,25 +698,7 @@ rdbk4_vec   <=	b"000" & RegWrite & b"0000"  &  b"00000000"  &  b"00000000"  &  b
 rdbk7_vec   <=  b"000" & ALUsrcB_pEX & b"0000"  & b"00000000" & b"0000"   &  b"00" & ALUOP_pEX & "00" & Funct_pEX;
 rdbk13_vec  <=	b"00000000" & b"000" &  Rd_pWB &  b"00000000"  &  b"0000" & "000" & RegWrite_pWB;
 
-
 end  Behavioral;
 
 -- **************************************************************************************************
 -- **************************************************************************************************
-rdbk0 		<= 	    PC_reg;
-rdbk1 		<= 	    IR_reg; 
-rdbk2 		<= 	    sext_imm_pID;
-rdbk3 	    <=		b"000" & Rs  &  b"000" & Rt  &  b"000" & Rd  &  b"00" & Funct;
-rdbk4	    <=		b"000" & RegWrite & b"0000"  &  b"00000000"  &  b"00000000"  &  b"0000" & b"000" & Rs_equals_Rt; ;
-rdbk5 	    <=		GPR_rd_data1;
-rdbk6	    <=		GPR_rd_data2;
-rdbk7		<= 		b"000" & ALUsrcB_pEX & b"0000"  & b"00000000" & b"0000"   &  b"00" & ALUOP_pEX & "00" & Funct_pEX;;
-rdbk8		<=		A_reg;
-rdbk9<= 		B_reg;
-rdbk10 	    <=		sext_imm_reg;
-rdbk11 	    <= 		ALU_output;
-rdbk12 	    <= 		ALUout_reg;
-rdbk13	    <=		rdbk13_vec;
---rdbk14_out_to_TB 		<=  	x"00000000";
---rdbk15_out_to_TB 		<= 		x"00000000";
-

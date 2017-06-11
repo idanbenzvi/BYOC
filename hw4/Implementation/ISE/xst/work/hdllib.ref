@@ -1,0 +1,12 @@
+AR hw4_top behavioral /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/Src_4ISE/HW4_top.vhd sub00/vhpl11 1496599049
+EN clock_driver NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/Src_4ISE/BYOC_Clock_driver.vhd sub00/vhpl02 1496599040
+EN dual_port_memory_no_ck_read NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/Src_4ISE/dual_port_memory.vhd sub00/vhpl00 1496599038
+EN mips_alu NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/Src_4ISE/MIPS_ALU.vhd sub00/vhpl08 1496599046
+AR fetch_unit behavioral /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/Src_4ISE/Fetch_Unit.vhd sub00/vhpl05 1496599043
+EN fetch_unit NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/Src_4ISE/Fetch_Unit.vhd sub00/vhpl04 1496599042
+AR gpr behavioral /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/Src_4ISE/GPR.vhd sub00/vhpl07 1496599045
+AR mips_alu behavioral /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/Src_4ISE/MIPS_ALU.vhd sub00/vhpl09 1496599047
+AR dual_port_memory_no_ck_read dual_port_memory /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/Src_4ISE/dual_port_memory.vhd sub00/vhpl01 1496599039
+EN gpr NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/Src_4ISE/GPR.vhd sub00/vhpl06 1496599044
+EN hw4_top NULL /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/Src_4ISE/HW4_top.vhd sub00/vhpl10 1496599048
+AR clock_driver clock_divider /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/Src_4ISE/BYOC_Clock_driver.vhd sub00/vhpl03 1496599041
