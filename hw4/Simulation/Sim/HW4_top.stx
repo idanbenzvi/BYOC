@@ -1,0 +1,52 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Sim/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Sim/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/dual_port_memory.vhd" in Library work.
+Architecture dual_port_memory of Entity dual_port_memory_no_ck_read is up to date.
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/SIM_HW4_filenames.vhd" in Library work.
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/BYOC_Clock_driver_4sim.vhd" in Library work.
+Architecture clock_divider of Entity clock_driver is up to date.
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/BYOC_Host_Intf_4sim.vhd" in Library work.
+Architecture behavioral of Entity byoc_host_intf is up to date.
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/Fetch_Unit.vhd" in Library work.
+Architecture behavioral of Entity fetch_unit is up to date.
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/GPR.vhd" in Library work.
+Architecture behavioral of Entity gpr is up to date.
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/MIPS_ALU.vhd" in Library work.
+Architecture behavioral of Entity mips_alu is up to date.
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Src_4sim/HW4_top_4sim.vhd" in Library work.
+Entity <hw4_top> compiled.
+Entity <hw4_top> (Architecture <behavioral>) compiled.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> 
+
+
+Total memory usage is 473912 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

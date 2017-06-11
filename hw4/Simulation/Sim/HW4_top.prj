@@ -1,0 +1,8 @@
+vhdl work "../Src_4sim/SIM_HW4_filenames.vhd"
+vhdl work "../Src_4sim/dual_port_memory.vhd"
+vhdl work "../Src_4sim/MIPS_ALU.vhd"
+vhdl work "../Src_4sim/GPR.vhd"
+vhdl work "../Src_4sim/Fetch_Unit.vhd"
+vhdl work "../Src_4sim/BYOC_Host_Intf_4sim.vhd"
+vhdl work "../Src_4sim/BYOC_Clock_driver_4sim.vhd"
+vhdl work "../Src_4sim/HW4_top_4sim.vhd"

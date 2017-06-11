@@ -1,0 +1,20 @@
+xst -intstyle ise -ifn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.xst" -ofn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../Src_4ISE -nt timestamp -uc /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/Src_4ISE/BYOC.ucf -p xc3s500e-fg320-4 HW4_top.ngc HW4_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o HW4_top_map.ncd HW4_top.ngd HW4_top.pcf 
+par -w -intstyle ise -ol high -t 1 HW4_top_map.ncd HW4_top.ncd HW4_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml HW4_top.twx HW4_top.ncd -o HW4_top.twr HW4_top.pcf 
+bitgen -intstyle ise -f HW4_top.ut HW4_top.ncd 
+xst -intstyle ise -ifn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.xst" -ofn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.syr" 
+xst -intstyle ise -ifn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.xst" -ofn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.syr" 
+xst -intstyle ise -ifn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.xst" -ofn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.syr" 
+xst -intstyle ise -ifn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.xst" -ofn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.syr" 
+xst -intstyle ise -ifn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.xst" -ofn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.syr" 
+xst -intstyle ise -ifn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.xst" -ofn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.syr" 
+xst -intstyle ise -ifn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.xst" -ofn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.syr" 
+xst -intstyle ise -ifn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.xst" -ofn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.syr" 
+xst -intstyle ise -ifn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.xst" -ofn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/ISE/HW4_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../Src_4ISE -nt timestamp -uc /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Implementation/Src_4ISE/BYOC.ucf -p xc3s500e-fg320-4 HW4_top.ngc HW4_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o HW4_top_map.ncd HW4_top.ngd HW4_top.pcf 
+par -w -intstyle ise -ol high -t 1 HW4_top_map.ncd HW4_top.ncd HW4_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml HW4_top.twx HW4_top.ncd -o HW4_top.twr HW4_top.pcf 
+bitgen -intstyle ise -f HW4_top.ut HW4_top.ncd 

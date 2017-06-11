@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Sim/BYOC_TB_for_students.xst" -ofn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Sim/BYOC_TB_for_students.syr" 
+xst -intstyle ise -ifn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Sim/BYOC_TB_for_students.xst" -ofn "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Sim/BYOC_TB_for_students.syr" 

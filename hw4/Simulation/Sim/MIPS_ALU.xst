@@ -1,0 +1,5 @@
+set -tmpdir "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Sim/xst/projnav.tmp"
+set -xsthdpdir "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw4/Simulation/Sim/xst"
+elaborate
+-ifn MIPS_ALU.prj
+-ifmt mixed
