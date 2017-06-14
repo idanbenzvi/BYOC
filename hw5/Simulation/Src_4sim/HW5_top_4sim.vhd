@@ -647,7 +647,7 @@ begin
 								MemToReg <= '1';
 								MemWrite <= '0';
 		when b"101011" => --sw
-								ALUOP < ="00";
+								ALUOP <= "00";
 								RegWrite <= '0'; 
 								RegDst <= '0';
 								ALUsrcB <= '1';
