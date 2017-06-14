@@ -595,11 +595,6 @@ begin
 	end if;
 end process;
 
---if a store word (SW) instruction - make sure to set MemWrite
-process()
-begin
-	if(
-end process;
 
 -- Control decoder  - calculates the signals in ID phase
 -- creates the following signals according to the opcode:
@@ -609,7 +604,7 @@ end process;
 --		MemWrite	 '1' - write to DMem
 --		MemToReg	 '0' - write ALUout_reg data (to "Rd"), '1' - write MDR_reg data (to "Rd")
 --		RegWrite	 '1' - write to GPR file (to "Rd")
-process(IR_reg, ALUOP, ALUsrcB, RegDst, RegWrite,MemWrite,MemToReg)
+process(IR_reg, ALUOP, ALUsrcB, RegDst, RegWrite,MemWrite,MemToReg,Opcode)
 begin 
 	case Opcode is
 		when b"000000" => 
@@ -645,17 +640,17 @@ begin
 		-- HW 5 Additions --
 		--------------------
 		when b"100011" => --lw
-								ALUOP < ="";
+								ALUOP <= b"00";
 								RegWrite <= '1'; -- allow writing to the register
-								RegDst <= 
-								ALUsrcB <= ;
+								RegDst <= '0';
+								ALUsrcB <= '1' ;
 								MemToReg <= '1';
 								MemWrite <= '0';
 		when b"101011" => --sw
-								ALUOP < ="";
-								RegWrite <= '1'; -- allow writing to the register
-								RegDst <= 
-								ALUsrcB <= ;
+								ALUOP < ="00";
+								RegWrite <= '0'; 
+								RegDst <= '0';
+								ALUsrcB <= '1';
 								MemToReg <= '0';
 								MemWrite <= '1';
 		when others => null;
@@ -673,6 +668,9 @@ begin
 	end if;
 end process;
 
+--EX phase signals registers
+
+
 
 process(GPR_rd_data2,CK,HOLD,RESET)
 begin
@@ -684,7 +682,6 @@ begin
 end process;
 
 -- sext_imm register
-
 process(sext_imm,CK,HOLD,RESET)
 begin
 	if RESET='1' then
