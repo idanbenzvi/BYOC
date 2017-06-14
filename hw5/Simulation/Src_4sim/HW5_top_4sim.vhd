@@ -780,6 +780,15 @@ begin
 	end if;
 end process;
 
+process(CK,HOLD,RESET, ALUOut_reg_pWB)
+begin
+	if RESET='1' then
+		ALUOut_reg_pWB <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		ALUOut_reg_pWB <= ALUOut_reg ;
+	end if;
+end process;
+
 -- ***************************************************************************************************
 --build special rdbk signals
 rdbk3_vec   <=	b"000" & Rs  &  b"000" & Rt  &  b"000" & Rd  &  b"00" & Funct;
