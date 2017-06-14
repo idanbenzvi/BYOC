@@ -659,7 +659,7 @@ begin
 								ALUsrcB <= '1';
 								MemToReg <= '0';
 								MemWrite <= '1';
-		when others => null;
+		when others => NULL;
 		end case;
 end process;
 -- ============================= EX phase processes ========================================
@@ -765,7 +765,7 @@ Rd_pMEM <= Rd_pWB;
 --process (CK, HOLD, RESET, Rd_pWB)
 --begin
 --	if RESET='1' then
---		Rd_pMEM <= b"00000";
+--		Rd_pMEM < = b"00000";
 --	elsif CK'event and CK='1' and HOLD='0' then
 --		Rd_pMEM <= Rd_pWB;
 --	end if;
@@ -840,9 +840,9 @@ end process;
 process(CK,HOLD,RESET, RegWrite_pEX) --TODO : make sure this doesn't cause errors from now on...
 begin
 	if RESET='1' then
-		RegWrite_pWb <= '0';
+		RegWrite_pMEM <= '0';
 	elsif CK'event and CK='1' and HOLD='0' then	
-		RegWrite_pWB <= RegWrite_pEX ;
+		RegWrite_pMEM <= RegWrite_pEX ;
 	end if;
 end process;
 
