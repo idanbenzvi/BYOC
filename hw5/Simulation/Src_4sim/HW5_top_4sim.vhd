@@ -747,14 +747,14 @@ end process;
 process (CK, HOLD, RESET, B_reg)
 begin
 	if RESET='1' then
-		B_reg_pMEM <= '0';
+		B_reg_pMEM <= x"00000000";
 	elsif CK'event and CK='1' and HOLD='0' then
 		B_reg_pMEM <= B_reg;
 	end if;
 end process;
 
--- no register required
-Rd_pMEM <= RegDst_pEX;
+-- no register required - TODO : Make sure no error occurs because of this
+Rd_pMEM <= Rd_pWB;
 
 --MemWrite_pMEM Register
 process (CK, HOLD, RESET, MemWrite_pEX)
@@ -833,7 +833,7 @@ end process;
 process(CK,HOLD,RESET, ALUOut_reg_pWB)
 begin
 	if RESET='1' then
-		ALUOut_reg_pWB <= '0';
+		ALUOut_reg_pWB <= b"00000";
 	elsif CK'event and CK='1' and HOLD='0' then
 		ALUOut_reg_pWB <= ALUOut_reg ;
 	end if;
@@ -852,7 +852,7 @@ end process;
 process(CK,HOLD,RESET, Rd_pMEM)
 begin
 	if RESET='1' then
-		Rd_pWB <= '0';
+		Rd_pWB <= b"00000";
 	elsif CK'event and CK='1' and HOLD='0' then
 		Rd_pWB <= Rd_pMEM;
 	end if;
