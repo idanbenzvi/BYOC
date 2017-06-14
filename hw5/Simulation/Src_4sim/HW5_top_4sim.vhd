@@ -761,6 +761,16 @@ end process;
 
 -- no register required - TODO : Make sure no error occurs because of this
 Rd_pMEM <= Rd_pWB;
+--
+--process (CK, HOLD, RESET, Rd_pWB)
+--begin
+--	if RESET='1' then
+--		Rd_pMEM <= b"00000";
+--	elsif CK'event and CK='1' and HOLD='0' then
+--		Rd_pMEM <= Rd_pWB;
+--	end if;
+--end process;
+
 
 --MemWrite_pMEM Register
 process (CK, HOLD, RESET, MemWrite_pEX)
