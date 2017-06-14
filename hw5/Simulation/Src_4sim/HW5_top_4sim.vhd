@@ -759,15 +759,6 @@ begin
 	end if;
 end process;
 
--- a register is required !
-process(CK, RESET)
-begin
-	if RESET = '1' then
-		Rd_pWB <= b"00000";
-	elsif CK'event and CK = '1' and HOLD = '0' then
-		Rd_pWB <= Rd_pMEM;
-	end if;
-end process;
 --
 --process (CK, HOLD, RESET, Rd_pWB)
 --begin
@@ -778,6 +769,21 @@ end process;
 --	end if;
 --end process;
 
+
+-- RegDst mux and Rd_pWB register - HW5 - changed from WB to MEM
+process(CK,HOLD,RESET, rd_pEX, rt_pEX) 
+begin
+	if RESET='1' then
+		--RegDst_pEX <= '0';
+		Rd_pMEM <= b"00000";
+	elsif CK'event and CK='1' and HOLD='0' then	
+			if RegDst_pEX = '1' then
+				Rd_pMEM <= rd_pEX;
+			else
+				Rd_pMEM<= rt_pEX;
+			end if;		
+	end if;	
+end process;
 
 --MemWrite_pMEM Register
 process (CK, HOLD, RESET, MemWrite_pEX)
@@ -828,19 +834,14 @@ begin
 	end if;
 end process;
 
--- RegDst mux and Rd_pWB register - HW5 - changed from WB to MEM
-process(CK,HOLD,RESET, rd_pEX, rt_pEX) 
+-- a register is required !
+process(CK, RESET)
 begin
-	if RESET='1' then
-		--RegDst_pEX <= '0';
-		Rd_pMEM <= b"00000";
-	elsif CK'event and CK='1' and HOLD='0' then	
-			if RegDst_pEX = '1' then
-				Rd_pMEM <= rd_pEX;
-			else
-				Rd_pMEM<= rt_pEX;
-			end if;		
-	end if;	
+	if RESET = '1' then
+		Rd_pWB <= b"00000";
+	elsif CK'event and CK = '1' and HOLD = '0' then
+		Rd_pWB <= Rd_pMEM;
+	end if;
 end process;
 
 -- RegWrite_pWB FF
@@ -866,7 +867,7 @@ end process;
 process(MemToReg,MDR_reg,ALUOut_reg_pWB)
 begin
 	if MemToReg='0' then
-		GPR_wr_data <= ALUout_reg;
+		GPR_wr_data <= ALUout_reg_pWB;
 	else
 		GPR_wr_data <= MDR_reg;
 	end if;
