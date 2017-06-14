@@ -722,6 +722,16 @@ begin
 	end if;
 end process;
 
+--signal  MemWrite_pEX : STD_LOGIC;
+--signal  MemToReg_pEX : STD_LOGIC;
+process (CK, HOLD, RESET, MemWrite)
+begin
+	if RESET='1' then
+		MemWrite_pEX <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		MemWrite_pEX <= MemWrite;
+	end if;
+end process;
 
 -- ============================= WB phase processes ========================================
 -- ========================================================================================
