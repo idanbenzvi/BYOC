@@ -612,30 +612,36 @@ begin
 								ALUsrcB <= '0';
 								RegDst <= '1';
 								RegWrite <= '1';
+								MemToReg <= '0';
 								MemWrite <= '0';
 		when b"001000" => ALUOP <= b"00"; -- addi - I type command
 								RegWrite <= '1';
 								RegDst <= '0'; 
 								ALUsrcB <= '1';
+								MemToReg <= '0';
 								MemWrite <= '0';
 		when b"000100" => -- beq - 4
 								ALUOP <= b"01";
 								ALUsrcB <= '0';
 								RegDst <= '0'; --doesn't matter
 								RegWrite <= '0';
+								MemToReg <= '0';
 								MemWrite <= '0';
 		when b"000101" => -- bne - 5 
 								ALUOP <= b"01"; --sub
 								RegDst <= '0'; -- doesn't matter
 								ALUsrcB <= '0' ;
 								RegWrite <= '0';
+								MemToReg <= '0';
 								MemWrite <= '0';
 		when b"000010" => -- jump - 2
 								ALUOP		 <= "00";  --don't care
 								RegWrite	<= '0';
 								RegDst		<= '0'; --don't care
 								ALUsrcB		<= '0';
+								MemToReg <= '0';
 								MemWrite <= '0';
+								
 								--handle all other cases as null
 		-- HW 5 Additions --
 		--------------------
@@ -833,7 +839,7 @@ end process;
 process(CK,HOLD,RESET, ALUOut_reg_pWB)
 begin
 	if RESET='1' then
-		ALUOut_reg_pWB <= b"00000";
+		ALUOut_reg_pWB <= x"00000000";
 	elsif CK'event and CK='1' and HOLD='0' then
 		ALUOut_reg_pWB <= ALUOut_reg ;
 	end if;
@@ -858,12 +864,12 @@ begin
 	end if;
 end process;
 
-process(CK,HOLD,RESET, MemToReg_pEX)
+process(CK,HOLD,RESET, MemToReg_pMEM)
 begin
 	if RESET='1' then
-		MemToReg_pMEM <= '0';
+		MemToReg_pWB <= '0';
 	elsif CK'event and CK='1' and HOLD='0' then
-		MemToReg_pMEM <= MemToReg_pEX;
+		MemToReg_pWB <= MemToReg_pMEM;
 	end if;
 end process;
 
@@ -882,7 +888,7 @@ rdbk3_vec   <=	b"000" & Rs  &  b"000" & Rt  &  b"000" & Rd  &  b"00" & Funct;
 rdbk4_vec   <=	b"000" & RegWrite & b"0000"  &  b"00000000"  &  b"00000000"  &  b"0000" & b"000" & Rs_equals_Rt;
 rdbk5_vec   <=   "000" & ALUsrcB_pEX & b"0000"  & b"00000000" & b"0000"   &  b"00" & ALUOP_pEX & "00" & Funct_pEX;
 rdbk12_vec  <=	MemWrite_pMem & b"00" & MemToReg_pMEM & b"000" &  RegWrite_pMEM & b"000" & Rd_pMEM & b"000" & MemToReg_pWB & b"000" & RegWrite_pWB & b"000" & Rd_pWB;
-
+				-- 31              30-29   28              27-25     24              23-21      20-16    15-13   12              11-9         8         7-5       4-0   
 
 
 -- ***************************************************************************************************
