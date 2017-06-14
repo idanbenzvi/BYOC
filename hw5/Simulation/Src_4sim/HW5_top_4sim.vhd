@@ -670,8 +670,6 @@ end process;
 
 --EX phase signals registers
 
-
-
 process(GPR_rd_data2,CK,HOLD,RESET)
 begin
 	if RESET='1' then
@@ -740,8 +738,53 @@ begin
 	end if;
 end process;
 
+-- ============================= MEM phase processes ========================================
+-- ==========================================================================================
+
+B_reg_PMEM <= B_reg;
+Rd_pMEM <= RegDst_pEX;
+MemWrite_pMEM <= Mem;
+MemToReg_pMEM <= ;
+RegWrite_pMEM <= ;
+
+--Regsiters requried
+
+--MemWrite_pMEM Register
+process (CK, HOLD, RESET, MemWrite_pEX)
+begin
+	if RESET='1' then
+		MemWrite_pMEM <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		MemWrite_pMEM <= MemWrite_pEX;
+	end if;
+end process;
+------------------------
+
+--MemToReg_pMEM Register
+process (CK, HOLD, RESET, MemToReg_pEX)
+begin
+	if RESET='1' then
+		MemToReg_pMEM <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		MemToReg_pMEM <= MemToReg_pEX;
+	end if;
+end process;
+------------------------
+
+
+--RegWrite_pMEM Register
+process (CK, HOLD, RESET, RegWrite_pEX)
+begin
+	if RESET='1' then
+		RegWrite_pMEM <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		RegWrite_pMEM <= RegWrite_pEX;
+	end if;
+end process;
+------------------------
+
 -- ============================= WB phase processes ========================================
--- ========================================================================================
+-- =========================================================================================
 
 --NO need to add MDR signals, as stated
 
