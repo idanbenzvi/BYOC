@@ -842,6 +842,33 @@ begin
 	end if;
 end process;
 
+process(CK,HOLD,RESET, Rd_pMEM)
+begin
+	if RESET='1' then
+		Rd_pWB <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		Rd_pWB <= Rd_pMEM;
+	end if;
+end process;
+
+process(CK,HOLD,RESET, MemToReg_pEX)
+begin
+	if RESET='1' then
+		MemToReg_pMEM <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		MemToReg_pMEM <= MemToReg_pEX;
+	end if;
+end process;
+
+process(CK,HOLD,RESET, RegWrite_pMEM)
+begin
+	if RESET='1' then
+		RegWrite_pWB <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		RegWrite_pWB <= RegWrite_pMEM;
+	end if;
+end process;
+
 -- ***************************************************************************************************
 --build special rdbk signals
 rdbk3_vec   <=	b"000" & Rs  &  b"000" & Rt  &  b"000" & Rd  &  b"00" & Funct;
