@@ -759,8 +759,15 @@ begin
 	end if;
 end process;
 
--- no register required - TODO : Make sure no error occurs because of this
-Rd_pMEM <= Rd_pWB;
+-- a register is required !
+process(CK, RESET)
+begin
+	if RESET = '1' then
+		Rd_pWB <= b"00000";
+	elsif CK'event and CK = '1' and HOLD = '0' then
+		Rd_pWB <= Rd_pMEM;
+	end if;
+end process;
 --
 --process (CK, HOLD, RESET, Rd_pWB)
 --begin
@@ -821,17 +828,17 @@ begin
 	end if;
 end process;
 
--- RegDst mux and Rd_pWB register
+-- RegDst mux and Rd_pWB register - HW5 - changed from WB to MEM
 process(CK,HOLD,RESET, rd_pEX, rt_pEX) 
 begin
 	if RESET='1' then
 		--RegDst_pEX <= '0';
-		Rd_pWB <= b"00000";
+		Rd_pMEM <= b"00000";
 	elsif CK'event and CK='1' and HOLD='0' then	
 			if RegDst_pEX = '1' then
-				Rd_pWB <= rd_pEX;
+				Rd_pMEM <= rd_pEX;
 			else
-				Rd_pWB <= rt_pEX;
+				Rd_pMEM<= rt_pEX;
 			end if;		
 	end if;	
 end process;
