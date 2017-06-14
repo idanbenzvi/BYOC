@@ -741,13 +741,20 @@ end process;
 -- ============================= MEM phase processes ========================================
 -- ==========================================================================================
 
-B_reg_PMEM <= B_reg;
-Rd_pMEM <= RegDst_pEX;
-MemWrite_pMEM <= Mem;
-MemToReg_pMEM <= ;
-RegWrite_pMEM <= ;
 
 --Regsiters requried
+
+process (CK, HOLD, RESET, B_reg)
+begin
+	if RESET='1' then
+		B_reg_pMEM <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		B_reg_pMEM <= B_reg;
+	end if;
+end process;
+
+-- no register required
+Rd_pMEM <= RegDst_pEX;
 
 --MemWrite_pMEM Register
 process (CK, HOLD, RESET, MemWrite_pEX)
