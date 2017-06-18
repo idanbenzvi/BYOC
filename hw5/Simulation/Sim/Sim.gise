@@ -21,8 +21,86 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Sim.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="BYOC_TB_for_students_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="BYOC_TB_for_students_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="BYOC_TB_for_students_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="BYOC_TB_for_students_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="HW5_top.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="HW5_top.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="HW5_top.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="HW5_top_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="HW5_top_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1497431278" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1497431278">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1497444576" xil_pn:in_ck="-5873048652574706397" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1497444576">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../Src_4sim/BYOC_Clock_driver_4sim.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/BYOC_Host_Intf_4sim.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/Fetch_Unit.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/GPR.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/HW5_top_4sim.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/MIPS_ALU.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/SIM_HW5_TB.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/SIM_HW5_filenames.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/dual_port_memory.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1497435694" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6648347747627761137" xil_pn:start_ts="1497435694">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1497435694" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-4342950624277075951" xil_pn:start_ts="1497435694">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1497432345" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6070537419189569623" xil_pn:start_ts="1497432345">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1497444576" xil_pn:in_ck="-5873048652574706397" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1497444576">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../Src_4sim/BYOC_Clock_driver_4sim.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/BYOC_Host_Intf_4sim.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/Fetch_Unit.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/GPR.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/HW5_top_4sim.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/MIPS_ALU.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/SIM_HW5_TB.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/SIM_HW5_filenames.vhd"/>
+      <outfile xil_pn:name="../Src_4sim/dual_port_memory.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1497444578" xil_pn:in_ck="-5873048652574706397" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2058405797319777976" xil_pn:start_ts="1497444576">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="BYOC_TB_for_students_beh.prj"/>
+      <outfile xil_pn:name="BYOC_TB_for_students_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1497760647" xil_pn:in_ck="7813172058146123173" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1070957045861215851" xil_pn:start_ts="1497760647">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="BYOC_TB_for_students_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+  </transforms>
 
 </generated_project>

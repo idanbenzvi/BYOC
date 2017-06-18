@@ -834,7 +834,7 @@ begin
 	end if;
 end process;
 
--- a register is required !
+-- a register is required ! - Rd_pWB
 process(CK, RESET)
 begin
 	if RESET = '1' then
@@ -845,7 +845,7 @@ begin
 end process;
 
 -- RegWrite_pWB FF
-process(CK,HOLD,RESET, RegWrite_pEX) --TODO : make sure this doesn't cause errors from now on...
+process(CK,HOLD,RESET, RegWrite_pEX) 
 begin
 	if RESET='1' then
 		RegWrite_pMEM <= '0';
@@ -863,7 +863,7 @@ begin
 	end if;
 end process;
 
--- TODO: make sure we are taking the values from the right phase
+
 process(MemToReg,MDR_reg,ALUOut_reg_pWB)
 begin
 	if MemToReg='0' then
