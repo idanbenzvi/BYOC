@@ -47,27 +47,7 @@ CK_50MHz 		:	in		STD_LOGIC;
 buttons_in		:	in		STD_LOGIC_vector(3 downto 0) ;--  btn0 is single clock (manual clock), btn3 is manual reset
 switches_in 	:	in		STD_LOGIC_VECTOR (7 downto 0);-- 4-0 to select which part to be displayed on the 7Segnets LEDs
 sevenseg_out	:	out		STD_LOGIC_VECTOR (6 downto 0);-- to the 7 seg LEDs
-anodes_out		:	out		STD_LOGIC_VECTOR (3 downto 0);-- to the 7 seg LEDs
--- signals to be tested by the TB
-CK_out_to_TB			:	out STD_LOGIC; 
-RESET_out_to_TB			:	out STD_LOGIC; 
-HOLD_out_to_TB			:	out STD_LOGIC; 
-rdbk0_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk1_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk2_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk3_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk4_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk5_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk6_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk7_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk8_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk9_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk10_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk11_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk12_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk13_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk14_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0); 
-rdbk15_out_to_TB 		:	out STD_LOGIC_VECTOR (31 downto 0) 
+anodes_out		:	out		STD_LOGIC_VECTOR (3 downto 0)-- to the 7 seg LEDs 
 		);
 end HW5_top; 
 
@@ -907,32 +887,6 @@ rdbk4_vec   <=	b"000" & RegWrite & b"0000"  &  b"00000000"  &  b"00000000"  &  b
 rdbk5_vec   <=   "000" & ALUsrcB_pEX & b"0000"  & b"00000000" & b"0000"   &  b"00" & ALUOP_pEX & "00" & Funct_pEX;
 rdbk12_vec  <=	MemWrite_pMem & b"00" & MemToReg_pMEM & b"000" &  RegWrite_pMEM & b"000" & Rd_pMEM & b"000" & MemToReg_pWB & b"000" & RegWrite_pWB & b"000" & Rd_pWB;
 				-- 31              30-29   28              27-25     24              23-21      20-16    15-13   12              11-9         8         7-5       4-0   
-
-
--- ***************************************************************************************************
--- Connect the signals to be tested by the TB
-CK_out_to_TB		    <=		CK;
-RESET_out_to_TB		    <=		RESET;
-HOLD_out_to_TB			<=		HOLD;
-rdbk0_out_to_TB 		<= 	    PC_reg;
-rdbk1_out_to_TB 		<= 	    IR_reg; 
-rdbk2_out_to_TB 		<= 	    sext_imm;
-rdbk3_out_to_TB 	    <=		rdbk3_vec;
-rdbk4_out_to_TB 	    <=		rdbk4_vec;
-rdbk5_out_to_TB 		<=		rdbk5_vec;
-rdbk6_out_to_TB 	    <=		A_reg;
-rdbk7_out_to_TB 		<= 		B_reg;
-rdbk8_out_to_TB 		<=		sext_imm_reg;
-rdbk9_out_to_TB 	    <= 		ALU_output;
-rdbk10_out_to_TB 		<=		ALUout_reg;
-rdbk11_out_to_TB 		<= 		B_reg_pMEM;
-rdbk12_out_to_TB    	<= 		rdbk12_vec;
-rdbk13_out_to_TB    	<=		MDR_reg;
-rdbk14_out_to_TB     	<=  	ALUout_reg_pWB;
-rdbk15_out_to_TB 	    <= 		GPR_wr_data;
-
-
--- **************************************************************************************************
 
 
 
