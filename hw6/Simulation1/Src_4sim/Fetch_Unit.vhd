@@ -99,7 +99,6 @@ HOLD		<=   	HOLD_in;
 MIPS_IMem_adrs 	<=  IMem_adrs;
 IMem_rd_data <=		MIPS_IMem_rd_data;
 
-jr_adrs <= jr_adrs_in;
 -- removed rdbk outputs signals
 
 -- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -164,7 +163,7 @@ branch_adrs <= (sext_imm(29 downto 0) & b"00") + PC_plus_4_pID;
 jump_adrs <= PC_plus_4_pID(31 downto 28) & ((IR_reg(25 downto 0) & b"00"));
 
 -- JR address    (create the jr_adrs signal)
-jr_adrs <= x"00400004";
+jr_adrs <= jr_adrs_in;
 
 -- PC_plus_4_pID register   (create the PC_plus_4_pID signal)
 process(CK,RESET)
