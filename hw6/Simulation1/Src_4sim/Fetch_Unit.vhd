@@ -113,7 +113,7 @@ jr_adrs <= jr_adrs_in;
 process(CK,RESET)
 begin
 if RESET = '1' then
-	PC_reg <= jr_adrs;
+	PC_reg <= x"00400000";
 elsif CK'event and CK='1' and HOLD ='0' then -- ASK GENERIC DANNY
 	PC_reg <= PC_mux_out ;
 end if;
