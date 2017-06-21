@@ -674,12 +674,14 @@ begin
 								RegWrite <= '1';
 								MemToReg <= '0';
 								MemWrite <= '0';
+								JAL <= '0';
 		when b"001000" => ALUOP <= b"00"; -- addi - I type command
 								RegWrite <= '1';
 								RegDst <= '0'; 
 								ALUsrcB <= '1';
 								MemToReg <= '0';
 								MemWrite <= '0';
+								JAL <= '0';
 		when b"000100" => -- beq - 4
 								ALUOP <= b"01";
 								ALUsrcB <= '0';
@@ -687,6 +689,7 @@ begin
 								RegWrite <= '0';
 								MemToReg <= '0';
 								MemWrite <= '0';
+								JAL <= '0';
 		when b"000101" => -- bne - 5 
 								ALUOP <= b"01"; --sub
 								RegDst <= '0'; -- doesn't matter
@@ -694,6 +697,7 @@ begin
 								RegWrite <= '0';
 								MemToReg <= '0';
 								MemWrite <= '0';
+								JAL <= '0';
 		when b"000010" => -- jump - 2
 								ALUOP		 <= "00";  --don't care
 								RegWrite	<= '0';
@@ -701,8 +705,15 @@ begin
 								ALUsrcB		<= '0';
 								MemToReg <= '0';
 								MemWrite <= '0';
-								
-								--handle all other cases as null
+								JAL <= '0';
+		when b"000011" => -- JAL 
+								ALUOP <= "00";
+								RegWrite <= '1'; -- a must to write to the GPR of return address
+								RegDst <= '0';
+								ALUsrcB <= '0';
+								MemToReg <= '0';
+								MemWrite <= '0';
+								JAL <= '1';
 		-- HW 5 Additions --
 		--------------------
 		when b"100011" => --lw
@@ -712,6 +723,7 @@ begin
 								ALUsrcB <= '1' ;
 								MemToReg <= '1';
 								MemWrite <= '0';
+								JAL <= '0';
 		when b"101011" => --sw
 								ALUOP <= "00";
 								RegWrite <= '0'; 
@@ -719,6 +731,7 @@ begin
 								ALUsrcB <= '1';
 								MemToReg <= '0';
 								MemWrite <= '1';
+								JAL <= '0';
 		when others => NULL;
 		end case;
 end process;
