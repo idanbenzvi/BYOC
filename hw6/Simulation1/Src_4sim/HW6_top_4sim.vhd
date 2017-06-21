@@ -649,7 +649,7 @@ begin
 end process;
 
 ----@@@HW6 add JR support   -- HW6 adding JR forwarding means a change here
-jr_address  <= ??? 
+--jr_address  <= ??? 
 
 
 
@@ -978,7 +978,7 @@ process(MemToReg_pWB,MDR_reg,ALUOut_reg_pWB,JAL)
 begin
 	if JAL = '1' then 
 		GPR_wr_data <= PC_Plus_4_pWB;
-	else if
+	else
 		--not JAL
 		if MemToReg_pWB='0' then
 			GPR_wr_data <= ALUout_reg_pWB;
@@ -995,9 +995,10 @@ begin
 		Rd_pWB <= b"00000";
 	elsif CK'event and CK='1' and HOLD='0' then
 		if JAL = '1' then
-		Rd_pWB <= b"11111" ; -- force Rt to be 31 -- TODO : did we force the correct one ? Rt ? Rd ? not sure
+			Rd_pWB <= b"11111"; -- force Rt to be 31 -- TODO : did we force the correct one ? Rt ? Rd ? not sure
 		else 
-		Rd_pWB <= Rd_pMEM;
+			Rd_pWB <= Rd_pMEM;
+		end if;
 	end if;
 end process;
 
