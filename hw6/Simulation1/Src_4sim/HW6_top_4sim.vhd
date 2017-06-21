@@ -731,7 +731,12 @@ begin
 								-- Setting Rs to be the $0
 								Rs <= b"00000";
 		when b"001101" => -- ori
-			-- TODO: impl ori.
+								ALUOP <= b"11";
+								RegWrite <= '1';
+								RegDst <= '0'; 
+								ALUsrcB <= '1';
+								MemToReg <= '0';
+								MemWrite <= '0';
 		when others => NULL;
 		end case;
 end process;
@@ -772,6 +777,8 @@ begin
 	elsif CK'event and CK = '1' and HOLD='0' then
 		if Opcode = b"001111" then -- Check if LUI
 			sext_imm_reg <= sext_imm(15 downto 0) & x"0000";
+		elsif Opcode = b"001101" then -- prevent sign ext on ORI command
+			sext_imm_reg(15 downto 0) <= sext_imm(15 downto 0);
 		else
 			sext_imm_reg <= sext_imm;
 		end if;

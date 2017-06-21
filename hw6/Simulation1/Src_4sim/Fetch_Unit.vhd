@@ -145,12 +145,10 @@ imm <=  IR_reg(15 downto 0);
 
 process(imm)
 begin
-	if opcode != b"001101" then -- sign ext only when NOT an ORI
-		if imm(15) = '1' then
-			  sext_imm(31 downto 16) <= x"ffff";
-		else
-			  sext_imm(31 downto 16) <= x"0000";
-		end if;
+	if imm(15) = '1' then
+		  sext_imm(31 downto 16) <= x"ffff";
+	else
+		  sext_imm(31 downto 16) <= x"0000";
 	end if;
 	sext_imm(15 downto 0) <= imm;
 end process;
