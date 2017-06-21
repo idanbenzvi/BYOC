@@ -719,11 +719,22 @@ begin
 								ALUsrcB <= '1';
 								MemToReg <= '0';
 								MemWrite <= '1';
+		-- HW 6 Additions --
+		-------------------------
+		when b"001111" => -- lui
+								ALUOP <= b"00";
+								RegWrite <= '1';
+								RegDst <= '0'; 
+								ALUsrcB <= '1';
+								MemToReg <= '0';
+								MemWrite <= '0';
+								-- Setting Rs to be the $0
+								Rs <= b"00000";
+		when b"001101" => -- ori
+			-- TODO: impl ori.
 		when others => NULL;
 		end case;
 end process;
-
-
 
 -- ============================= EX phase processes ========================================
 -- ======================================================================================
@@ -759,7 +770,11 @@ begin
 	if RESET='1' then
 		sext_imm_reg <= x"00000000";
 	elsif CK'event and CK = '1' and HOLD='0' then
-		sext_imm_reg <= sext_imm;
+		if Opcode = b"001111" then -- Check if LUI
+			sext_imm_reg <= sext_imm(15 downto 0) & x"0000";
+		else
+			sext_imm_reg <= sext_imm;
+		end if;
 	end if;
 end process;
 
