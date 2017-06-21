@@ -25,6 +25,7 @@ IR_reg_pID		:	out		STD_LOGIC_VECTOR  (31 downto 0);-- The IR_reg (instruction) t
 sext_imm_pID	:	out		STD_LOGIC_VECTOR  (31 downto 0);-- The sext_imm to be used in ID 
 PC_reg_pIF		:	out		STD_LOGIC_VECTOR  (31 downto 0);-- The PC_reg value in IF. To be read by TB in simulation and rdbk in implementation - for verification purposes 
 Rs_equals_Rt_pID  : in  	STD_LOGIC;-- '1' if value read from Rs equals the value read from Rt, '0' otherwise. Used in branch instructions.
+jr_adrs_in		: in	STD_LOGIC_VECTOR  (31 downto 0);
 -- IMem signals
 MIPS_IMem_adrs	     : out STD_LOGIC_VECTOR (31 downto 0);
 MIPS_IMem_rd_data     : in STD_LOGIC_VECTOR (31 downto 0)
@@ -97,6 +98,7 @@ HOLD		<=   	HOLD_in;
 MIPS_IMem_adrs 	<=  IMem_adrs;
 IMem_rd_data <=		MIPS_IMem_rd_data;
 
+jr_adrs <= jr_adrs_in;
 -- removed rdbk outputs signals
 
 -- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -110,7 +112,7 @@ IMem_rd_data <=		MIPS_IMem_rd_data;
 process(CK,RESET)
 begin
 if RESET = '1' then
-	PC_reg <= x"00400000";
+	PC_reg <= jr_adrs;
 elsif CK'event and CK='1' and HOLD ='0' then -- ASK GENERIC DANNY
 	PC_reg <= PC_mux_out ;
 end if;
