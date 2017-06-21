@@ -795,7 +795,10 @@ begin
 end process;
 
 -- PC_plus_4_pEX --@@@HW6 added to support JAL instruction
-
+process(CK,RESET)
+begin
+	PC_Plus_4_pEX <= PC_Plus_4_pID;
+end process; 
 
 -- control signals regs  --@@@HW6  add JAL support here to
 process(CK,RESET)
@@ -804,12 +807,14 @@ begin
 		ALUsrcB_pEX	<=	'0';
 		ALUOP_pEX <= b"00";
 		RegDst_pEX <= '0';
-		RegWrite_pEX <= '0';	
+		RegWrite_pEX <= '0';
+		JAL_pEX <= '0';
 	elsif CK'event and CK='1' and HOLD='0' then
 		ALUsrcB_pEX	<=	ALUsrcB;
 		ALUOP_pEX <= ALUOP;
 		RegDst_pEX <= RegDst;
 		RegWrite_pEX <= RegWrite; 
+		JAL_pEX <= JAL;
 	end if;
 end process;
 
@@ -873,7 +878,7 @@ begin
 end process;
 
 --PC_plus_4_pMEM reg --@@@HW6 added to support JAL instruction
-
+PC_plus_4_pMEM <= PC_Plus_4_pEX;
 
 --control signals FFs 
 process(CK,RESET)
@@ -919,6 +924,17 @@ begin
 	end if;
 end process;
 
+
+process (CK, RESET)
+begin
+	if RESET='1' then
+		JAL_pMEM <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		JAL_pMEM <= JAL_pEX;
+	end if;
+end process;
+
+
 --============================= WB phase processes ========================================
 --========================================================================================
 --MDR_reg no need to define -- connected directly from BYOC_Host_intf - resides inside the DMem
@@ -934,12 +950,17 @@ begin
 end process;
 
 --MemToReg mux     --@@@HW6 requires changes to support JAL instruction
-process(MemToReg_pWB,MDR_reg,ALUOut_reg_pWB)
+process(MemToReg_pWB,MDR_reg,ALUOut_reg_pWB,JAL)
 begin
-	if MemToReg_pWB='0' then
-		GPR_wr_data <= ALUout_reg_pWB;
-	else
-		GPR_wr_data <= MDR_reg;
+	if JAL = '1' then 
+		GPR_wr_data <= PC_Plus_4_pWB;
+	else if
+		--not JAL
+		if MemToReg_pWB='0' then
+			GPR_wr_data <= ALUout_reg_pWB;
+		else
+			GPR_wr_data <= MDR_reg;
+		end if;
 	end if;
 end process;
 
@@ -949,17 +970,18 @@ begin
 	if RESET='1' then
 		Rd_pWB <= b"00000";
 	elsif CK'event and CK='1' and HOLD='0' then
+		if JAL = '1' then
+		Rd_pWB <= b"11111" ; -- force Rt to be 31 -- TODO : did we force the correct one ? Rt ? Rd ? not sure
+		else 
 		Rd_pWB <= Rd_pMEM;
 	end if;
 end process;
 
 --PC_plus_4_pWB --@@@HW6 added to support JAL instruction
-
+PC_Plus_4_pWB <= PC_Plus_4_pMEM;
 
 --control signals FFs 
 --RegWrite_pWB, MemToReg_pWB FFs   --@@@HW6 added JAL_pWB FF to support JAL instruction  
-
-
 process(CK,RESET, MemToReg_pMEM)
 begin
 	if RESET='1' then
