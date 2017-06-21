@@ -128,7 +128,8 @@ begin
 		when b"00" => PC_mux_out <= PC_Plus_4;
 		when b"01" => PC_mux_out <= branch_adrs;
 		when b"10" => PC_mux_out <= jr_adrs;
-		when others => PC_mux_out <= jump_adrs;
+		when b"11" => PC_mux_out <=  jump_adrs;
+		--when others => PC_mux_out <= jump_adrs; TODO
 	end case;
 end process;
 

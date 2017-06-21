@@ -674,12 +674,14 @@ begin
 								RegWrite <= '1';
 								MemToReg <= '0';
 								MemWrite <= '0';
+								JAL <= '0';
 		when b"001000" => ALUOP <= b"00"; -- addi - I type command
 								RegWrite <= '1';
 								RegDst <= '0'; 
 								ALUsrcB <= '1';
 								MemToReg <= '0';
 								MemWrite <= '0';
+								JAL <= '0';
 		when b"000100" => -- beq - 4
 								ALUOP <= b"01";
 								ALUsrcB <= '0';
@@ -687,6 +689,7 @@ begin
 								RegWrite <= '0';
 								MemToReg <= '0';
 								MemWrite <= '0';
+								JAL <= '0';
 		when b"000101" => -- bne - 5 
 								ALUOP <= b"01"; --sub
 								RegDst <= '0'; -- doesn't matter
@@ -694,6 +697,7 @@ begin
 								RegWrite <= '0';
 								MemToReg <= '0';
 								MemWrite <= '0';
+								JAL <= '0';
 		when b"000010" => -- jump - 2
 								ALUOP		 <= "00";  --don't care
 								RegWrite	<= '0';
@@ -701,8 +705,15 @@ begin
 								ALUsrcB		<= '0';
 								MemToReg <= '0';
 								MemWrite <= '0';
-								
-								--handle all other cases as null
+								JAL <= '0';
+		when b"000011" => -- JAL 
+								ALUOP <= "00";
+								RegWrite <= '1'; -- a must to write to the GPR of return address
+								RegDst <= '0';
+								ALUsrcB <= '0';
+								MemToReg <= '0';
+								MemWrite <= '0';
+								JAL <= '1';
 		-- HW 5 Additions --
 		--------------------
 		when b"100011" => --lw
@@ -712,6 +723,7 @@ begin
 								ALUsrcB <= '1' ;
 								MemToReg <= '1';
 								MemWrite <= '0';
+								JAL <= '0';
 		when b"101011" => --sw
 								ALUOP <= "00";
 								RegWrite <= '0'; 
@@ -719,6 +731,7 @@ begin
 								ALUsrcB <= '1';
 								MemToReg <= '0';
 								MemWrite <= '1';
+								JAL <= '0';
 		-- HW 6 Additions --
 		-------------------------
 		when b"001111" => -- lui
@@ -730,6 +743,7 @@ begin
 								MemWrite <= '0';
 								-- Setting Rs to be the $0
 								Rs <= b"00000";
+								JAL <= '0';
 		when b"001101" => -- ori
 								ALUOP <= b"11";
 								RegWrite <= '1';
@@ -737,6 +751,7 @@ begin
 								ALUsrcB <= '1';
 								MemToReg <= '0';
 								MemWrite <= '0';
+								JAL <= '0';
 		when others => NULL;
 		end case;
 end process;
@@ -804,7 +819,10 @@ begin
 end process;
 
 -- PC_plus_4_pEX --@@@HW6 added to support JAL instruction
-
+process(CK,RESET)
+begin
+	PC_Plus_4_pEX <= PC_Plus_4_pID;
+end process; 
 
 -- control signals regs  --@@@HW6  add JAL support here to
 process(CK,RESET)
@@ -813,12 +831,14 @@ begin
 		ALUsrcB_pEX	<=	'0';
 		ALUOP_pEX <= b"00";
 		RegDst_pEX <= '0';
-		RegWrite_pEX <= '0';	
+		RegWrite_pEX <= '0';
+		JAL_pEX <= '0';
 	elsif CK'event and CK='1' and HOLD='0' then
 		ALUsrcB_pEX	<=	ALUsrcB;
 		ALUOP_pEX <= ALUOP;
 		RegDst_pEX <= RegDst;
 		RegWrite_pEX <= RegWrite; 
+		JAL_pEX <= JAL;
 	end if;
 end process;
 
@@ -882,7 +902,7 @@ begin
 end process;
 
 --PC_plus_4_pMEM reg --@@@HW6 added to support JAL instruction
-
+PC_plus_4_pMEM <= PC_Plus_4_pEX;
 
 --control signals FFs 
 process(CK,RESET)
@@ -928,6 +948,17 @@ begin
 	end if;
 end process;
 
+
+process (CK, RESET)
+begin
+	if RESET='1' then
+		JAL_pMEM <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		JAL_pMEM <= JAL_pEX;
+	end if;
+end process;
+
+
 --============================= WB phase processes ========================================
 --========================================================================================
 --MDR_reg no need to define -- connected directly from BYOC_Host_intf - resides inside the DMem
@@ -943,12 +974,17 @@ begin
 end process;
 
 --MemToReg mux     --@@@HW6 requires changes to support JAL instruction
-process(MemToReg_pWB,MDR_reg,ALUOut_reg_pWB)
+process(MemToReg_pWB,MDR_reg,ALUOut_reg_pWB,JAL)
 begin
-	if MemToReg_pWB='0' then
-		GPR_wr_data <= ALUout_reg_pWB;
-	else
-		GPR_wr_data <= MDR_reg;
+	if JAL = '1' then 
+		GPR_wr_data <= PC_Plus_4_pWB;
+	else if
+		--not JAL
+		if MemToReg_pWB='0' then
+			GPR_wr_data <= ALUout_reg_pWB;
+		else
+			GPR_wr_data <= MDR_reg;
+		end if;
 	end if;
 end process;
 
@@ -958,17 +994,18 @@ begin
 	if RESET='1' then
 		Rd_pWB <= b"00000";
 	elsif CK'event and CK='1' and HOLD='0' then
+		if JAL = '1' then
+		Rd_pWB <= b"11111" ; -- force Rt to be 31 -- TODO : did we force the correct one ? Rt ? Rd ? not sure
+		else 
 		Rd_pWB <= Rd_pMEM;
 	end if;
 end process;
 
 --PC_plus_4_pWB --@@@HW6 added to support JAL instruction
-
+PC_Plus_4_pWB <= PC_Plus_4_pMEM;
 
 --control signals FFs 
 --RegWrite_pWB, MemToReg_pWB FFs   --@@@HW6 added JAL_pWB FF to support JAL instruction  
-
-
 process(CK,RESET, MemToReg_pMEM)
 begin
 	if RESET='1' then
