@@ -741,8 +741,6 @@ begin
 								ALUsrcB <= '1';
 								MemToReg <= '0';
 								MemWrite <= '0';
-								-- Setting Rs to be the $0
-								Rs <= b"00000";
 								JAL <= '0';
 		when b"001101" => -- ori
 								ALUOP <= b"11";
@@ -764,7 +762,12 @@ begin
 	if RESET='1' then
 		A_reg <= x"00000000";
 	elsif CK'event and CK = '1' and HOLD='0' then
-		A_reg <= GPR_rd_data1;
+		if Opcode = b"001111" then
+			-- Setting A_reg to be the 0
+			A_reg <= x"00000000";
+		else
+			A_reg <= GPR_rd_data1;
+		end if;
 	end if;
 end process;
 
@@ -811,9 +814,11 @@ begin
 		Rt_pEX <= b"00000";
 		Rd_pEX <= b"00000";
 		funct_pEX <= b"000000";
+		Rs_pEX <= b"00000";
 	elsif CK'event and CK='1' and HOLD='0' then
 		Rt_pEX <= Rt;
 		Rd_pEX <= Rd;
+		Rs_pEx <= Rs;
 		funct_pEX <= funct;
 	end if;
 end process;
