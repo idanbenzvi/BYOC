@@ -24,6 +24,7 @@ HOLD_in 		: in STD_LOGIC;
 IR_reg_pID		:	out		STD_LOGIC_VECTOR  (31 downto 0);-- The IR_reg (instruction) to be used in ID 
 sext_imm_pID	:	out		STD_LOGIC_VECTOR  (31 downto 0);-- The sext_imm to be used in ID 
 PC_reg_pIF		:	out		STD_LOGIC_VECTOR  (31 downto 0);-- The PC_reg value in IF. To be read by TB in simulation and rdbk in implementation - for verification purposes 
+PC_plus_4_pID_out : out	STD_LOGIC_VECTOR  (31 downto 0);
 Rs_equals_Rt_pID  : in  	STD_LOGIC;-- '1' if value read from Rs equals the value read from Rt, '0' otherwise. Used in branch instructions.
 jr_adrs_in		: in	STD_LOGIC_VECTOR  (31 downto 0);
 -- IMem signals
@@ -128,8 +129,8 @@ begin
 		when b"00" => PC_mux_out <= PC_Plus_4;
 		when b"01" => PC_mux_out <= branch_adrs;
 		when b"10" => PC_mux_out <= jr_adrs;
-		when b"11" => PC_mux_out <=  jump_adrs;
-		--when others => PC_mux_out <= jump_adrs; TODO
+		--when b"11" => PC_mux_out <=  jump_adrs;
+		when others => PC_mux_out <= jump_adrs;
 	end case;
 end process;
 
