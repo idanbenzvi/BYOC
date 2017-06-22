@@ -624,7 +624,17 @@ RESET <= switches_in(6) or RESET_from_Host_Intf;
 -- ============================= =========================================================
 -- IR fields signals
 Opcode <= IR_reg(31 downto 26);
+
+-- Addition to support LUI command - we need to set Rs to 0 to make sure the sign extension will work
+--process(Opcode)
+--begin
+--if Opcode = b"001111" then
+--	Rs <= b"00000";
+--	else
 Rs <= IR_reg(25 downto 21); 
+--end if;
+--end process;
+
 Rt <= IR_reg(20 downto 16); --@@@HW6 a change is required here to support JAL 
 Rd <= IR_reg(15 downto 11);
 Funct <= IR_reg(5 downto 0);
@@ -762,7 +772,7 @@ begin
 	if RESET='1' then
 		A_reg <= x"00000000";
 	elsif CK'event and CK = '1' and HOLD='0' then
-		if Opcode = b"001111" then
+		if Opcode = b"001111" then -- case of LUI
 			-- Setting A_reg to be the 0
 			A_reg <= x"00000000";
 		else
@@ -793,8 +803,9 @@ begin
 	if RESET='1' then
 		sext_imm_reg <= x"00000000";
 	elsif CK'event and CK = '1' and HOLD='0' then
-		if Opcode = b"001111" then -- Check if LUI
-			sext_imm_reg <= sext_imm(15 downto 0) & x"0000";
+		if Opcode = b"001111" then -- Check if LUI (tried to avoid & and use 2 commands)
+			sext_imm_reg(31 downto 16) <= sext_imm(15 downto 0);
+			sext_imm_reg(15 downto 0) <=  x"0000";
 		elsif Opcode = b"001101" then -- prevent sign ext on ORI command
 			sext_imm_reg(15 downto 0) <= sext_imm(15 downto 0);
 		else
