@@ -190,11 +190,12 @@ begin
 				PC_source <= b"00";
 			end if;
 		when b"000101" =>
-			if(Rs_equals_Rt_pID = '1') then
+			if(Rs_equals_Rt_pID = '0') then
 				PC_source <= b"01"; --bne
+			
 			else
 				-- do nothing
-				PC_source <= b"00";
+			PC_source <= b"00";
 			end if;
 		when b"000000" =>
 			if funct = b"001000" then
