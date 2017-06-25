@@ -638,7 +638,7 @@ end process;
 process(Opcode)
 begin
 	if Opcode = b"000011" then -- jal 
-		Rt <= b"11111"; -- JAL support = to enable writing PC+4 to register 31 
+		Rt <= b"11111"; -- JAL support = to enable  writing PC+4 to register 31 
 	else
 		Rt <= IR_reg(20 downto 16); 
 	end if;
@@ -667,7 +667,7 @@ begin
 end process;
 
 ----@@@HW6 add JR support   -- HW6 adding JR forwarding means a change here
-jr_address  <= GPR_rd_data1; -- @@@HW6 when branching support required,change to GPR_rd_data1_wt_fwd
+--jr_address  <= GPR_rd_data1; -- @@@HW6 when branching support required,change to GPR_rd_data1_wt_fwd
 
 
 -- Control decoder  - calculates the signals in ID phase
@@ -796,36 +796,7 @@ begin
 end process;
 
 -- with forwarding															-- @@@HW6 adding data forwarding
-process(RegWrite_pMEM,Rd_pMEM,Rs_pEX) -- case 1 of forwarding
-begin
-	if RegWrite_pMEM ='1' then
-		if Rd_pMEM = Rs_pEX then
-				A_reg_wt_fwd <= ALU_out_reg;
-			else
-				A_reg_wt_fwd <= A_reg;
-		end if;
-		if Rd_PMEM=Rt_pEX then
-				B_reg_wt_fwd <= ALU_out_reg;
-			else
-				B_reg_wt_fwd <= B_reg;
-		end if;
-	end if;
 
-	if RegWrite_pWB ='1' then	-- case 2 of forwarding
-		if Rd_pWB = Rs_pEX then
-			A_reg_wt_fwd <= GPR_wr_data; -- this is the output of the memToReg mux 
-		else
-			A_reg_wt_fwd <= A_reg_value;
-		end if;
-		
-		if Rd_pWB=Rt_pEX then
-			B_reg_wt_fwd <= GPR_wr_data; -- this is the output of the memToReg mux 
-		else
-			B_reg_wt_fwd <= A_reg_value;
-		end if;
-	end if;
-
-end process
 
 
 --src_A mux (forwarding)													-- @@@HW6 adding data forwarding in EX phase			
@@ -862,11 +833,11 @@ begin
 		Rt_pEX <= b"00000";
 		Rd_pEX <= b"00000";
 		funct_pEX <= b"000000";
-		Rs_pEX <= b"00000"; --@@@HW6 required for forwarding
+		--Rs_pEX <= b"00000"; --@@@HW6 required for forwarding
 	elsif CK'event and CK='1' and HOLD='0' then
 		Rt_pEX <= Rt;
 		Rd_pEX <= Rd;
-		Rs_pEx <= Rs; -- @@@HW6 required for forwarding
+		--Rs_pEx <= Rs; -- @@@HW6 required for forwarding
 		funct_pEX <= funct;
 	end if;
 end process;
@@ -1096,7 +1067,7 @@ RESET_out_to_TB		    <=		RESET;
 HOLD_out_to_TB			<=		HOLD;
 rdbk0_out_to_TB 		<= 	    PC_reg;
 rdbk1_out_to_TB 		<= 	    IR_reg; 
-rdbk2_out_to_TB 		<= 	    sext_imm_pID; --@@@hw6 change
+rdbk2_out_to_TB 		<= 	    sext_imm_pID; --@@@hw6 change(?)
 rdbk3_out_to_TB 	    <=		rdbk3_vec;
 rdbk4_out_to_TB 	    <=		rdbk4_vec;
 rdbk5_out_to_TB 		<=		rdbk5_vec;

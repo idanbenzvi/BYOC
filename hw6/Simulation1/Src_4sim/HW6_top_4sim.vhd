@@ -574,8 +574,8 @@ Port map (
 ALUOP		=>			ALUOP_pEX,
 Funct		=>			Funct_pEX,
 -- data inputs & data control inputs
-A_in		=>			A_reg,   -- @@@HW6 should be A_reg_wt_fwd for adding data forwarding in EX phase
-B_in		=>			B_reg,   -- @@@HW6 should be B_reg_wt_fwd for adding data forwarding in EX phase
+A_in		=>	A_reg_wt_fwd, --		A_reg,   -- @@@HW6 should be A_reg_wt_fwd for adding data forwarding in EX phase
+B_in		=>	B_reg_wt_fwd, --		B_reg,   -- @@@HW6 should be B_reg_wt_fwd for adding data forwarding in EX phase
 sext_imm	=>			sext_imm_reg,
 ALUsrcB		=>			ALUsrcB_pEX,
 -- data output
@@ -799,6 +799,38 @@ begin
 end process;
 
 -- with forwarding															-- @@@HW6 adding data forwarding
+process(RegWrite_pMEM,Rd_pMEM,Rs_pEX) -- case 1 of forwarding
+begin
+	if RegWrite_pMEM ='1' then
+		if Rd_pMEM = Rs_pEX then
+				A_reg_wt_fwd <= ALU_out_reg;
+			else
+				A_reg_wt_fwd <= A_reg;
+		end if;
+		if Rd_PMEM=Rt_pEX then
+				B_reg_wt_fwd <= ALU_out_reg;
+			else
+				B_reg_wt_fwd <= B_reg;
+		end if;
+	end if;
+
+	if RegWrite_pWB ='1' then	-- case 2 of forwarding
+		if Rd_pWB = Rs_pEX then
+			A_reg_wt_fwd <= GPR_wr_data; -- this is the output of the memToReg mux 
+		else
+			A_reg_wt_fwd <= A_reg_value;
+		end if;
+		
+		if Rd_pWB=Rt_pEX then
+			B_reg_wt_fwd <= GPR_wr_data; -- this is the output of the memToReg mux 
+		else
+			B_reg_wt_fwd <= A_reg_value;
+		end if;
+	end if;
+
+end process
+
+
 --src_A mux (forwarding)													-- @@@HW6 adding data forwarding in EX phase			
 
 --src B mux (forwarding part) 												-- @@@HW6 adding data forwarding in EX phase
