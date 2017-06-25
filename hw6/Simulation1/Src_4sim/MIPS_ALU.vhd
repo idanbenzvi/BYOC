@@ -65,6 +65,7 @@ begin
 	case ALUOP is
 		when b"00" => ALU_cmd <= b"010";
 		when b"01" => ALU_cmd <= b"110";
+		when b"11" => ALU_cmd <= b"001"; -- added OR when the command is ORI
 		when b"10" =>
 			case Funct is
 				when b"100000" => ALU_cmd <= b"010"; -- Addition
