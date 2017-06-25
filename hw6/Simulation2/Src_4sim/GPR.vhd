@@ -72,22 +72,32 @@ DUAL_PORT_MEMORY:	dual_port_memory_no_CK_read
 
 	GPR_we <= (not GPR_Hold) and Reg_Write;
 
-process(rd_reg1, GPR_rd_Data1, GPR_data_out1)
+process(rd_reg1,Reg_Write, GPR_rd_Data1, GPR_data_out1)
 begin
 	if rd_reg1 = b"00000" then
 		GPR_data_out1 <= x"00000000";
 	else
-		GPR_data_out1 <= GPR_rd_data1;
+		-- addition to support transparent GPR
+		if rd_reg1=wr_reg and Reg_Write = '1' then
+			GPR_data_out1 <= wr_data;
+		else
+			GPR_data_out1 <= GPR_rd_data1;
+		end if;
 	end if;
 end process;
+
 rd_data1 <= GPR_data_out1;
 
 process(rd_reg2,GPR_rd_Data2,GPR_data_out2)
 begin
 	if rd_reg2 = b"00000" then
 		GPR_data_out2 <= x"00000000";
-	else
-		GPR_data_out2 <= GPR_rd_data2;
+	else-- addition to support transparent GPR
+		if rd_reg1=wr_reg and Reg_Write = '1' then
+			GPR_data_out2 <= wr_data;
+		else
+			GPR_data_out2 <= GPR_rd_data2;
+		end if;
 	end if;
 end process;
 rd_data2 <= GPR_data_out2;
