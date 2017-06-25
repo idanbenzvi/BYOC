@@ -507,13 +507,13 @@ leds_out			=>		leds_out_from_host_intf,
 -- RDBK signals
 rdbk0 			=> 		PC_reg,
 rdbk1 			=> 		IR_reg,
-rdbk2 			=> 		sext_imm,
+rdbk2 			=> 		sext_imm_reg,
 rdbk3 			=> 		rdbk3_vec,
 rdbk4 			=> 		rdbk4_vec,
 rdbk5			=> 		rdbk5_vec,
 rdbk6			=> 		A_reg,
 rdbk7			=> 		B_reg,
-rdbk8			=> 		sext_imm_reg,
+rdbk8			=> 		sext_imm,
 rdbk9			=> 		ALU_output,
 rdbk10			=> 		ALUout_reg,
 rdbk11			=> 		B_reg_pMEM,
@@ -624,7 +624,7 @@ RESET <= switches_in(6) or RESET_from_Host_Intf;
 Opcode <= IR_reg(31 downto 26);
 
 -- Addition to support LUI command - we need to set Rs to 0 to make sure the sign extension will work
-process(Opcode,CK)
+process(Opcode,IR_reg)
 begin
 if Opcode = b"001111" then -- LUI support
 	Rs <= b"00000";
@@ -633,7 +633,7 @@ else
 end if;
 end process;
 
-process(Opcode,CK)
+process(Opcode,IR_reg)
 begin
 	if Opcode = b"000011" then -- jal 
 		Rt <= b"11111"; -- JAL support = to enable writing PC+4 to register 31 
@@ -805,14 +805,7 @@ begin
 	if RESET='1' then
 		sext_imm_reg <= x"00000000";
 	elsif CK'event and CK = '1' and HOLD='0' then
-		if Opcode = b"001111" then -- Check if LUI (tried to avoid & and use 2 commands)
-			sext_imm_reg(31 downto 16) <= sext_imm(15 downto 0);
-			sext_imm_reg(15 downto 0) <=  x"0000";
-		elsif Opcode = b"001101" then -- prevent sign ext on ORI command
-			sext_imm_reg(15 downto 0) <= sext_imm(15 downto 0);
-		else
 			sext_imm_reg <= sext_imm;
-		end if;
 	end if;
 end process;
 
