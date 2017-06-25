@@ -626,16 +626,24 @@ RESET <= switches_in(6) or RESET_from_Host_Intf;
 Opcode <= IR_reg(31 downto 26);
 
 -- Addition to support LUI command - we need to set Rs to 0 to make sure the sign extension will work
---process(Opcode)
---begin
---if Opcode = b"001111" then
---	Rs <= b"00000";
---	else
-Rs <= IR_reg(25 downto 21); 
---end if;
---end process;
+process(Opcode)
+begin
+if Opcode = b"001111" then
+	Rs <= b"00000";
+else
+	Rs <= IR_reg(25 downto 21); 
+end if;
+end process;
 
-Rt <= IR_reg(20 downto 16); --@@@HW6 a change is required here to support JAL 
+process(Opcode)
+begin
+	if Opcode = b"000011" then -- jal 
+		Rt <= b"11111"; -- JAL support = to enable writing PC+4 to register 31 
+	else
+		Rt <= IR_reg(20 downto 16); 
+	end if;
+end process;
+
 Rd <= IR_reg(15 downto 11);
 Funct <= IR_reg(5 downto 0);
 
@@ -674,7 +682,7 @@ end process;
 --		MemToReg	 '0' - write ALUout_reg data (to "Rd"), '1' - write MDR_reg data (to "Rd")
 --		RegWrite	 '1' - write to GPR file (to "Rd")
 --		JAL	         '1' - wrhen we are in jal instruction --@@@HW6 adding  JAL support 
-process(IR_reg, ALUOP, ALUsrcB, RegDst, RegWrite,MemWrite,MemToReg,Opcode)
+process(Opcode)
 begin 
 	case Opcode is
 		when b"000000" => 
@@ -767,7 +775,7 @@ end process;
 -- ============================= EX phase processes ========================================
 -- ======================================================================================
 -- A & B registers
-process(CK,RESET)
+process(CK,RESET,Opcode)
 begin
 	if RESET='1' then
 		A_reg <= x"00000000";
@@ -798,7 +806,7 @@ end process;
 
 
 -- sext_imm register
-process(CK,RESET)
+process(CK,RESET,Opcode)
 begin
 	if RESET='1' then
 		sext_imm_reg <= x"00000000";
@@ -825,11 +833,11 @@ begin
 		Rt_pEX <= b"00000";
 		Rd_pEX <= b"00000";
 		funct_pEX <= b"000000";
-		Rs_pEX <= b"00000";
+		--Rs_pEX <= b"00000";
 	elsif CK'event and CK='1' and HOLD='0' then
 		Rt_pEX <= Rt;
 		Rd_pEX <= Rd;
-		Rs_pEx <= Rs;
+		--Rs_pEx <= Rs;
 		funct_pEX <= funct;
 	end if;
 end process;
