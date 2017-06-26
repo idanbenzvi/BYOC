@@ -1,5 +1,3 @@
---
--- 
 -- This module is the HW6_top entity for simulation & implementation     see --@@@HW6 for HW6 related changes
 --  
 --
@@ -509,13 +507,13 @@ leds_out			=>		leds_out_from_host_intf,
 -- RDBK signals
 rdbk0 			=> 		PC_reg,
 rdbk1 			=> 		IR_reg,
-rdbk2 			=> 		sext_imm,
+rdbk2 			=> 		sext_imm_reg,
 rdbk3 			=> 		rdbk3_vec,
 rdbk4 			=> 		rdbk4_vec,
 rdbk5			=> 		rdbk5_vec,
 rdbk6			=> 		A_reg,
 rdbk7			=> 		B_reg,
-rdbk8			=> 		sext_imm_reg,
+rdbk8			=> 		sext_imm,
 rdbk9			=> 		ALU_output,
 rdbk10			=> 		ALUout_reg,
 rdbk11			=> 		B_reg_pMEM,
@@ -574,8 +572,8 @@ Port map (
 ALUOP		=>			ALUOP_pEX,
 Funct		=>			Funct_pEX,
 -- data inputs & data control inputs
-A_in		=>	A_reg_wt_fwd, --		A_reg,   -- @@@HW6 should be A_reg_wt_fwd for adding data forwarding in EX phase
-B_in		=>	B_reg_wt_fwd, --		B_reg,   -- @@@HW6 should be B_reg_wt_fwd for adding data forwarding in EX phase
+A_in		=>			A_reg,   -- @@@HW6 should be A_reg_wt_fwd for adding data forwarding in EX phase
+B_in		=>			B_reg,   -- @@@HW6 should be B_reg_wt_fwd for adding data forwarding in EX phase
 sext_imm	=>			sext_imm_reg,
 ALUsrcB		=>			ALUsrcB_pEX,
 -- data output
@@ -626,16 +624,16 @@ RESET <= switches_in(6) or RESET_from_Host_Intf;
 Opcode <= IR_reg(31 downto 26);
 
 -- Addition to support LUI command - we need to set Rs to 0 to make sure the sign extension will work
-process(Opcode)
+process(Opcode,IR_reg)
 begin
-if Opcode = b"001111" then
+if Opcode = b"001111" then -- LUI support
 	Rs <= b"00000";
 else
 	Rs <= IR_reg(25 downto 21); 
 end if;
 end process;
 
-process(Opcode)
+process(Opcode,IR_reg)
 begin
 	if Opcode = b"000011" then -- jal 
 		Rt <= b"11111"; -- JAL support = to enable writing PC+4 to register 31 
@@ -667,11 +665,7 @@ begin
 end process;
 
 ----@@@HW6 add JR support   -- HW6 adding JR forwarding means a change here
---jr_address  <= ??? 
-
-
-
-
+jr_address  <= GPR_rd_data1 ;
 
 -- Control decoder  - calculates the signals in ID phase
 -- creates the following signals according to the opcode:
@@ -799,38 +793,6 @@ begin
 end process;
 
 -- with forwarding															-- @@@HW6 adding data forwarding
-process(RegWrite_pMEM,Rd_pMEM,Rs_pEX) -- case 1 of forwarding
-begin
-	if RegWrite_pMEM ='1' then
-		if Rd_pMEM = Rs_pEX then
-				A_reg_wt_fwd <= ALU_out_reg;
-			else
-				A_reg_wt_fwd <= A_reg;
-		end if;
-		if Rd_PMEM=Rt_pEX then
-				B_reg_wt_fwd <= ALU_out_reg;
-			else
-				B_reg_wt_fwd <= B_reg;
-		end if;
-	end if;
-
-	if RegWrite_pWB ='1' then	-- case 2 of forwarding
-		if Rd_pWB = Rs_pEX then
-			A_reg_wt_fwd <= GPR_wr_data; -- this is the output of the memToReg mux 
-		else
-			A_reg_wt_fwd <= A_reg_value;
-		end if;
-		
-		if Rd_pWB=Rt_pEX then
-			B_reg_wt_fwd <= GPR_wr_data; -- this is the output of the memToReg mux 
-		else
-			B_reg_wt_fwd <= A_reg_value;
-		end if;
-	end if;
-
-end process
-
-
 --src_A mux (forwarding)													-- @@@HW6 adding data forwarding in EX phase			
 
 --src B mux (forwarding part) 												-- @@@HW6 adding data forwarding in EX phase
@@ -843,14 +805,7 @@ begin
 	if RESET='1' then
 		sext_imm_reg <= x"00000000";
 	elsif CK'event and CK = '1' and HOLD='0' then
-		if Opcode = b"001111" then -- Check if LUI (tried to avoid & and use 2 commands)
-			sext_imm_reg(31 downto 16) <= sext_imm(15 downto 0);
-			sext_imm_reg(15 downto 0) <=  x"0000";
-		elsif Opcode = b"001101" then -- prevent sign ext on ORI command
-			sext_imm_reg(15 downto 0) <= sext_imm(15 downto 0);
-		else
 			sext_imm_reg <= sext_imm;
-		end if;
 	end if;
 end process;
 
@@ -877,7 +832,11 @@ end process;
 -- PC_plus_4_pEX --@@@HW6 added to support JAL instruction
 process(CK,RESET)
 begin
-	PC_Plus_4_pEX <= PC_Plus_4_pID;
+if RESET='1' then
+		PC_Plus_4_pEX <= x"00000000";
+	elsif CK'event and CK='1' and HOLD='0' then
+		PC_Plus_4_pEX <= PC_Plus_4_pID;
+	end if;
 end process; 
 
 -- control signals regs  --@@@HW6  add JAL support here to
@@ -943,7 +902,7 @@ begin
 end process;
 
 --RegDst mux and Rd_pMEM register
-process(CK,RESET) 
+process(CK,RESET,RegDst_pEX) 
 begin
 	if RESET='1' then
 		--RegDst_pEX <= '0';
@@ -958,7 +917,16 @@ begin
 end process;
 
 --PC_plus_4_pMEM reg --@@@HW6 added to support JAL instruction
-PC_plus_4_pMEM <= PC_Plus_4_pEX;
+
+
+process (CK, RESET)
+begin
+	if RESET='1' then
+		PC_plus_4_pMEM <= x"00000000";
+	elsif CK'event and CK='1' and HOLD='0' then
+		PC_plus_4_pMEM <= PC_Plus_4_pEX;
+	end if;
+end process;
 
 --control signals FFs 
 process(CK,RESET)
@@ -1081,11 +1049,11 @@ begin
 	end if;
 end process;
 
-
 -- ***************************************************************************************************
 --build special rdbk signals
 rdbk3_vec   <=	b"000" & Rs  &  b"000" & Rt  &  b"000" & Rd  &  b"00" & Funct;
-rdbk4_vec   <=	b"000" & RegWrite & b"0000"  &  b"00000000"  &  b"00000000"  &  b"0000" & b"000" & Rs_equals_Rt;
+rdbk4_vec   <=	b"000" & RegWrite & b"000" & MemWrite  &  b"00000000"  &  b"00000000"  &  b"0000" & b"000" & Rs_equals_Rt;
+				-- 31 30 29    28       27 26 25 24 -- @@@ change for HW6
 rdbk5_vec   <=  b"000" & ALUsrcB_pEX & b"0000"  & b"00000000" & b"0000"   &  b"00" & ALUOP_pEX & "00" & Funct_pEX;
 rdbk12_vec  <=	MemWrite_pMem & b"00" & MemToReg_pMEM & b"000" &  RegWrite_pMEM & b"000" & Rd_pMEM & b"000" & MemToReg_pWB & b"000" & RegWrite_pWB & b"000" & Rd_pWB;
 
@@ -1098,7 +1066,7 @@ RESET_out_to_TB		    <=		RESET;
 HOLD_out_to_TB			<=		HOLD;
 rdbk0_out_to_TB 		<= 	    PC_reg;
 rdbk1_out_to_TB 		<= 	    IR_reg; 
-rdbk2_out_to_TB 		<= 	    sext_imm;
+rdbk2_out_to_TB 		<= 	    sext_imm; --@@@hw6 change(?)
 rdbk3_out_to_TB 	    <=		rdbk3_vec;
 rdbk4_out_to_TB 	    <=		rdbk4_vec;
 rdbk5_out_to_TB 		<=		rdbk5_vec;
@@ -1113,8 +1081,6 @@ rdbk13_out_to_TB    	<=		MDR_reg;
 rdbk14_out_to_TB     	<=  	ALUout_reg_pWB;
 rdbk15_out_to_TB 	    <= 		GPR_wr_data;
 
-
--- **************************************************************************************************
 
 
 

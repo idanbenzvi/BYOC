@@ -121,6 +121,11 @@ end process;
 IMem_adrs <= PC_reg; -- connect PC_reg to IMem
 PC_reg_pIF <= PC_reg; -- connect to pIF signal for the TB as spcified inthe Top_4sim
 
+-- instruction decoder
+opcode <= IR_reg(31 downto 26);
+funct  <= IR_reg(5 downto 0);
+
+
 --PC source mux
 process(PC_Source,PC_plus_4, branch_adrs, jr_adrs, jump_adrs)
 begin
@@ -144,14 +149,21 @@ IR_reg_pID <= IR_reg; -- added for the ID phase (output)
 imm <=  IR_reg(15 downto 0);
 
 
-process(imm)
+process(imm,Opcode)
 begin
+ if Opcode = b"001111" then 
+     sext_imm <= imm(15 downto 0) & x"0000"; --LUI
+ elsif Opcode = b"001101" then 
+      sext_imm <= x"0000" & imm(15 downto 0); -- ORI 
+ else	
+		
 	if imm(15) = '1' then
 		  sext_imm(31 downto 16) <= x"ffff";
 	else
 		  sext_imm(31 downto 16) <= x"0000";
 	end if;
 	sext_imm(15 downto 0) <= imm;
+	end if;
 end process;
 
 sext_imm_pID <= sext_imm; -- output signal to the ID phase
@@ -175,9 +187,6 @@ begin
 	end if;
 end process;
 
--- instruction decoder
-opcode <= IR_reg(31 downto 26);
-funct  <= IR_reg(5 downto 0);
 
 -- PC_source decoder  (create the PC_source signal)
 process(opcode, PC_source, Rs_equals_Rt_pID, funct) --sensitive to changes in the opcode
