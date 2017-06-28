@@ -993,14 +993,14 @@ begin
 	if RESET='1' then
 		ALUOut_reg_pWB <= x"00000000";
 	elsif CK'event and CK='1' and HOLD='0' then
-		ALUOut_reg_pWB <= ALUOut_reg ;
+		ALUOut_reg_pWB <= ALUOut_reg;
 	end if;
 end process;
 
 --MemToReg mux     --@@@HW6 requires changes to support JAL instruction
-process(MemToReg_pWB,MDR_reg,ALUOut_reg_pWB,JAL)
+process(MemToReg_pWB,MDR_reg,ALUOut_reg_pWB,JAL_pWB, PC_Plus_4_pWB)
 begin
-	if JAL = '1' then 
+	if JAL_pWB = '1' then 
 		GPR_wr_data <= PC_Plus_4_pWB;
 	else
 		--not JAL
@@ -1018,7 +1018,7 @@ begin
 	if RESET='1' then
 		Rd_pWB <= b"00000";
 	elsif CK'event and CK='1' and HOLD='0' then
-		if JAL = '1' then
+		if JAL_pWB = '1' then
 			Rd_pWB <= b"11111"; -- force Rt to be 31 -- TODO : did we force the correct one ? Rt ? Rd ? not sure
 		else 
 			Rd_pWB <= Rd_pMEM;
@@ -1039,7 +1039,15 @@ end process;
 
 --control signals FFs 
 --RegWrite_pWB, MemToReg_pWB FFs   --@@@HW6 added JAL_pWB FF to support JAL instruction  
-process(CK,RESET, MemToReg_pMEM)
+process(CK,RESET)
+begin
+	if RESET='1' then
+		JAL_pWB <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		JAL_pWB <= JAL_pMEM;
+	end if;
+end process;
+process(CK,RESET)
 begin
 	if RESET='1' then
 		MemToReg_pWB <= '0';
