@@ -928,22 +928,6 @@ begin
 	end if;
 end process;
 
---control signals FFs 
---process(CK,RESET) Duplicate code
---begin
---	if RESET='1' then
---		ALUsrcB_pEX	<=	'0';
---		ALUOP_pEX <= b"00";
---		RegDst_pEX <= '0';
---		RegWrite_pEX <= '0';	
---	elsif CK'event and CK='1' and HOLD='0' then
---		ALUsrcB_pEX	<=	ALUsrcB;
---		ALUOP_pEX <= ALUOP;
---		RegDst_pEX <= RegDst;
---		RegWrite_pEX <= RegWrite; 
---	end if;
---end process;
-
 --RegWrite_pMEM, MemToReg_pMEM, MemWrite_pEX FFs  --@@@HW6  add JAL_pMEM to support JAL
 process (CK, RESET)
 begin
