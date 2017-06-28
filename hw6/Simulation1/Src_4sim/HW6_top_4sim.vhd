@@ -1018,11 +1018,7 @@ begin
 	if RESET='1' then
 		Rd_pWB <= b"00000";
 	elsif CK'event and CK='1' and HOLD='0' then
-		if JAL_pWB = '1' then
-			Rd_pWB <= b"11111"; -- force Rt to be 31 -- TODO : did we force the correct one ? Rt ? Rd ? not sure
-		else 
-			Rd_pWB <= Rd_pMEM;
-		end if;
+		Rd_pWB <= Rd_pMEM;
 	end if;
 end process;
 
