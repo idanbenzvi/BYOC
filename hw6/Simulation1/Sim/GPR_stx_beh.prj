@@ -1,0 +1,2 @@
+vhdl isim_temp "../Src_4sim/dual_port_memory.vhd"
+vhdl isim_temp "../Src_4sim/GPR.vhd"
