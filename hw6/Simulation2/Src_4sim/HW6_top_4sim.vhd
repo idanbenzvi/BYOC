@@ -626,19 +626,19 @@ RESET <= switches_in(6) or RESET_from_Host_Intf;
 Opcode <= IR_reg(31 downto 26);
 
 -- Addition to support LUI command - we need to set Rs to 0 to make sure the sign extension will work
-process(Opcode)
+process(Opcode,IR_reg)
 begin
-if Opcode = b"001111" then
+if Opcode = b"001111" then -- LUI support
 	Rs <= b"00000";
 else
 	Rs <= IR_reg(25 downto 21); 
 end if;
 end process;
 
-process(Opcode)
+process(Opcode,IR_reg)
 begin
 	if Opcode = b"000011" then -- jal 
-		Rt <= b"11111"; -- JAL support = to enable  writing PC+4 to register 31 
+		Rt <= b"11111"; -- JAL support = to enable writing PC+4 to register 31 
 	else
 		Rt <= IR_reg(20 downto 16); 
 	end if;
@@ -811,14 +811,7 @@ begin
 	if RESET='1' then
 		sext_imm_reg <= x"00000000";
 	elsif CK'event and CK = '1' and HOLD='0' then
-		if Opcode = b"001111" then -- Check if LUI (tried to avoid & and use 2 commands)
-			sext_imm_reg(31 downto 16) <= sext_imm(15 downto 0);
-			sext_imm_reg(15 downto 0) <=  x"0000";
-		elsif Opcode = b"001101" then -- prevent sign ext on ORI command
-			sext_imm_reg(15 downto 0) <= sext_imm(15 downto 0);
-		else
 			sext_imm_reg <= sext_imm;
-		end if;
 	end if;
 end process;
 
@@ -845,7 +838,11 @@ end process;
 -- PC_plus_4_pEX --@@@HW6 added to support JAL instruction
 process(CK,RESET)
 begin
-	PC_Plus_4_pEX <= PC_Plus_4_pID;
+if RESET='1' then
+		PC_Plus_4_pEX <= x"00000000";
+	elsif CK'event and CK='1' and HOLD='0' then
+		PC_Plus_4_pEX <= PC_Plus_4_pID;
+	end if;
 end process; 
 
 -- control signals regs  --@@@HW6  add JAL support here to
@@ -926,21 +923,14 @@ begin
 end process;
 
 --PC_plus_4_pMEM reg --@@@HW6 added to support JAL instruction
-PC_plus_4_pMEM <= PC_Plus_4_pEX;
 
---control signals FFs 
-process(CK,RESET)
+
+process (CK, RESET)
 begin
 	if RESET='1' then
-		ALUsrcB_pEX	<=	'0';
-		ALUOP_pEX <= b"00";
-		RegDst_pEX <= '0';
-		RegWrite_pEX <= '0';	
+		PC_plus_4_pMEM <= x"00000000";
 	elsif CK'event and CK='1' and HOLD='0' then
-		ALUsrcB_pEX	<=	ALUsrcB;
-		ALUOP_pEX <= ALUOP;
-		RegDst_pEX <= RegDst;
-		RegWrite_pEX <= RegWrite; 
+		PC_plus_4_pMEM <= PC_Plus_4_pEX;
 	end if;
 end process;
 
@@ -993,14 +983,14 @@ begin
 	if RESET='1' then
 		ALUOut_reg_pWB <= x"00000000";
 	elsif CK'event and CK='1' and HOLD='0' then
-		ALUOut_reg_pWB <= ALUOut_reg ;
+		ALUOut_reg_pWB <= ALUOut_reg;
 	end if;
 end process;
 
 --MemToReg mux     --@@@HW6 requires changes to support JAL instruction
-process(MemToReg_pWB,MDR_reg,ALUOut_reg_pWB,JAL)
+process(MemToReg_pWB,MDR_reg,ALUOut_reg_pWB,JAL_pWB, PC_Plus_4_pWB)
 begin
-	if JAL = '1' then 
+	if JAL_pWB = '1' then 
 		GPR_wr_data <= PC_Plus_4_pWB;
 	else
 		--not JAL
@@ -1013,25 +1003,37 @@ begin
 end process;
 
 --Rd_pWB register
-process(CK,RESET,JAL)
+process(CK,RESET)
 begin
 	if RESET='1' then
 		Rd_pWB <= b"00000";
 	elsif CK'event and CK='1' and HOLD='0' then
-		if JAL = '1' then
-			Rd_pWB <= b"11111"; -- force Rt to be 31 -- TODO : did we force the correct one ? Rt ? Rd ? not sure
-		else 
-			Rd_pWB <= Rd_pMEM;
-		end if;
+		Rd_pWB <= Rd_pMEM;
 	end if;
 end process;
 
 --PC_plus_4_pWB --@@@HW6 added to support JAL instruction
-PC_Plus_4_pWB <= PC_Plus_4_pMEM;
+
+process(CK,RESET)
+begin
+	if RESET='1' then
+		PC_Plus_4_pWB <= x"00000000";
+	elsif CK'event and CK='1' and HOLD='0' then
+		PC_Plus_4_pWB <= PC_Plus_4_pMEM;
+	end if;
+end process;
 
 --control signals FFs 
 --RegWrite_pWB, MemToReg_pWB FFs   --@@@HW6 added JAL_pWB FF to support JAL instruction  
-process(CK,RESET, MemToReg_pMEM)
+process(CK,RESET)
+begin
+	if RESET='1' then
+		JAL_pWB <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		JAL_pWB <= JAL_pMEM;
+	end if;
+end process;
+process(CK,RESET)
 begin
 	if RESET='1' then
 		MemToReg_pWB <= '0';
@@ -1040,7 +1042,7 @@ begin
 	end if;
 end process;
 
-process(CK,RESET, RegWrite_pMEM)
+process(CK,RESET)
 begin
 	if RESET='1' then
 		RegWrite_pWB <= '0';
@@ -1049,13 +1051,12 @@ begin
 	end if;
 end process;
 
-
 -- ***************************************************************************************************
 --build special rdbk signals
 rdbk3_vec   <=	b"000" & Rs  &  b"000" & Rt  &  b"000" & Rd  &  b"00" & Funct;
 rdbk4_vec   <=	b"000" & RegWrite & b"000" & MemWrite  &  b"00000000"  &  b"00000000"  &  b"0000" & b"000" & Rs_equals_Rt;
 				-- 31 30 29    28       27 26 25 24 -- @@@ change for HW6
-rdbk5_vec   <=  b"000" & ALUsrcB_pEX & b"0000"  & b"00000000" & b"0000"   &  b"00" & ALUOP & "00" & Funct_pEX; -- @@@HW6 change of aluop
+rdbk5_vec   <=  b"000" & ALUsrcB_pEX & b"0000"  & b"00000000" & b"0000"   &  b"00" & ALUOP_pEX & "00" & Funct_pEX;
 rdbk12_vec  <=	MemWrite_pMem & b"00" & MemToReg_pMEM & b"000" &  RegWrite_pMEM & b"000" & Rd_pMEM & b"000" & MemToReg_pWB & b"000" & RegWrite_pWB & b"000" & Rd_pWB;
 
 
@@ -1067,7 +1068,7 @@ RESET_out_to_TB		    <=		RESET;
 HOLD_out_to_TB			<=		HOLD;
 rdbk0_out_to_TB 		<= 	    PC_reg;
 rdbk1_out_to_TB 		<= 	    IR_reg; 
-rdbk2_out_to_TB 		<= 	    sext_imm_pID; --@@@hw6 change(?)
+rdbk2_out_to_TB 		<= 	    sext_imm; --@@@hw6 change(?)
 rdbk3_out_to_TB 	    <=		rdbk3_vec;
 rdbk4_out_to_TB 	    <=		rdbk4_vec;
 rdbk5_out_to_TB 		<=		rdbk5_vec;
