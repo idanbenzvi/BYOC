@@ -44,7 +44,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1498634505" xil_pn:in_ck="2236463376219500518" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1498634505">
+    <transform xil_pn:end_ts="1498646171" xil_pn:in_ck="2236463376219500518" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1498646171">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../Src_4sim/BYOC_Clock_driver_4sim.vhd"/>
@@ -57,11 +57,11 @@
       <outfile xil_pn:name="../Src_4sim/SIM_HW6_filenames.vhd"/>
       <outfile xil_pn:name="../Src_4sim/dual_port_memory.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1498420502" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4783330819911247269" xil_pn:start_ts="1498420502">
+    <transform xil_pn:end_ts="1498643525" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4783330819911247269" xil_pn:start_ts="1498643525">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1498420502" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-802934320669705497" xil_pn:start_ts="1498420502">
+    <transform xil_pn:end_ts="1498643525" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-802934320669705497" xil_pn:start_ts="1498643525">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -69,7 +69,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1498634505" xil_pn:in_ck="2236463376219500518" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1498634505">
+    <transform xil_pn:end_ts="1498646171" xil_pn:in_ck="2236463376219500518" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1498646171">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../Src_4sim/BYOC_Clock_driver_4sim.vhd"/>
@@ -82,7 +82,7 @@
       <outfile xil_pn:name="../Src_4sim/SIM_HW6_filenames.vhd"/>
       <outfile xil_pn:name="../Src_4sim/dual_port_memory.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1498634507" xil_pn:in_ck="2236463376219500518" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4370909857455213310" xil_pn:start_ts="1498634505">
+    <transform xil_pn:end_ts="1498646181" xil_pn:in_ck="2236463376219500518" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4370909857455213310" xil_pn:start_ts="1498646171">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -94,7 +94,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1498634507" xil_pn:in_ck="1197704341753991615" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1070957045861215851" xil_pn:start_ts="1498634507">
+    <transform xil_pn:end_ts="1498646183" xil_pn:in_ck="1197704341753991615" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1070957045861215851" xil_pn:start_ts="1498646181">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="BYOC_TB_for_students_isim_beh.wdb"/>

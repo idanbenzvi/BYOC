@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation1/Src_4sim/Fetch_Unit.vhd";
+static const char *ng0 = "/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Simulation1/Src_4sim/Fetch_Unit.vhd";
 extern char *IEEE_P_3620187407;
 extern char *IEEE_P_2592010699;
 

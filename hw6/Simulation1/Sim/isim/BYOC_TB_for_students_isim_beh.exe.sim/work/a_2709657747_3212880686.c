@@ -24,7 +24,7 @@
 extern char *IEEE_P_2592010699;
 extern char *STD_STANDARD;
 extern char *IEEE_P_3499444699;
-static const char *ng3 = "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation1/Src_4sim/BYOC_Host_Intf_4sim.vhd";
+static const char *ng3 = "/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Simulation1/Src_4sim/BYOC_Host_Intf_4sim.vhd";
 extern char *STD_TEXTIO;
 extern char *IEEE_P_3620187407;
 extern char *WORK_P_2152067958;
