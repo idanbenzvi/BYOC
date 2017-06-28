@@ -902,7 +902,7 @@ begin
 end process;
 
 --RegDst mux and Rd_pMEM register
-process(CK,RESET,RegDst_pEX) 
+process(CK,RESET) 
 begin
 	if RESET='1' then
 		--RegDst_pEX <= '0';
@@ -1048,7 +1048,7 @@ begin
 	end if;
 end process;
 
-process(CK,RESET, RegWrite_pMEM)
+process(CK,RESET)
 begin
 	if RESET='1' then
 		RegWrite_pWB <= '0';
