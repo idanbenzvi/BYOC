@@ -1,0 +1,5 @@
+set -tmpdir "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation1/Sim/xst/projnav.tmp"
+set -xsthdpdir "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation1/Sim/xst"
+elaborate
+-ifn HW6_top.prj
+-ifmt mixed

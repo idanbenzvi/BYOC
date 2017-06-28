@@ -1,0 +1,59 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation1/Sim/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation1/Sim/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation1/Src_4sim/dual_port_memory.vhd" in Library work.
+Entity <dual_port_memory_no_ck_read> compiled.
+Entity <dual_port_memory_no_ck_read> (Architecture <dual_port_memory>) compiled.
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation1/Src_4sim/SIM_HW6_filenames.vhd" in Library work.
+Package <BYOC_filenames> compiled.
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation1/Src_4sim/BYOC_Clock_driver_4sim.vhd" in Library work.
+Entity <Clock_Driver> compiled.
+Entity <Clock_Driver> (Architecture <clock_divider>) compiled.
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation1/Src_4sim/BYOC_Host_Intf_4sim.vhd" in Library work.
+Entity <BYOC_Host_Intf> compiled.
+Entity <BYOC_Host_Intf> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation1/Src_4sim/Fetch_Unit.vhd" in Library work.
+Entity <Fetch_Unit> compiled.
+Entity <Fetch_Unit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation1/Src_4sim/GPR.vhd" in Library work.
+Entity <GPR> compiled.
+Entity <GPR> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation1/Src_4sim/MIPS_ALU.vhd" in Library work.
+Entity <MIPS_ALU> compiled.
+Entity <MIPS_ALU> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation1/Src_4sim/HW6_top_4sim.vhd" in Library work.
+Entity <HW6_top> compiled.
+Entity <HW6_top> (Architecture <Behavioral>) compiled.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> 
+
+
+Total memory usage is 474304 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

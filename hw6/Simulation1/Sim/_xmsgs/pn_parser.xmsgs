@@ -8,40 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Simulation1/Src_4sim/HW6_top_4sim.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Simulation1/Src_4sim/HW6_top_4sim.vhd</arg>&quot; Line <arg fmt="%d" index="2">652</arg>. <arg fmt="%s" index="3">Syntax error near &quot;?&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Simulation1/Src_4sim/HW6_top_4sim.vhd</arg>&quot; Line <arg fmt="%d" index="2">667</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Simulation1/Src_4sim/HW6_top_4sim.vhd</arg>&quot; Line <arg fmt="%d" index="2">677</arg>. <arg fmt="%s" index="3">Syntax error near &quot;when&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Simulation1/Src_4sim/HW6_top_4sim.vhd</arg>&quot; Line <arg fmt="%d" index="2">683</arg>. <arg fmt="%s" index="3">Syntax error near &quot;when&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Simulation1/Src_4sim/HW6_top_4sim.vhd</arg>&quot; Line <arg fmt="%d" index="2">690</arg>. <arg fmt="%s" index="3">Syntax error near &quot;when&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Simulation1/Src_4sim/HW6_top_4sim.vhd</arg>&quot; Line <arg fmt="%d" index="2">697</arg>. <arg fmt="%s" index="3">Syntax error near &quot;when&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Simulation1/Src_4sim/HW6_top_4sim.vhd</arg>&quot; Line <arg fmt="%d" index="2">708</arg>. <arg fmt="%s" index="3">Syntax error near &quot;when&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Simulation1/Src_4sim/HW6_top_4sim.vhd</arg>&quot; Line <arg fmt="%d" index="2">715</arg>. <arg fmt="%s" index="3">Syntax error near &quot;when&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Simulation1/Src_4sim/HW6_top_4sim.vhd</arg>&quot; Line <arg fmt="%d" index="2">724</arg>. <arg fmt="%s" index="3">Syntax error near &quot;when&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Simulation1/Src_4sim/HW6_top_4sim.vhd</arg>&quot; Line <arg fmt="%d" index="2">733</arg>. <arg fmt="%s" index="3">Syntax error near &quot;when&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Simulation1/Src_4sim/HW6_top_4sim.vhd</arg>&quot; Line <arg fmt="%d" index="2">740</arg>. <arg fmt="%s" index="3">Syntax error near &quot;when&quot;.</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation1/Src_4sim/MIPS_ALU.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

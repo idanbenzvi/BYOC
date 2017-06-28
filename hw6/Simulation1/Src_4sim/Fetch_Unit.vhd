@@ -149,22 +149,24 @@ IR_reg_pID <= IR_reg; -- added for the ID phase (output)
 imm <=  IR_reg(15 downto 0);
 
 
+-- hw6 all sign extension options 
 process(imm,Opcode)
 begin
- if Opcode = b"001111" then 
-     sext_imm <= imm(15 downto 0) & x"0000"; --LUI
- elsif Opcode = b"001101" then 
-      sext_imm <= x"0000" & imm(15 downto 0); -- ORI 
- else	
-		
-	if imm(15) = '1' then
-		  sext_imm(31 downto 16) <= x"ffff";
-	else
-		  sext_imm(31 downto 16) <= x"0000";
-	end if;
-	sext_imm(15 downto 0) <= imm;
-	end if;
+	case Opcode is 
+	when  b"001111" =>   sext_imm <= imm(15 downto 0) & x"0000"; --LUI
+	when  b"001101" => sext_imm <= x"0000" & imm(15 downto 0); -- ORI 
+	when others => -- all ohter instructions
+		if imm(15) = '1' then
+			sext_imm(31 downto 16) <= x"ffff";
+			sext_imm(15 downto 0) <= imm;
+		else
+			sext_imm(31 downto 16) <= x"0000";
+			sext_imm(15 downto 0) <= imm;	
+		end if;
+	end case;
 end process;
+ --if Opcode = b"001111" then 
+ --elsif Opcode = b"001101" then 
 
 sext_imm_pID <= sext_imm; -- output signal to the ID phase
 
@@ -187,9 +189,11 @@ begin
 	end if;
 end process;
 
+--hw6 - addition to output the pc_plus_4_pid_out signal
+PC_plus_4_pID_out <= PC_plus_4_pID; 
 
 -- PC_source decoder  (create the PC_source signal)
-process(opcode, PC_source, Rs_equals_Rt_pID, funct) --sensitive to changes in the opcode
+process(opcode, Rs_equals_Rt_pID, funct) --sensitive to changes in the opcode
 begin
 	case opcode is
 		when b"000010" => PC_source <= b"11"; --j

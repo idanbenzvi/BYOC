@@ -75,6 +75,7 @@ begin
 				when b"100101" => ALU_cmd <= b"001"; -- OR
 				when b"100110" => ALU_cmd <= b"011"; -- XOR
 				when b"101010" => ALU_cmd <= b"111"; -- SLT
+				when b"001000" => ALU_cmd <= b"001"; -- Jr (hw6 addition)
 				when others => ALU_cmd <= b"000"; 
 			end case;
 		when others => ALU_cmd <= b"000";
