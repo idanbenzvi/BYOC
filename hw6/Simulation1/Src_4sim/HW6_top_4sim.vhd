@@ -1027,7 +1027,15 @@ begin
 end process;
 
 --PC_plus_4_pWB --@@@HW6 added to support JAL instruction
-PC_Plus_4_pWB <= PC_Plus_4_pMEM;
+
+process(CK,RESET)
+begin
+	if RESET='1' then
+		PC_Plus_4_pWB <= x"00000000";
+	elsif CK'event and CK='1' and HOLD='0' then
+		PC_Plus_4_pWB <= PC_Plus_4_pMEM;
+	end if;
+end process;
 
 --control signals FFs 
 --RegWrite_pWB, MemToReg_pWB FFs   --@@@HW6 added JAL_pWB FF to support JAL instruction  
