@@ -24,7 +24,9 @@ HOLD_in 		: in STD_LOGIC;
 IR_reg_pID		:	out		STD_LOGIC_VECTOR  (31 downto 0);-- The IR_reg (instruction) to be used in ID 
 sext_imm_pID	:	out		STD_LOGIC_VECTOR  (31 downto 0);-- The sext_imm to be used in ID 
 PC_reg_pIF		:	out		STD_LOGIC_VECTOR  (31 downto 0);-- The PC_reg value in IF. To be read by TB in simulation and rdbk in implementation - for verification purposes 
+PC_plus_4_pID_out : out	STD_LOGIC_VECTOR  (31 downto 0);
 Rs_equals_Rt_pID  : in  	STD_LOGIC;-- '1' if value read from Rs equals the value read from Rt, '0' otherwise. Used in branch instructions.
+jr_adrs_in		: in	STD_LOGIC_VECTOR  (31 downto 0);
 -- IMem signals
 MIPS_IMem_adrs	     : out STD_LOGIC_VECTOR (31 downto 0);
 MIPS_IMem_rd_data     : in STD_LOGIC_VECTOR (31 downto 0)
@@ -119,6 +121,11 @@ end process;
 IMem_adrs <= PC_reg; -- connect PC_reg to IMem
 PC_reg_pIF <= PC_reg; -- connect to pIF signal for the TB as spcified inthe Top_4sim
 
+-- instruction decoder
+opcode <= IR_reg(31 downto 26);
+funct  <= IR_reg(5 downto 0);
+
+
 --PC source mux
 process(PC_Source,PC_plus_4, branch_adrs, jr_adrs, jump_adrs)
 begin
@@ -126,6 +133,7 @@ begin
 		when b"00" => PC_mux_out <= PC_Plus_4;
 		when b"01" => PC_mux_out <= branch_adrs;
 		when b"10" => PC_mux_out <= jr_adrs;
+		--when b"11" => PC_mux_out <=  jump_adrs;
 		when others => PC_mux_out <= jump_adrs;
 	end case;
 end process;
@@ -141,15 +149,24 @@ IR_reg_pID <= IR_reg; -- added for the ID phase (output)
 imm <=  IR_reg(15 downto 0);
 
 
-process(imm)
+-- hw6 all sign extension options 
+process(imm,Opcode)
 begin
-	if imm(15) = '1' then
-		  sext_imm(31 downto 16) <= x"ffff";
-	else
-		  sext_imm(31 downto 16) <= x"0000";
-	end if;
-	sext_imm(15 downto 0) <= imm;
+	case Opcode is 
+	when  b"001111" => sext_imm <= imm(15 downto 0) & x"0000"; --LUI
+	when  b"001101" => sext_imm <= x"0000" & imm(15 downto 0); -- ORI 
+	when others => -- all ohter instructions
+		if imm(15) = '1' then
+			sext_imm(31 downto 16) <= x"ffff";
+			sext_imm(15 downto 0) <= imm;
+		else
+			sext_imm(31 downto 16) <= x"0000";
+			sext_imm(15 downto 0) <= imm;	
+		end if;
+	end case;
 end process;
+ --if Opcode = b"001111" then 
+ --elsif Opcode = b"001101" then 
 
 sext_imm_pID <= sext_imm; -- output signal to the ID phase
 
@@ -160,7 +177,7 @@ branch_adrs <= (sext_imm(29 downto 0) & b"00") + PC_plus_4_pID;
 jump_adrs <= PC_plus_4_pID(31 downto 28) & ((IR_reg(25 downto 0) & b"00"));
 
 -- JR address    (create the jr_adrs signal)
-jr_adrs <= x"00400004";
+jr_adrs <= jr_adrs_in;
 
 -- PC_plus_4_pID register   (create the PC_plus_4_pID signal)
 process(CK,RESET)
@@ -172,12 +189,11 @@ begin
 	end if;
 end process;
 
--- instruction decoder
-opcode <= IR_reg(31 downto 26);
-funct  <= IR_reg(5 downto 0);
+--hw6 - addition to output the pc_plus_4_pid_out signal
+PC_plus_4_pID_out <= PC_plus_4_pID; 
 
 -- PC_source decoder  (create the PC_source signal)
-process(opcode, PC_source, Rs_equals_Rt_pID, funct) --sensitive to changes in the opcode
+process(opcode, Rs_equals_Rt_pID, funct) --sensitive to changes in the opcode
 begin
 	case opcode is
 		when b"000010" => PC_source <= b"11"; --j

@@ -48,6 +48,7 @@ signal  ALU_output : STD_LOGIC_VECTOR  (31 downto 0);
 begin
 
 ALU_A_in <= A_in;
+ALU_out <= ALU_output;
 
 -- enter your design here
 process(sext_imm, B_in, ALUsrcB)
@@ -65,6 +66,7 @@ begin
 	case ALUOP is
 		when b"00" => ALU_cmd <= b"010";
 		when b"01" => ALU_cmd <= b"110";
+		when b"11" => ALU_cmd <= b"001"; -- added OR when the command is ORI
 		when b"10" =>
 			case Funct is
 				when b"100000" => ALU_cmd <= b"010"; -- Addition
@@ -73,6 +75,7 @@ begin
 				when b"100101" => ALU_cmd <= b"001"; -- OR
 				when b"100110" => ALU_cmd <= b"011"; -- XOR
 				when b"101010" => ALU_cmd <= b"111"; -- SLT
+				when b"001000" => ALU_cmd <= b"001"; -- Jr (hw6 addition)
 				when others => ALU_cmd <= b"000"; 
 			end case;
 		when others => ALU_cmd <= b"000";
@@ -81,22 +84,22 @@ end process;
 
 process(ALU_cmd, ALU_A_in, ALU_B_in)
 begin
-	-- ALU_Out
+	-- ALU_output
 	case ALU_cmd is
-		when b"000" => ALU_out <= (ALU_A_in and ALU_B_in);
-		when b"001" => ALU_out <= (ALU_A_in or ALU_B_in);
-		when b"010" => ALU_out <= (ALU_A_in + ALU_B_in);
-		when b"011" => ALU_out <= (ALU_A_in xor ALU_B_in);		
-		--when b"100" => ALU_out <= (ALU_A_in nand ALU_B_in);
-		--when b"101" => ALU_out <= (ALU_A_in nor ALU_B_in);
-		when b"110" => ALU_out <= (ALU_A_in - ALU_B_in);
+		when b"000" => ALU_output <= (ALU_A_in and ALU_B_in);
+		when b"001" => ALU_output <= (ALU_A_in or ALU_B_in);
+		when b"010" => ALU_output <= (ALU_A_in + ALU_B_in);
+		when b"011" => ALU_output <= (ALU_A_in xor ALU_B_in);		
+		--when b"100" => ALU_output <= (ALU_A_in nand ALU_B_in);
+		--when b"101" => ALU_output <= (ALU_A_in nor ALU_B_in);
+		when b"110" => ALU_output <= (ALU_A_in - ALU_B_in);
 		when b"111" => 
 			if conv_integer(ALU_A_in) < conv_integer(ALU_B_in) then
-				ALU_out <= x"00000001";
+				ALU_output <= x"00000001";
 			else
-				ALU_out <= x"00000000";
+				ALU_output <= x"00000000";
 			end if;
-		when others => ALU_out <= x"00000000"; 
+		when others => ALU_output <= x"00000000"; 
 	end case;
 end process;
 
