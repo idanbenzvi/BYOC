@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/parallels/Documents/byoc/BYOC_Lab_Project_1/hw6/Simulation2/Sim/BYOC_TB_for_students_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="byoc_filenames" />
+            <top_module name="byoc_tb_for_students" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="textio" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="67" />
+   <wvobject fp_name="/byoc_tb_for_students/tb_ck" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_ck</obj_property>
+      <obj_property name="ObjectShortName">tb_ck</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_ck_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_ck_out</obj_property>
+      <obj_property name="ObjectShortName">tb_ck_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_reset_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_reset_out</obj_property>
+      <obj_property name="ObjectShortName">tb_reset_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_hold_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_hold_out</obj_property>
+      <obj_property name="ObjectShortName">tb_hold_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rs232_tx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rs232_tx</obj_property>
+      <obj_property name="ObjectShortName">tb_rs232_tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk3[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk5" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk5[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk5[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk6" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk6[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk6[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk7" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk7[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk7[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk8" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk8[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk8[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk9" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk9[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk9[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk10" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk10[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk10[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk11" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk11[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk11[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk12" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk12[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk12[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk13" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk13[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk13[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk14" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk14[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk14[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/tb_rdbk15" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tb_rdbk15[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_rdbk15[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/rs_equals_rt" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">rs_equals_rt</obj_property>
+      <obj_property name="ObjectShortName">rs_equals_rt</obj_property>
+      <obj_property name="label">rs_equals_rt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/i" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">i</obj_property>
+      <obj_property name="ObjectShortName">i</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/pc_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_reg[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/rs" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rs[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rs[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/rt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rt[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/rd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rd[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/funct" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">funct[5:0]</obj_property>
+      <obj_property name="ObjectShortName">funct[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/opcode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">opcode[5:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/ir_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ir_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ir_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/sext_imm" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sext_imm[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sext_imm[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/alu_output" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">alu_output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_output[31:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/aluout_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluout_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">aluout_reg[31:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">a_reg_wt_fwd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a_reg_wt_fwd[31:0]</obj_property>
+      <obj_property name="label">a_reg_wt_fwd[31:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[31]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[31]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[31]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[30]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[30]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[30]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[29]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[29]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[29]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[28]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[28]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[28]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[27]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[27]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[27]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[26]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[26]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[26]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[25]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[25]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[25]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[24]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[24]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[24]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[23]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[23]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[23]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[22]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[22]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[22]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[21]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[21]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[21]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[20]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[20]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[20]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[19]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[19]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[19]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[18]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[18]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[18]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[17]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[17]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[17]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[16]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[16]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[16]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[15]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[15]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[14]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[14]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[13]" type="logic" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[13]</obj_property>
+         <obj_property name="label">[13]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[12]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[12]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[11]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[11]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[10]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[10]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[9]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[9]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[8]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[8]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[7]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[7]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[6]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[6]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[5]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[5]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[4]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[4]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[3]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[3]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[2]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[2]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[1]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd[0]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">a_reg_wt_fwd[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/aluout_reg_pwb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluout_reg_pwb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">aluout_reg_pwb[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/gpr_rd_data2_wt_fwd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">gpr_rd_data2_wt_fwd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gpr_rd_data2_wt_fwd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/gpr_wr_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">gpr_wr_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gpr_wr_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/gpr_rd_data2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">gpr_rd_data2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gpr_rd_data2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/gpr_rd_data1_wt_fwd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">gpr_rd_data1_wt_fwd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gpr_rd_data1_wt_fwd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/gpr_rd_data1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">gpr_rd_data1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gpr_rd_data1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/b_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/b_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/sext_imm_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sext_imm_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sext_imm_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/funct" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">funct[5:0]</obj_property>
+      <obj_property name="ObjectShortName">funct[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/ALU/a_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/ALU/b_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/ck_no_expected_val" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">ck_no_expected_val</obj_property>
+      <obj_property name="ObjectShortName">ck_no_expected_val</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/temp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">temp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">temp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value3[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value5" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value5[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value5[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value6" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value6[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value6[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value7" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value7[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value7[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value8" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value8[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value8[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value9" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value9[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value9[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value10" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value10[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value10[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value11" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value11[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value11[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value12" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value12[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value12[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value13" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value13[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value13[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value14" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value14[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value14[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/expected_value15" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">expected_value15[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_value15[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/err_cntr" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">err_cntr</obj_property>
+      <obj_property name="ObjectShortName">err_cntr</obj_property>
+   </wvobject>
+</wave_config>

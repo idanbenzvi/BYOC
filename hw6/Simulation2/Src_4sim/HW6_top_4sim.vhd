@@ -1,5 +1,3 @@
---
--- 
 -- This module is the HW6_top entity for simulation & implementation     see --@@@HW6 for HW6 related changes
 --  
 --
@@ -574,8 +572,8 @@ Port map (
 ALUOP		=>			ALUOP_pEX,
 Funct		=>			Funct_pEX,
 -- data inputs & data control inputs
-A_in		=>	A_reg_wt_fwd, --		A_reg,   -- @@@HW6 should be A_reg_wt_fwd for adding data forwarding in EX phase
-B_in		=>	B_reg_wt_fwd, --		B_reg,   -- @@@HW6 should be B_reg_wt_fwd for adding data forwarding in EX phase
+A_in		=>			A_reg_wt_fwd,   -- @@@HW6 should be A_reg_wt_fwd for adding data forwarding in EX phase
+B_in		=>			B_reg_wt_fwd,   -- @@@HW6 should be B_reg_wt_fwd for adding data forwarding in EX phase
 sext_imm	=>			sext_imm_reg,
 ALUsrcB		=>			ALUsrcB_pEX,
 -- data output
@@ -667,8 +665,7 @@ begin
 end process;
 
 ----@@@HW6 add JR support   -- HW6 adding JR forwarding means a change here
---jr_address  <= GPR_rd_data1; -- @@@HW6 when branching support required,change to GPR_rd_data1_wt_fwd
-
+jr_address  <= GPR_rd_data1 ;
 
 -- Control decoder  - calculates the signals in ID phase
 -- creates the following signals according to the opcode:
@@ -796,13 +793,34 @@ begin
 end process;
 
 -- with forwarding															-- @@@HW6 adding data forwarding
-
-
-
 --src_A mux (forwarding)													-- @@@HW6 adding data forwarding in EX phase			
+process(RegWrite_pMEM, Rd_pMEM, Rs_pEX, RegWrite_pWB, Rd_pWB)
+begin
+	if RegWrite_pMEM = '1' and Rd_pMEM = Rs_pEX then 
+		A_reg_wt_fwd <= ALUout_reg;
+		
+	elsif RegWrite_pWB = '1' and Rd_pWB = Rs_pEX then
+		A_reg_wt_fwd <= GPR_wr_data;
+		
+	else
+		A_reg_wt_fwd <= A_reg;
+	end if;
+end process;
+
 
 --src B mux (forwarding part) 												-- @@@HW6 adding data forwarding in EX phase
-
+process(RegWrite_pMEM, Rd_pMEM, Rt_pEX, RegWrite_pWB, Rd_pWB)
+begin
+	if RegWrite_pMEM = '1' and Rd_pMEM = Rt_pEX then 
+		B_reg_wt_fwd <= ALUout_reg;
+		
+	elsif RegWrite_pWB = '1' and Rd_pWB = Rt_pEX then
+		B_reg_wt_fwd <= GPR_wr_data;
+		
+	else
+		B_reg_wt_fwd <= B_reg;
+	end if;
+end process;
 
 
 -- sext_imm register
@@ -826,11 +844,11 @@ begin
 		Rt_pEX <= b"00000";
 		Rd_pEX <= b"00000";
 		funct_pEX <= b"000000";
-		--Rs_pEX <= b"00000"; --@@@HW6 required for forwarding
+		Rs_pEX <= b"00000";
 	elsif CK'event and CK='1' and HOLD='0' then
 		Rt_pEX <= Rt;
 		Rd_pEX <= Rd;
-		--Rs_pEx <= Rs; -- @@@HW6 required for forwarding
+		Rs_pEx <= Rs;
 		funct_pEX <= funct;
 	end if;
 end process;
@@ -884,7 +902,6 @@ begin
 	end if;
 end process;
 
-
 -- ============================= MEM phase processes ========================================
 -- ========================================================================================
 -- ALUOUT register
@@ -903,7 +920,7 @@ begin
 	if RESET='1' then
 		B_reg_pMEM <= x"00000000";
 	elsif CK'event and CK='1' and HOLD='0' then
-		B_reg_pMEM <= B_reg;
+		B_reg_pMEM <= B_reg_wt_fwd;
 	end if;
 end process;
 
@@ -988,7 +1005,7 @@ begin
 end process;
 
 --MemToReg mux     --@@@HW6 requires changes to support JAL instruction
-process(MemToReg_pWB,MDR_reg,ALUOut_reg_pWB,JAL_pWB, PC_Plus_4_pWB)
+process(MemToReg_pWB,MDR_reg,ALUOut_reg_pWB)
 begin
 	if JAL_pWB = '1' then 
 		GPR_wr_data <= PC_Plus_4_pWB;
@@ -1083,8 +1100,6 @@ rdbk13_out_to_TB    	<=		MDR_reg;
 rdbk14_out_to_TB     	<=  	ALUout_reg_pWB;
 rdbk15_out_to_TB 	    <= 		GPR_wr_data;
 
-
--- **************************************************************************************************
 
 
 
