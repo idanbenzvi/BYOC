@@ -655,9 +655,29 @@ Funct <= IR_reg(5 downto 0);
 	
 	
 --beq/bne comparator    --@@@HW6 adding branch forwarding means a change here
-process(GPR_rd_data1, GPR_rd_data2)
+process(GPR_rd_data1, GPR_rd_data2, ALUOut_reg, RegWrite_pEX)
 begin
 	if(GPR_rd_data1 = GPR_rd_data2) then
+		Rs_equals_Rt <= '1';
+	else
+		Rs_equals_Rt <= '0';
+	end if;
+	
+	--if RegWrite_pEX = '1' then
+	if ... then
+		GPR_rd_data1_wt_fwd <= ALUOut_reg;
+	else
+		GPR_rd_data1_wt_fwd <= GPR_rd_data1;
+	end if;
+	
+	--if RegWrite_pEX = '1' then
+	if ... then
+		GPR_rd_data2_wt_fwd <= ALUOut_reg;
+	else
+		GPR_rd_data2_wt_fwd <= GPR_rd_data2;
+	end if;
+	
+	if GPR_rd_data1_wt_fwd = GPR_rd_data2_wt_fwd then
 		Rs_equals_Rt <= '1';
 	else
 		Rs_equals_Rt <= '0';
@@ -665,7 +685,7 @@ begin
 end process;
 
 ----@@@HW6 add JR support   -- HW6 adding JR forwarding means a change here
-jr_address  <= GPR_rd_data1 ;
+jr_address  <= GPR_rd_data1_wt_fwd;
 
 -- Control decoder  - calculates the signals in ID phase
 -- creates the following signals according to the opcode:
