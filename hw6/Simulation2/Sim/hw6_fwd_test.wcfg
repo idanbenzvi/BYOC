@@ -100,22 +100,30 @@
       <obj_property name="ElementShortName">tb_rdbk15[31:0]</obj_property>
       <obj_property name="ObjectShortName">tb_rdbk15[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ff00</obj_property>
    </wvobject>
    <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/rs_equals_rt" type="logic" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">rs_equals_rt</obj_property>
       <obj_property name="ObjectShortName">rs_equals_rt</obj_property>
       <obj_property name="label">rs_equals_rt</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ff00</obj_property>
    </wvobject>
    <wvobject fp_name="/byoc_tb_for_students/i" type="other" db_ref_id="1">
       <obj_property name="ElementShortName">i</obj_property>
       <obj_property name="ObjectShortName">i</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
    </wvobject>
    <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/pc_reg" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">pc_reg[31:0]</obj_property>
       <obj_property name="ObjectShortName">pc_reg[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
    </wvobject>
    <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/ir_reg" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">ir_reg[31:0]</obj_property>
@@ -123,6 +131,20 @@
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="CustomSignalColor">#ff0000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/alu_output" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">alu_output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_output[31:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/aluout_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluout_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">aluout_reg[31:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/rs" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">rs[4:0]</obj_property>
@@ -156,20 +178,6 @@
    <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/sext_imm" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">sext_imm[31:0]</obj_property>
       <obj_property name="ObjectShortName">sext_imm[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/alu_output" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">alu_output[31:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_output[31:0]</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="CustomSignalColor">#00ffff</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/aluout_reg" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">aluout_reg[31:0]</obj_property>
-      <obj_property name="ObjectShortName">aluout_reg[31:0]</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="CustomSignalColor">#00ffff</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/byoc_tb_for_students/Testing_BYOC_top/a_reg_wt_fwd" type="array" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
