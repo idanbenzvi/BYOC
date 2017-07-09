@@ -1,0 +1,12 @@
+AR hw6_top behavioral /media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/HW6_top.vhd sub00/vhpl11 1499617263
+EN clock_driver NULL /media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/BYOC_Clock_driver.vhd sub00/vhpl02 1499617254
+EN dual_port_memory_no_ck_read NULL /media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/dual_port_memory.vhd sub00/vhpl00 1499617252
+EN hw6_top NULL /media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/HW6_top.vhd sub00/vhpl10 1499617262
+EN mips_alu NULL /media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/MIPS_ALU.vhd sub00/vhpl08 1499617260
+AR fetch_unit behavioral /media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/Fetch_Unit.vhd sub00/vhpl05 1499617257
+EN fetch_unit NULL /media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/Fetch_Unit.vhd sub00/vhpl04 1499617256
+AR gpr behavioral /media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/GPR.vhd sub00/vhpl07 1499617259
+AR mips_alu behavioral /media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/MIPS_ALU.vhd sub00/vhpl09 1499617261
+AR dual_port_memory_no_ck_read dual_port_memory /media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/dual_port_memory.vhd sub00/vhpl01 1499617253
+EN gpr NULL /media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/GPR.vhd sub00/vhpl06 1499617258
+AR clock_driver clock_divider /media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/BYOC_Clock_driver.vhd sub00/vhpl03 1499617255

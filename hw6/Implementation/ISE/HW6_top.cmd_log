@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/ISE/HW6_top.xst" -ofn "/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/ISE/HW6_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../Src_4ISE -nt timestamp -i -p xc3s500e-fg320-4 HW6_top.ngc HW6_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o HW6_top_map.ncd HW6_top.ngd HW6_top.pcf 
+par -w -intstyle ise -ol high -t 1 HW6_top_map.ncd HW6_top.ncd HW6_top.pcf 
