@@ -1,5 +1,3 @@
---
--- 
 -- This module is the HW6_top entity for simulation & implementation     see --@@@HW6 for HW6 related changes
 --  
 --
@@ -54,7 +52,8 @@ CK_50MHz 		:	in		STD_LOGIC;
 buttons_in		:	in		STD_LOGIC_vector(3 downto 0) ;--  btn0 is single clock (manual clock), btn3 is manual reset
 switches_in 	:	in		STD_LOGIC_VECTOR (7 downto 0);-- 4-0 to select which part to be displayed on the 7Segnets LEDs
 sevenseg_out	:	out		STD_LOGIC_VECTOR (6 downto 0);-- to the 7 seg LEDs
-anodes_out		:	out		STD_LOGIC_VECTOR (3 downto 0) --;-- to the 7 seg LEDs
+anodes_out		:	out		STD_LOGIC_VECTOR (3 downto 0)-- to the 7 seg LEDs
+
 		);
 end HW6_top; 
 
@@ -554,8 +553,8 @@ Port map (
 ALUOP		=>			ALUOP_pEX,
 Funct		=>			Funct_pEX,
 -- data inputs & data control inputs
-A_in		=>			A_reg,   -- @@@HW6 should be A_reg_wt_fwd for adding data forwarding in EX phase
-B_in		=>			B_reg,   -- @@@HW6 should be B_reg_wt_fwd for adding data forwarding in EX phase
+A_in		=>			A_reg_wt_fwd,   -- @@@HW6 should be A_reg_wt_fwd for adding data forwarding in EX phase
+B_in		=>			B_reg_wt_fwd,   -- @@@HW6 should be B_reg_wt_fwd for adding data forwarding in EX phase
 sext_imm	=>			sext_imm_reg,
 ALUsrcB		=>			ALUsrcB_pEX,
 -- data output
@@ -604,27 +603,72 @@ RESET <= switches_in(6) or RESET_from_Host_Intf;
 -- ============================= =========================================================
 -- IR fields signals
 Opcode <= IR_reg(31 downto 26);
-Rs <= IR_reg(25 downto 21); 
-Rt <= IR_reg(20 downto 16); --@@@HW6 a change is required here to support JAL 
+
+-- Addition to support LUI command - we need to set Rs to 0 to make sure the sign extension will work
+process(Opcode,IR_reg)
+begin
+if Opcode = b"001111" then -- LUI support
+	Rs <= b"00000";
+else
+	Rs <= IR_reg(25 downto 21); 
+end if;
+end process;
+
+process(Opcode,IR_reg)
+begin
+	if Opcode = b"000011" then -- jal 
+		Rt <= b"11111"; -- JAL support = to enable writing PC+4 to register 31 
+	else
+		Rt <= IR_reg(20 downto 16); 
+	end if;
+end process;
+
 Rd <= IR_reg(15 downto 11);
 Funct <= IR_reg(5 downto 0);
 
-	
+--=========================================================================--
 --beq & bne & jr forwarding  				--@@@HW6 adding branch & JR forwarding
+
+
 --A mux of the Rs_equal_Rt comparator (beq/bne forwarding)
+--!We need to check if we are writing to the GPR in the previous instructions,and
+--To the register we want to use its value !
+--"Were we about to write to the GPR in the previous 3 insurctions (same address?)?"
+-- we need to compare the information from the ID phase to the MEM phase
+process(Rs,Rd_pMEM,ALUout_reg,GPR_rd_data1,RegWrite_pMEM) -- A_reg => Rs
+begin
+	if(RegWrite_pMEM='1' and Rs = Rd_pMEM and Rs /= b"00000") then
+		GPR_rd_data1_wt_fwd <= ALUout_reg;
+	else
+		GPR_rd_data1_wt_fwd <= GPR_rd_data1;
+	end if;
+end process;
 
 --B mux of the Rs_equal_Rt comparator (beq/bne forwarding)				--@@@HW6 adding branch & JR forwarding
-	
-	
+process(Rt,Rd_pMEM,ALUout_reg,GPR_rd_data2,RegWrite_pMEM) -- B_reg => Rt
+begin
+	if(RegWrite_pMEM = '1' and Rt = Rd_pMEM and Rt /= b"00000") then
+		GPR_rd_data2_wt_fwd <= ALUout_reg;
+	else
+		GPR_rd_data2_wt_fwd <= GPR_rd_data2;
+end if;
+end process;
+
+
 --beq/bne comparator    --@@@HW6 adding branch forwarding means a change here
+process(GPR_rd_data1_wt_fwd, GPR_rd_data2_wt_fwd)
+begin
+	if(GPR_rd_data1_wt_fwd = GPR_rd_data2_wt_fwd) then
+		Rs_equals_Rt <= '1';
+	else
+		Rs_equals_Rt <= '0';
+	end if;
+end process;
 
+-- HW6 add JR support -- HW6 adding JR forwarding means a change here
+jr_address  <= GPR_rd_data1_wt_fwd ; -- HW6 change to support fwding for Jr
 
-----@@@HW6 add JR support   -- HW6 adding JR forwarding means a change here
-jr_address  <= ??? 
-
-
-
-
+--=========================================================================--
 
 -- Control decoder  - calculates the signals in ID phase
 -- creates the following signals according to the opcode:
@@ -635,58 +679,318 @@ jr_address  <= ???
 --		MemToReg	 '0' - write ALUout_reg data (to "Rd"), '1' - write MDR_reg data (to "Rd")
 --		RegWrite	 '1' - write to GPR file (to "Rd")
 --		JAL	         '1' - wrhen we are in jal instruction --@@@HW6 adding  JAL support 
-
-
-
+process(Opcode)
+begin 
+	case Opcode is
+		when b"000000" => 
+								ALUOP <= b"10"; -- unique to R-type instructions
+								ALUsrcB <= '0';
+								RegDst <= '1';
+								RegWrite <= '1';
+								MemToReg <= '0';
+								MemWrite <= '0';
+								JAL <= '0';
+		when b"001000" => ALUOP <= b"00"; -- addi - I type command
+								RegWrite <= '1';
+								RegDst <= '0'; 
+								ALUsrcB <= '1';
+								MemToReg <= '0';
+								MemWrite <= '0';
+								JAL <= '0';
+		when b"000100" => -- beq - 4
+								ALUOP <= b"01";
+								ALUsrcB <= '0';
+								RegDst <= '0'; --doesn't matter
+								RegWrite <= '0';
+								MemToReg <= '0';
+								MemWrite <= '0';
+								JAL <= '0';
+		when b"000101" => -- bne - 5 
+								ALUOP <= b"01"; --sub
+								RegDst <= '0'; -- doesn't matter
+								ALUsrcB <= '0' ;
+								RegWrite <= '0';
+								MemToReg <= '0';
+								MemWrite <= '0';
+								JAL <= '0';
+		when b"000010" => -- jump - 2
+								ALUOP		 <= "00";  --don't care
+								RegWrite	<= '0';
+								RegDst		<= '0'; --don't care
+								ALUsrcB		<= '0';
+								MemToReg <= '0';
+								MemWrite <= '0';
+								JAL <= '0';
+		when b"000011" => -- JAL 
+								ALUOP <= "00";
+								RegWrite <= '1'; -- a must to write to the GPR of return address
+								RegDst <= '0';
+								ALUsrcB <= '0';
+								MemToReg <= '0';
+								MemWrite <= '0';
+								JAL <= '1';
+		-- HW 5 Additions --
+		--------------------
+		when b"100011" => --lw
+								ALUOP <= b"00";
+								RegWrite <= '1'; -- allow writing to the register
+								RegDst <= '0';
+								ALUsrcB <= '1' ;
+								MemToReg <= '1';
+								MemWrite <= '0';
+								JAL <= '0';
+		when b"101011" => --sw
+								ALUOP <= "00";
+								RegWrite <= '0'; 
+								RegDst <= '0';
+								ALUsrcB <= '1';
+								MemToReg <= '0';
+								MemWrite <= '1';
+								JAL <= '0';
+		-- HW 6 Additions --
+		-------------------------
+		when b"001111" => -- lui
+								ALUOP <= b"00";
+								RegWrite <= '1';
+								RegDst <= '0'; 
+								ALUsrcB <= '1';
+								MemToReg <= '0';
+								MemWrite <= '0';
+								JAL <= '0';
+		when b"001101" => -- ori
+								ALUOP <= b"11";
+								RegWrite <= '1';
+								RegDst <= '0'; 
+								ALUsrcB <= '1';
+								MemToReg <= '0';
+								MemWrite <= '0';
+								JAL <= '0';
+		when others => NULL;
+		end case;
+end process;
 
 -- ============================= EX phase processes ========================================
 -- ======================================================================================
 -- A & B registers
+process(CK,RESET,Opcode)
+begin
+	if RESET='1' then
+		A_reg <= x"00000000";
+	elsif CK'event and CK = '1' and HOLD='0' then
+		if Opcode = b"001111" then -- case of LUI
+			-- Setting A_reg to be the 0
+			A_reg <= x"00000000";
+		else
+			A_reg <= GPR_rd_data1;
+		end if;
+	end if;
+end process;
 
+process(CK,RESET)
+begin
+	if RESET='1' then
+		B_reg <= x"00000000";
+	elsif CK'event and CK = '1' and HOLD='0' then
+		B_reg <= GPR_rd_data2;
+	end if;
+end process;
 
 -- with forwarding															-- @@@HW6 adding data forwarding
 --src_A mux (forwarding)													-- @@@HW6 adding data forwarding in EX phase			
+process(RegWrite_pMEM, Rd_pMEM, Rs_pEX, RegWrite_pWB, Rd_pWB, ALUout_reg, GPR_wr_data, A_reg)
+begin
+	if RegWrite_pMEM = '1' and Rd_pMEM = Rs_pEX and Rs_pEX /= b"00000" then 
+		A_reg_wt_fwd <= ALUout_reg;
+		
+	elsif RegWrite_pWB = '1' and Rd_pWB = Rs_pEX and Rs_pEX /= b"00000" then
+		A_reg_wt_fwd <= GPR_wr_data;
+		
+	else
+		A_reg_wt_fwd <= A_reg;
+	end if;
+end process;
+
 
 --src B mux (forwarding part) 												-- @@@HW6 adding data forwarding in EX phase
-
+process(RegWrite_pMEM, Rd_pMEM, Rt_pEX, RegWrite_pWB, Rd_pWB, ALUout_reg, GPR_wr_data, B_reg)
+begin
+	if RegWrite_pMEM = '1' and Rd_pMEM = Rt_pEX and Rt_pEX /= b"00000" then 
+		B_reg_wt_fwd <= ALUout_reg;
+		
+	elsif RegWrite_pWB = '1' and Rd_pWB = Rt_pEX and Rt_pEX /= b"00000" then
+		B_reg_wt_fwd <= GPR_wr_data;
+		
+	else
+		B_reg_wt_fwd <= B_reg;
+	end if;
+end process;
 
 
 -- sext_imm register
-
+process(CK,RESET,Opcode)
+begin
+	if RESET='1' then
+		sext_imm_reg <= x"00000000";
+	elsif CK'event and CK = '1' and HOLD='0' then
+			sext_imm_reg <= sext_imm;
+	end if;
+end process;
 
 -- Rs register   --@@@HW6 added for data forwarding support
 
+
 -- Rt register 
-
 -- Rd register
-
+process(CK,RESET)
+begin
+	if RESET='1' then
+		Rt_pEX <= b"00000";
+		Rd_pEX <= b"00000";
+		funct_pEX <= b"000000";
+		Rs_pEX <= b"00000";
+	elsif CK'event and CK='1' and HOLD='0' then
+		Rt_pEX <= Rt;
+		Rd_pEX <= Rd;
+		Rs_pEx <= Rs;
+		funct_pEX <= funct;
+	end if;
+end process;
 
 -- PC_plus_4_pEX --@@@HW6 added to support JAL instruction
-
+process(CK,RESET)
+begin
+if RESET='1' then
+		PC_Plus_4_pEX <= x"00000000";
+	elsif CK'event and CK='1' and HOLD='0' then
+		PC_Plus_4_pEX <= PC_Plus_4_pID;
+	end if;
+end process; 
 
 -- control signals regs  --@@@HW6  add JAL support here to
+process(CK,RESET)
+begin
+	if RESET='1' then
+		ALUsrcB_pEX	<=	'0';
+		ALUOP_pEX <= b"00";
+		RegDst_pEX <= '0';
+		RegWrite_pEX <= '0';
+		JAL_pEX <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		ALUsrcB_pEX	<=	ALUsrcB;
+		ALUOP_pEX <= ALUOP;
+		RegDst_pEX <= RegDst;
+		RegWrite_pEX <= RegWrite; 
+		JAL_pEX <= JAL;
+	end if;
+end process;
+
 
 -- RegWrite_pEX, MemToReg_pEX, MemWrite_pEX FFs
 
+process (CK, RESET)
+begin
+	if RESET='1' then
+		MemToReg_pEX <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		MemToReg_pEX <= MemToReg;
+	end if;
+end process;
 
+process (CK, RESET)
+begin
+	if RESET='1' then
+		MemWrite_pEX <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		MemWrite_pEX <= MemWrite;
+	end if;
+end process;
 
 -- ============================= MEM phase processes ========================================
 -- ========================================================================================
 -- ALUOUT register
-
+process(CK,RESET)
+begin
+	if RESET='1' then
+		ALUout_reg <= x"00000000";
+	elsif CK'event and CK = '1' and HOLD = '0' then
+		ALUout_reg <= ALU_output;
+	end if;
+end process;
 
 --B delayed reg    --@@@HW6 need a change for data forwarding support 
-
+process (CK, RESET)
+begin
+	if RESET='1' then
+		B_reg_pMEM <= x"00000000";
+	elsif CK'event and CK='1' and HOLD='0' then
+		B_reg_pMEM <= B_reg_wt_fwd;
+	end if;
+end process;
 
 --RegDst mux and Rd_pMEM register
-
+process(CK,RESET) 
+begin
+	if RESET='1' then
+		--RegDst_pEX <= '0';
+		Rd_pMEM <= b"00000";
+	elsif CK'event and CK='1' and HOLD='0' then	
+			if RegDst_pEX = '1' then
+				Rd_pMEM <= rd_pEX;
+			else
+				Rd_pMEM<= rt_pEX;
+			end if;		
+	end if;	
+end process;
 
 --PC_plus_4_pMEM reg --@@@HW6 added to support JAL instruction
 
 
---control signals FFs 
---RegWrite_pMEM, MemToReg_pMEM, MemWrite_pEX FFs  --@@@HW6  add JAL_pMEM to support JAL
+process (CK, RESET)
+begin
+	if RESET='1' then
+		PC_plus_4_pMEM <= x"00000000";
+	elsif CK'event and CK='1' and HOLD='0' then
+		PC_plus_4_pMEM <= PC_Plus_4_pEX;
+	end if;
+end process;
 
+--RegWrite_pMEM, MemToReg_pMEM, MemWrite_pEX FFs  --@@@HW6  add JAL_pMEM to support JAL
+process (CK, RESET)
+begin
+	if RESET='1' then
+		RegWrite_pMEM <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		RegWrite_pMEM <= RegWrite_pEX;
+	end if;
+end process;
+
+process (CK,  RESET)
+begin
+	if RESET='1' then
+		MemToReg_pMEM <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		MemToReg_pMEM <= MemToReg_pEX;
+	end if;
+end process;
+
+process (CK, RESET)
+begin
+	if RESET='1' then
+		MemWrite_pMEM <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		MemWrite_pMEM <= MemWrite_pEX;
+	end if;
+end process;
+
+
+process (CK, RESET)
+begin
+	if RESET='1' then
+		JAL_pMEM <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		JAL_pMEM <= JAL_pEX;
+	end if;
+end process;
 
 
 --============================= WB phase processes ========================================
@@ -694,33 +998,86 @@ jr_address  <= ???
 --MDR_reg no need to define -- connected directly from BYOC_Host_intf - resides inside the DMem
 
 --ALUout_pWB register
-
+process(CK,RESET)
+begin
+	if RESET='1' then
+		ALUOut_reg_pWB <= x"00000000";
+	elsif CK'event and CK='1' and HOLD='0' then
+		ALUOut_reg_pWB <= ALUOut_reg;
+	end if;
+end process;
 
 --MemToReg mux     --@@@HW6 requires changes to support JAL instruction
-
+process(MemToReg_pWB,MDR_reg,ALUOut_reg_pWB,JAL_pWB,PC_Plus_4_pWB)
+begin
+	if JAL_pWB = '1' then 
+		GPR_wr_data <= PC_Plus_4_pWB;
+	else
+		--not JAL
+		if MemToReg_pWB='0' then
+			GPR_wr_data <= ALUout_reg_pWB;
+		else
+			GPR_wr_data <= MDR_reg;
+		end if;
+	end if;
+end process;
 
 --Rd_pWB register
-
+process(CK,RESET)
+begin
+	if RESET='1' then
+		Rd_pWB <= b"00000";
+	elsif CK'event and CK='1' and HOLD='0' then
+		Rd_pWB <= Rd_pMEM;
+	end if;
+end process;
 
 --PC_plus_4_pWB --@@@HW6 added to support JAL instruction
 
+process(CK,RESET)
+begin
+	if RESET='1' then
+		PC_Plus_4_pWB <= x"00000000";
+	elsif CK'event and CK='1' and HOLD='0' then
+		PC_Plus_4_pWB <= PC_Plus_4_pMEM;
+	end if;
+end process;
 
 --control signals FFs 
 --RegWrite_pWB, MemToReg_pWB FFs   --@@@HW6 added JAL_pWB FF to support JAL instruction  
+process(CK,RESET)
+begin
+	if RESET='1' then
+		JAL_pWB <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		JAL_pWB <= JAL_pMEM;
+	end if;
+end process;
+process(CK,RESET)
+begin
+	if RESET='1' then
+		MemToReg_pWB <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		MemToReg_pWB <= MemToReg_pMEM;
+	end if;
+end process;
 
-
+process(CK,RESET)
+begin
+	if RESET='1' then
+		RegWrite_pWB <= '0';
+	elsif CK'event and CK='1' and HOLD='0' then
+		RegWrite_pWB <= RegWrite_pMEM;
+	end if;
+end process;
 
 -- ***************************************************************************************************
 --build special rdbk signals
 rdbk3_vec   <=	b"000" & Rs  &  b"000" & Rt  &  b"000" & Rd  &  b"00" & Funct;
-rdbk4_vec   <=	b"000" & RegWrite & b"0000"  &  b"00000000"  &  b"00000000"  &  b"0000" & b"000" & Rs_equals_Rt;
+rdbk4_vec   <=	b"000" & RegWrite & b"000" & MemWrite  &  b"00000000"  &  b"00000000"  &  b"0000" & b"000" & Rs_equals_Rt;
+				-- 31 30 29    28       27 26 25 24 -- @@@ change for HW6
 rdbk5_vec   <=  b"000" & ALUsrcB_pEX & b"0000"  & b"00000000" & b"0000"   &  b"00" & ALUOP_pEX & "00" & Funct_pEX;
 rdbk12_vec  <=	MemWrite_pMem & b"00" & MemToReg_pMEM & b"000" &  RegWrite_pMEM & b"000" & Rd_pMEM & b"000" & MemToReg_pWB & b"000" & RegWrite_pWB & b"000" & Rd_pWB;
-
-
-
--- **************************************************************************************************
-
 
 
 end  Behavioral;
