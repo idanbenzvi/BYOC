@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> 
 Reading design: HW5_top.prj
@@ -71,7 +71,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -115,15 +115,14 @@ Architecture dual_port_memory of Entity dual_port_memory_no_ck_read is up to dat
 Compiling vhdl file "/media/sf_shared_with_vm/byoc2017/projects/shared/hw5/Implementation/Src_4ISE/BYOC_Clock_driver.vhd" in Library work.
 Architecture clock_divider of Entity clock_driver is up to date.
 Compiling vhdl file "/media/sf_shared_with_vm/byoc2017/projects/shared/hw5/Implementation/Src_4ISE/Fetch_Unit.vhd" in Library work.
-Architecture behavioral of Entity fetch_unit is up to date.
+Entity <fetch_unit> compiled.
+Entity <fetch_unit> (Architecture <behavioral>) compiled.
 Compiling vhdl file "/media/sf_shared_with_vm/byoc2017/projects/shared/hw5/Implementation/Src_4ISE/GPR.vhd" in Library work.
 Architecture behavioral of Entity gpr is up to date.
 Compiling vhdl file "/media/sf_shared_with_vm/byoc2017/projects/shared/hw5/Implementation/Src_4ISE/MIPS_ALU.vhd" in Library work.
 Architecture behavioral of Entity mips_alu is up to date.
 Compiling vhdl file "/media/sf_shared_with_vm/byoc2017/projects/shared/hw5/Implementation/Src_4ISE/HW5_MIPS.vhd" in Library work.
-WARNING:HDLParsers:3530 - Time stamp of file "/media/sf_shared_with_vm/byoc2017/projects/shared/hw5/Implementation/Src_4ISE/HW5_MIPS.vhd" is newer than current system time.
-Entity <hw5_top> compiled.
-Entity <hw5_top> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity hw5_top is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -444,21 +443,21 @@ Design Statistics
 # IOs                              : 91
 
 Cell Usage :
-# BELS                             : 3075
+# BELS                             : 3103
 #      GND                         : 2
 #      INV                         : 36
 #      LUT1                        : 144
 #      LUT2                        : 156
 #      LUT2_D                      : 3
 #      LUT2_L                      : 10
-#      LUT3                        : 800
-#      LUT3_D                      : 14
-#      LUT3_L                      : 17
-#      LUT4                        : 761
-#      LUT4_D                      : 35
-#      LUT4_L                      : 143
+#      LUT3                        : 795
+#      LUT3_D                      : 13
+#      LUT3_L                      : 21
+#      LUT4                        : 793
+#      LUT4_D                      : 33
+#      LUT4_L                      : 142
 #      MUXCY                       : 348
-#      MUXF5                       : 242
+#      MUXF5                       : 243
 #      MUXF6                       : 72
 #      MUXF7                       : 32
 #      VCC                         : 2
@@ -496,10 +495,10 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                     1310  out of   4656    28%  
+ Number of Slices:                     1314  out of   4656    28%  
  Number of Slice Flip Flops:            992  out of   9312    10%  
- Number of 4 input LUTs:               2378  out of   9312    25%  
-    Number used as logic:              2119
+ Number of 4 input LUTs:               2405  out of   9312    25%  
+    Number used as logic:              2146
     Number used as Shift registers:       3
     Number used as RAMs:                256
  Number of IOs:                          91
@@ -551,7 +550,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 16.256ns (Maximum Frequency: 61.518MHz)
+   Minimum period: 16.086ns (Maximum Frequency: 62.168MHz)
    Minimum input arrival time before clock: 8.912ns
    Maximum output required time after clock: 12.082ns
    Maximum combinational path delay: 6.744ns
@@ -562,10 +561,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_divider/half_ck_signal'
-  Clock period: 16.256ns (frequency: 61.518MHz)
-  Total number of paths / destination ports: 419479 / 3550
+  Clock period: 16.086ns (frequency: 62.168MHz)
+  Total number of paths / destination ports: 419162 / 3550
 -------------------------------------------------------------------------
-Delay:               16.256ns (Levels of Logic = 26)
+Delay:               16.086ns (Levels of Logic = 26)
   Source:            hostintf/IMem_in_host_intf/Regular_IMem/Mram_Memory_array2 (RAM)
   Destination:       hostintf/Tx_data_reg_0 (FF)
   Source Clock:      clock_divider/half_ck_signal rising
@@ -595,7 +594,7 @@ Delay:               16.256ns (Levels of Logic = 26)
      MUXCY:CI->O           1   0.059   0.000  Mcompar_Rs_equals_Rt_cmp_eq0000_cy<12> (Mcompar_Rs_equals_Rt_cmp_eq0000_cy<12>)
      MUXCY:CI->O           1   0.059   0.000  Mcompar_Rs_equals_Rt_cmp_eq0000_cy<13> (Mcompar_Rs_equals_Rt_cmp_eq0000_cy<13>)
      MUXCY:CI->O           1   0.059   0.000  Mcompar_Rs_equals_Rt_cmp_eq0000_cy<14> (Mcompar_Rs_equals_Rt_cmp_eq0000_cy<14>)
-     MUXCY:CI->O           8   0.459   0.836  Mcompar_Rs_equals_Rt_cmp_eq0000_cy<15> (Mcompar_Rs_equals_Rt_cmp_eq0000_cy<15>)
+     MUXCY:CI->O           4   0.459   0.666  Mcompar_Rs_equals_Rt_cmp_eq0000_cy<15> (Mcompar_Rs_equals_Rt_cmp_eq0000_cy<15>)
      begin scope: 'hostintf'
      LUT3:I1->O            1   0.704   0.000  Mmux_Host_RDBK_data_71 (Mmux_Host_RDBK_data_71)
      MUXF5:I0->O           1   0.321   0.000  Mmux_Host_RDBK_data_5_f5_0 (Mmux_Host_RDBK_data_5_f51)
@@ -605,8 +604,8 @@ Delay:               16.256ns (Levels of Logic = 26)
      LUT4:I0->O            1   0.704   0.000  Host_MIPS_rd_data<0> (Host_MIPS_rd_data<0>)
      FDE:D                     0.308          Tx_data_reg_0
     ----------------------------------------
-    Total                     16.256ns (11.089ns logic, 5.167ns route)
-                                       (68.2% logic, 31.8% route)
+    Total                     16.086ns (11.089ns logic, 4.997ns route)
+                                       (68.9% logic, 31.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CK_50MHz'
@@ -704,15 +703,15 @@ Delay:               6.744ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 95.00 secs
-Total CPU time to Xst completion: 39.35 secs
+Total REAL time to Xst completion: 122.00 secs
+Total CPU time to Xst completion: 50.91 secs
  
 --> 
 
 
-Total memory usage is 574220 kilobytes
+Total memory usage is 574252 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   12 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
 Number of infos    :   30 (   0 filtered)
 

@@ -8,7 +8,22 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/media/sf_shared_with_vm/byoc2017/projects/shared/hw5/Implementation/Src_4ISE/BYOC_Clock_driver.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/media/sf_shared_with_vm/byoc2017/projects/shared/hw5/Implementation/Src_4ISE/Fetch_Unit.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/media/sf_shared_with_vm/byoc2017/projects/shared/hw5/Implementation/Src_4ISE/GPR.vhd&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/media/sf_shared_with_vm/byoc2017/projects/shared/hw5/Implementation/Src_4ISE/HW5_MIPS.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/media/sf_shared_with_vm/byoc2017/projects/shared/hw5/Implementation/Src_4ISE/MIPS_ALU.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/media/sf_shared_with_vm/byoc2017/projects/shared/hw5/Implementation/Src_4ISE/dual_port_memory.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

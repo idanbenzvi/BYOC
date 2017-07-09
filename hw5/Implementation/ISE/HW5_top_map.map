@@ -9,7 +9,7 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Sun Jun 18 19:21:46 2017
+Mapped Date    : Sun Jul  9 18:51:06 2017
 
 Mapping design into LUTs...
 WARNING:MapLib:701 - Signal buttons_in<2> connected to top level port
@@ -54,14 +54,14 @@ Logic Utilization:
   Total Number Slice Registers:         992 out of   9,312   10%
     Number used as Flip Flops:          986
     Number used as Latches:               6
-  Number of 4 input LUTs:             2,245 out of   9,312   24%
+  Number of 4 input LUTs:             2,272 out of   9,312   24%
 Logic Distribution:
-  Number of occupied Slices:          1,432 out of   4,656   30%
-    Number of Slices containing only related logic:   1,432 out of   1,432 100%
-    Number of Slices containing unrelated logic:          0 out of   1,432   0%
+  Number of occupied Slices:          1,444 out of   4,656   31%
+    Number of Slices containing only related logic:   1,444 out of   1,444 100%
+    Number of Slices containing unrelated logic:          0 out of   1,444   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,396 out of   9,312   25%
-    Number used as logic:             1,986
+  Total Number of 4 input LUTs:       2,423 out of   9,312   26%
+    Number used as logic:             2,013
     Number used as a route-thru:        151
     Number used for Dual Port RAMs:     256
       (Two LUTs used per Dual Port RAM)
@@ -77,8 +77,8 @@ Logic Distribution:
 Average Fanout of Non-Clock Nets:                3.58
 
 Peak Memory Usage:  599 MB
-Total REAL time to MAP completion:  5 secs 
-Total CPU time to MAP completion:   4 secs 
+Total REAL time to MAP completion:  8 secs 
+Total CPU time to MAP completion:   5 secs 
 
 NOTES:
 

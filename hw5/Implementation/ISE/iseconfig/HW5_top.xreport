@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-06-18T19:15:46</DateModified>
+  <DateModified>2017-07-09T18:48:28</DateModified>
   <ModuleName>HW5_top</ModuleName>
   <SummaryTimeStamp>2017-06-18T19:15:45</SummaryTimeStamp>
   <SavedFilePath>/media/sf_shared_with_vm/byoc2017/projects/shared/hw5/Implementation/ISE/iseconfig/HW5_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/media/sf_shared_with_vm/byoc2017/projects/shared/hw5/Implementation/ISE</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/media/sf_shared_with_vm/byoc2017/projects/shared/hw5/Implementation/ISE/</ImplementationReportsDirectory>
   <DateInitialized>2017-06-18T19:15:45</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
