@@ -645,7 +645,7 @@ end process;
 -- ============================= EX phase processes ========================================
 -- ======================================================================================
 -- A & B registers
-process(GPR_rd_data1,CK,HOLD,RESET)
+process(CK,RESET)
 begin
 	if RESET='1' then
 		A_reg <= x"00000000";
@@ -656,7 +656,7 @@ end process;
 
 --EX phase signals registers
 
-process(GPR_rd_data2,CK,HOLD,RESET)
+process(CK,RESET)
 begin
 	if RESET='1' then
 		B_reg <= x"00000000";
@@ -666,7 +666,7 @@ begin
 end process;
 
 -- sext_imm register
-process(sext_imm,CK,HOLD,RESET)
+process(CK,RESET)
 begin
 	if RESET='1' then
 		sext_imm_reg <= x"00000000";
@@ -677,7 +677,7 @@ end process;
 
 -- Rt register 
 -- Rd register
-process(CK,HOLD,RESET, Rt, Rd, funct)
+process(CK,RESET)
 begin
 	if RESET='1' then
 		Rt_pEX <= b"00000";
@@ -691,7 +691,7 @@ begin
 end process;
 
 -- control signals regs
-process(CK,HOLD,RESET, ALUsrcB, ALUOP, RegDst, RegWrite)
+process(CK,RESET)
 begin
 	if RESET='1' then
 		ALUsrcB_pEX	<=	'0';
@@ -706,7 +706,7 @@ begin
 	end if;
 end process;
 
-process (CK, HOLD, RESET, MemWrite)
+process (CK, RESET)
 begin
 	if RESET='1' then
 		MemWrite_pEX <= '0';
@@ -715,7 +715,7 @@ begin
 	end if;
 end process;
 
-process (CK, HOLD, RESET, MemToReg)
+process (CK, RESET)
 begin
 	if RESET='1' then
 		MemToReg_pEX <= '0';
@@ -730,7 +730,7 @@ end process;
 
 --Regsiters requried
 
-process (CK, HOLD, RESET, B_reg)
+process (CK, RESET)
 begin
 	if RESET='1' then
 		B_reg_pMEM <= x"00000000";
@@ -751,7 +751,7 @@ end process;
 
 
 -- RegDst mux and Rd_pWB register - HW5 - changed from WB to MEM
-process(CK,HOLD,RESET, rd_pEX, rt_pEX) 
+process(CK,RESET) 
 begin
 	if RESET='1' then
 		--RegDst_pEX <= '0';
@@ -766,7 +766,7 @@ begin
 end process;
 
 --MemWrite_pMEM Register
-process (CK, HOLD, RESET, MemWrite_pEX)
+process (CK, RESET)
 begin
 	if RESET='1' then
 		MemWrite_pMEM <= '0';
@@ -777,7 +777,7 @@ end process;
 ------------------------
 
 --MemToReg_pMEM Register
-process (CK, HOLD, RESET, MemToReg_pEX)
+process (CK,  RESET)
 begin
 	if RESET='1' then
 		MemToReg_pMEM <= '0';
@@ -789,7 +789,7 @@ end process;
 
 
 --RegWrite_pMEM Register
-process (CK, HOLD, RESET, RegWrite_pEX)
+process (CK, RESET)
 begin
 	if RESET='1' then
 		RegWrite_pMEM <= '0';
@@ -805,7 +805,7 @@ end process;
 --NO need to add MDR signals, as stated
 
 -- ALUOUT register
-process(ALU_output,CK,RESET,HOLD)
+process(CK,RESET)
 begin
 	if RESET='1' then
 		ALUout_reg <= x"00000000";
@@ -825,7 +825,7 @@ begin
 end process;
 
 -- RegWrite_pWB FF
-process(CK,HOLD,RESET, RegWrite_pEX) 
+process(CK,RESET) 
 begin
 	if RESET='1' then
 		RegWrite_pMEM <= '0';
@@ -834,7 +834,7 @@ begin
 	end if;
 end process;
 
-process(CK,HOLD,RESET, ALUOut_reg_pWB)
+process(CK,RESET)
 begin
 	if RESET='1' then
 		ALUOut_reg_pWB <= x"00000000";
@@ -853,7 +853,7 @@ begin
 	end if;
 end process;
 
-process(CK,HOLD,RESET, Rd_pMEM)
+process(CK,RESET)
 begin
 	if RESET='1' then
 		Rd_pWB <= b"00000";
@@ -862,7 +862,7 @@ begin
 	end if;
 end process;
 
-process(CK,HOLD,RESET, MemToReg_pMEM)
+process(CK,RESET, MemToReg_pMEM)
 begin
 	if RESET='1' then
 		MemToReg_pWB <= '0';
@@ -871,7 +871,7 @@ begin
 	end if;
 end process;
 
-process(CK,HOLD,RESET, RegWrite_pMEM)
+process(CK,RESET, RegWrite_pMEM)
 begin
 	if RESET='1' then
 		RegWrite_pWB <= '0';
