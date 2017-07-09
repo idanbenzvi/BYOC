@@ -1,0 +1,30 @@
+Release 14.7 Drc P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Sun Jul  9 19:42:55 2017
+
+drc -z HW6_top.ncd HW6_top.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net ALUOP_not0001 is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<hostintf/IMem_in_host_intf/Regular_IMem/Mram_Memory_array2.B>:<RAMB16_
+   RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<hostintf/IMem_in_host_intf/Regular_IMem/Mram_Memory_array2.B>:<RAMB16_
+   RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA14> on
+   block:<hostintf/DMem_in_host_intf/Regular_Dmem/Mram_Memory_array2.A>:<RAMB16_
+   RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA15> on
+   block:<hostintf/DMem_in_host_intf/Regular_Dmem/Mram_Memory_array2.A>:<RAMB16_
+   RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<hostintf/DMem_in_host_intf/Regular_Dmem/Mram_Memory_array2.B>:<RAMB16_
+   RAMB16B>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<hostintf/DMem_in_host_intf/Regular_Dmem/Mram_Memory_array2.B>:<RAMB16_
+   RAMB16B>.
+DRC detected 0 errors and 7 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
