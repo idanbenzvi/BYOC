@@ -844,9 +844,9 @@ begin
 end process;
 
 
-process(MemToReg,MDR_reg,ALUOut_reg_pWB)
+process(MemToReg_pWB,MDR_reg,ALUOut_reg_pWB)
 begin
-	if MemToReg='0' then
+	if MemToReg_pWB='0' then
 		GPR_wr_data <= ALUout_reg_pWB;
 	else
 		GPR_wr_data <= MDR_reg;
