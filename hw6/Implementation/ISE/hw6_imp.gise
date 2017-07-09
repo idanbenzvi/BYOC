@@ -122,10 +122,15 @@
     <transform xil_pn:end_ts="1499617390" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-1314711511737871809" xil_pn:start_ts="1499617390">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
     </transform>
     <transform xil_pn:end_ts="1499617402" xil_pn:in_ck="-1060910372745098045" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="8161459572437758015" xil_pn:start_ts="1499617390">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
       <outfile xil_pn:name="HW6_top.bld"/>
       <outfile xil_pn:name="HW6_top.ngd"/>
       <outfile xil_pn:name="HW6_top_ngdbuild.xrpt"/>
@@ -136,6 +141,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
       <outfile xil_pn:name="HW6_top.pcf"/>
       <outfile xil_pn:name="HW6_top_map.map"/>
       <outfile xil_pn:name="HW6_top_map.mrp"/>
@@ -149,6 +157,9 @@
     <transform xil_pn:end_ts="1499618571" xil_pn:in_ck="2086478278164656391" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1499617434">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
       <outfile xil_pn:name="HW6_top.ncd"/>
       <outfile xil_pn:name="HW6_top.pad"/>
       <outfile xil_pn:name="HW6_top.par"/>
@@ -164,6 +175,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="HW6_top.bgn"/>
       <outfile xil_pn:name="HW6_top.bit"/>
       <outfile xil_pn:name="HW6_top.drc"/>
@@ -176,6 +188,9 @@
     <transform xil_pn:end_ts="1499618571" xil_pn:in_ck="114391635188390506" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1499618559">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
       <outfile xil_pn:name="HW6_top.twr"/>
       <outfile xil_pn:name="HW6_top.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
