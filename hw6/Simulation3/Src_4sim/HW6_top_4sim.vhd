@@ -645,47 +645,49 @@ end process;
 Rd <= IR_reg(15 downto 11);
 Funct <= IR_reg(5 downto 0);
 
-	
+--=========================================================================--
 --beq & bne & jr forwarding  				--@@@HW6 adding branch & JR forwarding
 
 
 --A mux of the Rs_equal_Rt comparator (beq/bne forwarding)
-
---B mux of the Rs_equal_Rt comparator (beq/bne forwarding)				--@@@HW6 adding branch & JR forwarding
-	
-	
---beq/bne comparator    --@@@HW6 adding branch forwarding means a change here
-process(GPR_rd_data1, GPR_rd_data2, ALUOut_reg, RegWrite_pEX)
+--!We need to check if we are writing to the GPR in the previous instructions,and
+--To the register we want to use its value !
+--"Were we about to write to the GPR in the previous 3 insurctions (same address?)?"
+-- we need to compare the information from the ID phase to the MEM phase
+process(Rs,Rd_pMEM,ALUout_reg,GPR_rd_data1,RegWrite_pMEM) -- A_reg => Rs
 begin
-	if(GPR_rd_data1 = GPR_rd_data2) then
-		Rs_equals_Rt <= '1';
-	else
-		Rs_equals_Rt <= '0';
-	end if;
-	
-	--if RegWrite_pEX = '1' then
-	if ... then
-		GPR_rd_data1_wt_fwd <= ALUOut_reg;
+	if(RegWrite_pMEM='1' and Rs = Rd_pMEM and Rs /= b"00000") then
+		GPR_rd_data1_wt_fwd <= ALUout_reg;
 	else
 		GPR_rd_data1_wt_fwd <= GPR_rd_data1;
 	end if;
-	
-	--if RegWrite_pEX = '1' then
-	if ... then
-		GPR_rd_data2_wt_fwd <= ALUOut_reg;
+end process;
+
+--B mux of the Rs_equal_Rt comparator (beq/bne forwarding)				--@@@HW6 adding branch & JR forwarding
+process(Rt,Rd_pMEM,ALUout_reg,GPR_rd_data2,RegWrite_pMEM) -- B_reg => Rt
+begin
+	if(RegWrite_pMEM = '1' and Rt = Rd_pMEM and Rt /= b"00000") then
+		GPR_rd_data2_wt_fwd <= ALUout_reg;
 	else
 		GPR_rd_data2_wt_fwd <= GPR_rd_data2;
-	end if;
-	
-	if GPR_rd_data1_wt_fwd = GPR_rd_data2_wt_fwd then
+end if;
+end process;
+
+
+--beq/bne comparator    --@@@HW6 adding branch forwarding means a change here
+process(GPR_rd_data1_wt_fwd, GPR_rd_data2_wt_fwd)
+begin
+	if(GPR_rd_data1_wt_fwd = GPR_rd_data2_wt_fwd) then
 		Rs_equals_Rt <= '1';
 	else
 		Rs_equals_Rt <= '0';
 	end if;
 end process;
 
-----@@@HW6 add JR support   -- HW6 adding JR forwarding means a change here
-jr_address  <= GPR_rd_data1_wt_fwd;
+-- HW6 add JR support -- HW6 adding JR forwarding means a change here
+jr_address  <= GPR_rd_data1_wt_fwd ; -- HW6 change to support fwding for Jr
+
+--=========================================================================--
 
 -- Control decoder  - calculates the signals in ID phase
 -- creates the following signals according to the opcode:
