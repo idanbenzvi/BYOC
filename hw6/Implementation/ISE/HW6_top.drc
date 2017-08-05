@@ -1,7 +1,7 @@
 Release 14.7 Drc P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Jul  9 19:42:55 2017
+Sun Aug  6 00:23:56 2017
 
 drc -z HW6_top.ncd HW6_top.pcf
 

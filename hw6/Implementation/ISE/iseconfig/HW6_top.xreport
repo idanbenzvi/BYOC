@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-07-09T19:19:02</DateModified>
+  <DateModified>2017-08-06T00:19:34</DateModified>
   <ModuleName>HW6_top</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2017-07-09T19:43:34</SummaryTimeStamp>
   <SavedFilePath>/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/ISE/iseconfig/HW6_top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/ISE</ImplementationReportsDirectory>
   <DateInitialized>2017-07-09T19:19:01</DateInitialized>

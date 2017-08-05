@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: HW6_top.prj
@@ -71,7 +71,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -111,37 +111,30 @@ Cores Search Directories           : {"../Src_4ISE"  }
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/dual_port_memory.vhd" in Library work.
-Entity <dual_port_memory_no_ck_read> compiled.
-Entity <dual_port_memory_no_ck_read> (Architecture <dual_port_memory>) compiled.
+Architecture dual_port_memory of Entity dual_port_memory_no_ck_read is up to date.
 Compiling vhdl file "/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/BYOC_Clock_driver.vhd" in Library work.
-Entity <Clock_Driver> compiled.
-Entity <Clock_Driver> (Architecture <clock_divider>) compiled.
+Architecture clock_divider of Entity clock_driver is up to date.
 Compiling vhdl file "/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/Fetch_Unit.vhd" in Library work.
-Entity <Fetch_Unit> compiled.
-Entity <Fetch_Unit> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity fetch_unit is up to date.
 Compiling vhdl file "/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/GPR.vhd" in Library work.
-Entity <GPR> compiled.
-Entity <GPR> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity gpr is up to date.
 Compiling vhdl file "/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/MIPS_ALU.vhd" in Library work.
-Entity <MIPS_ALU> compiled.
-Entity <MIPS_ALU> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity mips_alu is up to date.
 Compiling vhdl file "/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/HW6_top.vhd" in Library work.
-WARNING:HDLParsers:3530 - Time stamp of file "/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/HW6_top.vhd" is newer than current system time.
-Entity <HW6_top> compiled.
-Entity <HW6_top> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity hw6_top is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <HW6_top> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <HW6_top> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <Clock_Driver> in library <work> (architecture <clock_divider>).
 
-Analyzing hierarchy for entity <Fetch_Unit> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <Fetch_Unit> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <GPR> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <GPR> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <MIPS_ALU> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <MIPS_ALU> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <dual_port_memory_no_CK_read> in library <work> (architecture <dual_port_memory>) with generics.
 	depth = 32
@@ -151,17 +144,17 @@ Analyzing hierarchy for entity <dual_port_memory_no_CK_read> in library <work> (
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <HW6_top> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <HW6_top> in library <work> (Architecture <behavioral>).
 WARNING:Xst:2211 - "/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/HW6_top.vhd" line 434: Instantiating black box module <BYOC_Host_intf>.
 Entity <HW6_top> analyzed. Unit <HW6_top> generated.
 
 Analyzing Entity <Clock_Driver> in library <work> (Architecture <clock_divider>).
 Entity <Clock_Driver> analyzed. Unit <Clock_Driver> generated.
 
-Analyzing Entity <Fetch_Unit> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <Fetch_Unit> in library <work> (Architecture <behavioral>).
 Entity <Fetch_Unit> analyzed. Unit <Fetch_Unit> generated.
 
-Analyzing Entity <GPR> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <GPR> in library <work> (Architecture <behavioral>).
 WARNING:Xst:819 - "/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/GPR.vhd" line 76: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <wr_data>
 WARNING:Xst:819 - "/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/GPR.vhd" line 92: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
@@ -173,7 +166,7 @@ Analyzing generic Entity <dual_port_memory_no_CK_read> in library <work> (Archit
 	width = 32
 Entity <dual_port_memory_no_CK_read> analyzed. Unit <dual_port_memory_no_CK_read> generated.
 
-Analyzing Entity <MIPS_ALU> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <MIPS_ALU> in library <work> (Architecture <behavioral>).
 INFO:Xst:1561 - "/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/MIPS_ALU.vhd" line 79: Mux is complete : default of case is discarded
 Entity <MIPS_ALU> analyzed. Unit <MIPS_ALU> generated.
 
@@ -736,15 +729,15 @@ Delay:               6.840ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 143.00 secs
-Total CPU time to Xst completion: 58.75 secs
+Total REAL time to Xst completion: 52.00 secs
+Total CPU time to Xst completion: 31.98 secs
  
 --> 
 
 
-Total memory usage is 577152 kilobytes
+Total memory usage is 577196 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   14 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
 Number of infos    :   19 (   0 filtered)
 

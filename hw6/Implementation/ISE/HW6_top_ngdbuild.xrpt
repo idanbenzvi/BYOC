@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Sun Jul  9 19:23:18 2017">
+  <application stringID="NgdBuild" timeStamp="Sun Aug  6 00:20:55 2017">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -47,6 +47,7 @@
         <item DEFAULT="None" label="-dd" stringID="NGDBUILD_output_dir" value="_ngo"/>
         <item DEFAULT="None" label="-p" stringID="NGDBUILD_partname" value="xc3s500e-fg320-4"/>
         <item DEFAULT="None" label="-sd" stringID="NGDBUILD_search_path" value="../Src_4ISE"/>
+        <item DEFAULT="None" label="-uc" stringID="NGDBUILD_ucf_file" value="/media/sf_shared_with_vm/byoc2017/projects/shared/hw6/Implementation/Src_4ISE/BYOC.ucf"/>
       </section>
     </task>
     <task stringID="NGDBUILD_REPORT">
@@ -135,6 +136,7 @@
         <item dataType="int" stringID="NGDBUILD_NUM_RAMB16_S36" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_RAMB16_S4_S4" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_SRLC16E" value="3"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_TS_TIMESPEC" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="2"/>
         <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="258"/>
       </section>
